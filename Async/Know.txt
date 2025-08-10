@@ -1,0 +1,214 @@
+
+
+# JavaScript is by default Synchronous in nature and and single-threaded.
+# All indian mother are by default Asynchronous in nature.
+
+# Synchronous
+   - This means that code is executed line by line, one at a time.
+   - The JavaScript engine can only process one statement at a time in a single sequence. 
+   - The next line of code is not executed until the current one has finished.
+   - This is also known as blocking behavior. If a function takes a long time to run, it will block the entire program.
+
+   Ex-  
+       ⁡⁢⁢⁢ console.log("First");
+        // This is a "blocking" operation, even if simple.
+        // The next line won't run until this one is done.
+        console.log("Second");
+        console.log("Third");⁡
+    
+2. ⁡⁢⁣⁣How JavaScript Works Asynchronously⁡
+    So, if JavaScript is ⁡⁣⁣⁢synchronous⁡, how does it handle tasks that take time, like fetching data from a server, reading a file, or waiting for a timer, without freezing the entire application?
+
+    - The answer is that JavaScript itself doesn't handle it. The JavaScript Runtime Environment (like a web browser or Node.js) does. 
+    - These environments provide features that the JavaScript engine can offload tasks to.
+
+    # ⁡⁣⁢⁣This system works with a few key components:⁡
+
+    - Call Stack: Where your functions are executed, one at a time.
+
+    -  Web APIs / C++ APIs: These are part of the browser (or Node.js environment), not the JavaScript engine. They handle asynchronous tasks in the background (e.g., setTimeout, fetch, DOM events).
+
+    - Callback Queue (or Task Queue): When a background task from a Web API is complete, its callback function is placed in this queue, waiting to be executed.
+
+    - Event Loop: This is the most crucial part. The Event Loop's job is to constantly monitor the Call Stack and the Callback Queue. If the Call Stack is empty, it takes the first function from the Callback Queue and pushes it onto the Call Stack to be executed.
+
+    EX-
+        ⁡⁢⁢⁢console.log("Start");⁡
+
+⁡⁢⁢⁢        // setTimeout is a Web API function.
+        // We ask it to run our callback function after 2000ms.
+        setTimeout(() => {
+            console.log("Inside setTimeout after 2 seconds");
+        }, 2000);
+
+        console.log("End");
+
+        // Output:
+        // Start
+        // End
+        // Inside setTimeout after 2 seconds⁡/**
+ * @param {Promise} promise1
+ * @param {Promise} promise2
+ * @return {Promise}
+ */
+var addTwoPromises = async function(promise1, promise2) {
+
+        const a = new Promise((resolve , reject) => {
+            resolve(promise1,promise2);
+        })
+        
+    return a;
+};
+
+/**
+ * addTwoPromises(Promise.resolve(2), Promise.resolve(2))
+ *   .then(console.log); // 4
+ */
+
+    - This demonstrates the ⁡⁣⁣⁢non-blocking⁡ nature of asynchronous JavaScript. 
+    - The long-running task (⁡⁣⁣⁢setTimeout⁡) didn't stop the rest of the code from executing.   
+
+
+# 𝗠𝗼𝗱𝗲𝗿𝗻 𝗔𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 :
+    * Promises and async/await
+
+        - While callbacks are the underlying mechanism, modern JavaScript uses ⁡⁣⁣⁢Promises⁡ and the ⁡⁣⁣⁢async/await⁡ syntax to make asynchronous code much cleaner and easier to manage, avoiding "⁡⁢⁣⁢callback hell⁡." They are essentially syntactic sugar over the same event loop mechanism.
+
+     -> Table
+           ⁡⁢⁣⁣ feature             Synchronous         Asynchronous⁡
+        -   Execution Flow      Line BY Line        Skips long tasks , comes back
+        -   Blocking            Yes                 No
+        -   Use Case            Simple Tasks        Api calls , DB query , timers , fetch
+        -   Error Handling      No                  Yes
+
+Q. Why Do we Get Promise Instead of Data ?
+    ex-
+        ⁡⁢⁢⁢let data = fetch("https://jsonplaceholder.typicode.com/todos/1")
+        console.log(data);⁡
+
+        API call are asynchronous
+            - Fetch data takes time 
+            - js doesn't want to stop everything and wait (its single threaded)
+            - so instead , its gives you Promise , saying
+                "I will give you the data later , once it arrives."
+
+Q. 𝗘𝘅𝗽𝗹𝗮𝗶𝗻 𝗣𝗿𝗼𝗺𝗶𝘀𝗲𝘀 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 𝘄𝗶𝘁𝗵 𝗮 𝘀𝗶𝗺𝗽𝗹𝗲  
+    - A ⁡⁣⁣⁢Promise⁡ is a special JavaScript ⁡⁣⁣⁢object⁡ that acts as a placeholder for a future value
+
+    A Promise can be in one of three states:
+
+       1) Pending: The initial state. The asynchronous operation has not completed yet.
+       2) Fulfilled (or Resolved): The operation completed successfully, and the promise now has a resulting value.
+       3) Rejected: The operation failed, and the promise has a reason for the failure (an error).
+
+      -> A Simple Example: Simulating a Data Fetch
+            Let's create a function that simulates fetching user data from a server. This operation takes time, so it's a perfect use case for a Promise. Our function will return a promise that either resolves with user data or rejects with an error.
+
+            ex-
+
+            ⁡⁢⁢⁢function fetchData(api) {
+                return new Promise((resolve  , reject ) => {
+                    console.log("Fetching data plz wait ");
+
+                    // simulates a network delay of 3 seconds
+                    setTimeout(() => {
+                        if(api) {
+                            // if operation is successfully , we resolve
+                            const userData = {
+                                name : "John Doe",
+                                age : 30
+                            }
+                            resolve(userData);
+
+                        }
+                        else {
+                            reject(new Error("Failed to fetch data"));
+                        }
+                    }, 3000);
+                })
+            }⁡
+
+  -> ⁡⁢⁢⁣Consuming the Promise⁡
+        Now that we have a function that returns a promise, how do we use it? We use the .then() and .catch() methods.
+
+        .then(onFulfilled): Schedules a callback to run when the promise is fulfilled. It receives the resolved value as its argument.
+
+        .catch(onRejected): Schedules a callback to run when the promise is rejected. It receives the error as its argument.
+
+
+        ⁡⁣⁢⁣Handling a Successful Outcome⁡
+            // Let's call our function and tell it to succeed.
+          ⁡⁢⁢⁢  const userPromise = fetchUserData(true);
+
+            userPromise
+            .then(user => {
+                // This block runs only if the promise is FULFILLED.
+                console.log("✅ Success!");
+                console.log(`User Name: ${user.name}`);
+                console.log(`User Email: ${user.email}`);
+            })
+            .catch(error => {
+                // This block runs only if the promise is REJECTED.
+                console.error("❌ Error!");
+                console.error(error.message);
+            });⁡
+
+        /*
+            Expected Output:
+            Fetching data... please wait.
+            (after 2 seconds)
+            ✅ Success!
+            User Name: John Doe
+            User Email: john.doe@example.com
+        */
+
+        ⁡⁣⁢⁣Handling a Failure⁡
+        
+        // Now let's call it and tell it to fail.
+
+        ⁡⁢⁢⁢const failedPromise = fetchUserData(false);
+
+        failedPromise
+        .then(user => {
+            // This block will be skipped.
+            console.log("✅ Success!");
+            console.log(`User Name: ${user.name}`);
+        })
+        .catch(error => {
+            // The .catch() block will be executed.
+            console.error("❌ Error!");
+            console.error(error.message);
+        });
+⁡
+        /*
+            Expected Output:
+            Fetching data... please wait.
+            (after 2 seconds)
+            ❌ Error!
+            Failed to fetch user data from the server.
+        */
+
+                       
+- 𝗕𝘂𝘁 𝘄𝗲 𝗺𝗮𝘅 𝗼𝗳 𝘁𝗵𝗲 𝘁𝗶𝗺𝗲 𝘂𝘀𝗲 𝗮𝘀𝘆𝗻𝗰/𝘄𝗮𝗶𝘁 𝘁𝗼 𝗔𝗰𝗵𝗶𝗲𝘃𝗲𝗱 𝗮𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝗽𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴.
+- 𝘀𝗮𝗺𝗲 𝘁𝗶𝗺𝗲 𝘄𝗲 𝘂𝘀𝗲 𝗽𝗿𝗼𝗺𝗶𝘀𝗲 𝗯𝘂𝘁 𝗶𝗻 𝘃𝗲𝗿𝘆 𝗿𝗲𝗮𝗿 𝘁𝗶𝗺𝗲. 
+- 𝗜𝗻 𝗺𝗼𝗱𝗲𝗿𝗻 𝗰𝗼𝗱𝗲, 𝘄𝗲 𝗮𝘃𝗼𝗶𝗱 𝗻𝗲𝘀𝘁𝗶𝗻𝗴 𝗰𝗮𝗹𝗹𝗯𝗮𝗰𝗸𝘀 ("𝗖𝗮𝗹𝗹𝗯𝗮𝗰𝗸 𝗛𝗲𝗹𝗹") 𝗳𝗼𝗿 𝗰𝗼𝗺𝗽𝗹𝗲𝘅 𝗮𝘀𝘆𝗻𝗰 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀. 𝗛𝗼𝘄𝗲𝘃𝗲𝗿, 𝘄𝗲 𝘀𝘁𝗶𝗹𝗹 𝘂𝘀𝗲 𝘁𝗵𝗲𝗺 𝗳𝗼𝗿 𝘀𝗶𝗺𝗽𝗹𝗲 𝘁𝗮𝘀𝗸𝘀 (𝗹𝗶𝗸𝗲 𝗶𝗻 `setTimeout`) 𝗮𝗻𝗱 𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝗔𝗣𝗜𝘀 (𝗹𝗶𝗸𝗲 `Array.map`).
+
+    Callback -> 
+       |
+    Promise -> Promise is constructor function that called using new keyword
+       |
+    async/await -> 
+
+
+  async => setTimeout
+  async => setInterval
+  async => fetch
+
+# 𝗠𝗼𝗱𝗲𝗿𝗻 𝗔𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀
+
+
+# Callback 
+    - It is an function.
+    - In the simplest terms, a callback is a function that you pass as an argument to another function.
+    - The function that receives the callback will then execute ("call back") your function at a later time, when a specific task is complete.
+    

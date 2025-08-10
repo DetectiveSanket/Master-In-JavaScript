@@ -1,0 +1,168 @@
+
+
+------------------------------------------
+|                                        |                            
+|           ⁡⁢⁣⁢ 𝗦𝗰𝗼𝗽𝗲 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻  ⁡          |
+|                                        |
+------------------------------------------
+
+ Q1. What is Scope?
+ A1. Scope refers to the context in which variables, functions, and objects are accessible in a program. It determines the visibility and lifetime of these entities.
+
+    # Type of Scope:
+      - Function Scope : (var) 
+      - Global Scope : (let, const)
+      - Block Scope : (let, const) -> {}
+
+    Q2. What is Function Scope?
+    A2. Function scope means that variables declared within a function are only accessible within that function. They cannot be accessed from outside the function.
+
+    - function without name
+      function() {
+        var x = 10; // x is only accessible within this function
+        console.log(x); // 10
+      }
+
+        console.log(x); // ReferenceError: x is not defined
+
+        function myFunction() {
+            var y = 20; // y is only accessible within this function
+            console.log(y); // 20
+        }
+
+    Q3. What is Global Scope?
+    A3. Global scope means that variables declared outside of any function are accessible from anywhere in the program. They have a global lifetime and can be accessed by any function or block of code.
+
+    - global without function name
+      var x = 10; // x is globally accessible
+
+      function myFunction() {
+        console.log(x); // 10
+      }
+
+      myFunction(); // 10
+
+      console.log(x); // 10
+
+      let y = 20; // y is also globally accessible
+
+      if (true) {
+        console.log(y); // 20
+      }
+
+        console.log(y); // 20
+
+    Q4. What is Block Scope?
+    A4. Block scope refers to variables declared within a block ex -> {} (enclosed by curly braces `{}`) using `let` or `const`. These variables are only accessible within that block and are not visible outside of it.
+
+    - block without function name 
+      {
+        let x = 10; // x is only accessible within this block
+        console.log(x); // 10
+      }
+
+        console.log(x); // ReferenceError: x is not defined
+
+        if(true) {
+            let y = 20; // y is only accessible within this if block
+            console.log(y); // 20
+        }
+
+    Q5. What is the difference between `var`, `let`, and `const`?
+       - `var` is function-scoped or globally scoped, meaning it can be accessed anywhere within the function or globally if declared outside any function.
+       - `let` and `const` are block-scoped, meaning they are only accessible within the block they are defined in. Additionally, `const` is used to declare variables that cannot be reassigned after their initial assignment.
+
+
+----------------------------------------------------------------------------------
+
+------------------------------------------
+|                                        |                            
+|            ⁡⁢⁣⁢𝗘𝘅𝗲𝗰𝘂𝘁𝗶𝗼𝗻 𝗖𝗼𝗻𝘁𝗲𝘅𝘁⁡             |
+|                                        |
+------------------------------------------
+
+## Execution Context = memory creation & execution phase (execution of code)
+    
+Q1. What is Execution Context?
+A1. Execution context is the environment in which JavaScript code is executed. It includes the scope, variables, and the value of `this` at the time of execution. Each function call creates a new execution context.
+
+Q2. What are the two phases of Execution Context?
+A2. The two phases of execution context are:
+   - Memory Creation Phase: In this phase, the JavaScript engine allocates memory for variables and functions, initializes them to `undefined`, and sets up the scope chain.
+   - Execution Phase: In this phase, the code is executed line by line, and the values of variables are assigned based on the code logic.
+
+------------------------------------------
+|                                        |                            
+|            ⁡⁢⁣⁢𝗟𝗲𝘅𝗶𝗰𝗮𝗹 𝗦𝗰𝗼𝗽𝗲  ⁡               |
+|                                        |
+------------------------------------------  
+
+⁡⁢⁣⁣## javascript - > flow lexical scope
+## javascript - > does not flow dynamic scope⁡
+
+Q1. What is Lexical Scope?
+A1. Lexical scope refers to the scope of variables based on their physical placement in the source code. It means that a variable's scope is determined by its position in the code, and nested functions can access variables from their parent scopes.
+
+Q2. How does Lexical Scope work?
+A2. In lexical scope, when a function is defined inside another function, it has access to the variables of its parent function. This allows inner functions to "remember" the environment in which they were created, even when they are executed outside of that environment.
+
+Q3. Can you provide an example of Lexical Scope?
+A3. Sure! Here's an example:
+
+```javascript
+⁡⁢⁢⁢function outerFunction() {
+    let outerVariable = 'I am from outer function'; //lexical scope variable
+
+    function innerFunction() {
+        console.log(outerVariable); // Accessing outerVariable from the outer function
+    }
+
+    innerFunction(); // Output: I am from outer function
+}
+outerFunction();⁡
+```
+
+------------------------------------------
+|                                        |                            
+|            ⁡⁢⁣⁢Closure⁡ ⁡                    |
+|                                        |
+------------------------------------------ 
+
+### Ye sach hai function ke khatam hone pe appka function and uske variables bhi khatam ho jate hai , par jab bhi closure banta hai to wo function ke andar ke variables ko yaad rakhta hai , 
+aur uska naam hota hai Closure
+
+- closure -> parent function return one child function and that child function can access the parent function variables .
+
+Q1. What is Closure?
+A1. A closure is a function that retains access to its outer scope's variables even after the outer function has finished executing. It allows the inner function to "remember" the environment in which it was created.    
+
+
+- Closure is a powerful feature in JavaScript that enables data encapsulation and private variables.
+
+- Closure is a function that has access to its own scope, the outer function's scope, and the global scope.
+
+- Closure allows for the creation of private variables and functions, as the inner function can access variables from its outer function but cannot be accessed directly from outside.
+
+
+
+Q2. How does Closure work?
+A2. When a function is defined inside another function, it forms a closure. The inner function has access to the variables of its parent function, even after the parent function has completed execution. This is because the inner function "closes over" the variables of its outer scope.
+
+Q3. Can you provide an example of Closure?
+A3. Sure! Here's an example:
+
+```javascript
+
+⁡⁢⁢⁢function outerFunction() {
+    let outerVariable = 'I am from outer function'; // Variable in outer scope
+
+    function innerFunction() {
+        console.log(outerVariable); // Accessing outerVariable from the outer function
+    }
+
+    return innerFunction; // Returning the inner function as a closure
+}
+let closureFunction = outerFunction(); // closureFunction is now a closure
+closureFunction(); // Output: I am from outer function⁡
+
+```

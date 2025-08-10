@@ -1,0 +1,44 @@
+
+
+Main concept in array
+
+ 1) Map - creates a new array by applying a function to each element
+ 2) Filter - creates a new array with all elements that pass the test implemented by the provided function
+ 3) Reduce - executes a reducer function on each element of the array, resulting in a single output value
+ 4) forEach - executes a provided function once for each array element
+
+ # common about all four methods
+   - They all take a callback function as an argument.
+   - They do not change the original array (they return a new array or value).
+   - They can all be chained together.
+
+
+   -----------------------------------------------------------------
+
+1) Map
+    - ⁡⁣⁣⁢creates a new array by applying a function to each element⁡
+    - map away return values
+    - can be used to transform data
+    - can be chained with other array methods
+
+
+4) forEach
+    - executes a provided function once for each array element
+    - ⁡⁣⁣⁢does not create a new array⁡
+    - is often used for side effects (e.g., logging)
+
+    ex-
+        let arr = [1, 2, 3, 4];
+        arr.forEach(num => {
+            console.log(num * 2);
+        });
+
+
+    • forEach vs map
+        - forEach is used for side effects (e.g., logging), while map is used for       transforming data.
+
+        - forEach does not return a new array, while map returns a new array with the   transformed elements.
+
+        - forEach can be used with any type of function, while map requires a specific ⁡⁣⁣⁢return value for each element.⁡
+
+        - forEach is generally used when you want to perform an action for each element, while map is used when you want to create a new array based on the original array.

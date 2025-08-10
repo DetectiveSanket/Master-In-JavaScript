@@ -1,0 +1,62 @@
+------------------------------------------
+|                                        |                            
+|            ⁡⁢⁣⁡⁢⁣⁢𝗧𝗵𝗶𝘀 𝗸𝗲𝘆𝘄𝗼𝗿𝗱 ⁡⁡                |
+|                                        |
+------------------------------------------ 
+
+✔️✔️ this in global scope , function scope , method , event handler, class
+
+------------------------------------------
+
+Q1: What is this keyword in JavaScript?
+A1: The `this` keyword in JavaScript refers to the context in which a function is executed. It can refer to different objects depending on how the function is called.
+
+- Q2: How does the value of `this` change in different contexts?
+A2: The value of `this` can change based on how a function is called:
+  - In the global context, `this` refers to the global object (e.g., `window` in browsers).
+  - In a function, `this` refers to the object that called the function.
+  - In an event handler, `this` refers to the element that triggered the event.
+  - In a class method, `this` refers to the instance of the class.
+
+  ex=
+
+```javascript
+
+⁡⁢⁢⁢    // ⁡⁣⁢⁢Global context⁡
+    ⁡⁢⁢⁢console.log(this); // window (in browsers)⁡
+
+    // ⁡⁣⁢⁢Function context⁡
+    ⁡⁢⁢⁢function showThis() {
+        console.log(this); // window (in browsers)
+    }
+⁡
+    // ⁡⁣⁢⁢Method context⁡ = FUNCTION INSIDE OBJECT = METHOD.....
+    ⁡⁢⁢⁢const obj = {
+    name: 'Object',
+        showThis: function() { // this refers to obj
+            console.log(this); // obj
+        }
+    };
+
+    showThis(); // window
+    obj.showThis(); // obj⁡
+
+    ⁡⁣⁢⁢// Event handler context⁡
+   ⁡⁢⁢⁢ document.getElementById('myButton').addEventListener('click', function() {
+        console.log(this); // button element that triggered the event
+    });
+
+    // Class context
+    class MyClass {
+    constructor() {
+        this.name = 'MyClass Instance';
+    }
+    showThis() {
+        console.log(this); // MyClass Instance
+    }
+    }
+
+    const myInstance = new MyClass();
+    myInstance.showThis(); // MyClass Instance⁡
+
+```
