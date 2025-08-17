@@ -17,7 +17,7 @@ Here’s the complete list of 100 JavaScript interview questions:
 14. What is the purpose of the “bind” method in JavaScript?
 15. Explain the concept of AJAX in JavaScript.
 16. What is the “typeof” operator used for?  ✔️
-17. How does JavaScript handle errors and exceptions?
+17. How does JavaScript handle errors and exceptions? ✔️
 18. Explain the concept of event-driven programming in JavaScript.
 19. What is the purpose of the “async” and “await” keywords in JavaScript?
 
@@ -101,7 +101,7 @@ Here’s the complete list of 100 JavaScript interview questions:
 
 91. Explain how to optimize JavaScript code for performance.
 92. What is a service worker in JavaScript?
-93. How do you use “try...catch” for error handling in JavaScript?
+93. How do you use “try...catch” for error handling in JavaScript? ✔️
 94. Explain how promises can be chained.
 95. What are the benefits of using closures in JavaScript?
 96. How can you reverse a string in JavaScript?
