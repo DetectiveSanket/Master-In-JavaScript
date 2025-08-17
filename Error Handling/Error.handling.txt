@@ -1,0 +1,37 @@
+
+# Error Handling in JavaScript
+
+
+    • What is Error Handling in JavaScript?
+    -> Error handling is the process of managing errors that occur during the execution of a program. It allows developers to gracefully handle unexpected situations, preventing the program from crashing and providing a way to recover or log errors.
+    OR Error handling is the process of anticipating and responding to errors that might occur during the execution of your code
+
+
+    • ⁡⁢⁣⁣How is Error Handling Achieved in JavaScript?⁡
+    -> The primary mechanism for synchronous error handling is the `try...catch...finally` statement.
+    -> For asynchronous code (like API calls), we use ⁡⁣⁣⁢promise .catch() methods or try...catch with async/await⁡.
+
+        1. ⁡⁢⁢⁡⁣⁢The try...catch...finally Block
+        - The `try` block contains code that may throw an error.
+        - ⁡⁣⁢⁣catch(error):⁡ If an error occurs in the ⁡⁣⁣⁢try⁡ block, the program execution immediately jumps to the ⁡⁣⁣⁢catch block⁡. The error object contains information about what went wrong.
+        - ⁡⁣⁢⁣finally:⁡ This block is optional. The code inside finally will execute regardless of whether an error occurred or not. It's perfect for cleanup tasks, like closing a connection or resetting a state.
+
+        2. The throw Statement
+        - Sometimes, you need to create your own errors. The throw statement allows you to create custom exceptions. This is extremely useful for input validation or enforcing business logic.
+
+        3. Types of Errors in JavaScript
+        - JavaScript has several built-in error types, including:
+            Error: The generic base type for all errors.
+            SyntaxError: An error in parsing code (e.g., a missing parenthesis).
+            ReferenceError: Thrown when you try to use a variable that hasn't been declared.
+            TypeError: Thrown when a value is not of the expected type (e.g., calling a number as a function, or accessing a property on null).
+            RangeError: Thrown when a number is outside its allowed range
+
+        4. Error Handling in Asynchronous Code
+        - Handling errors in asynchronous operations like fetching data from an API is critical. You can use the .catch() method with Promises or try...catch with async/await to manage errors effectively.
+
+            a) Using Promises with .catch()
+            - When using Promises, you can chain a .catch() block to handle any error that occurs in the promise chain (including the initial operation or any .then() block).
+
+            b) Using async/await with try...catch (Modern & Common) 
+            - This is the most popular and readable way to handle async errors. It lets you use the familiar try...catch syntax for asynchronous code.

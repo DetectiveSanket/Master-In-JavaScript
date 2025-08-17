@@ -8,7 +8,7 @@ const validJson = '{"name": "Bob", "age": 25}';
 function parseUser(jsonString) {
   try {
     console.log("Attempting to parse JSON...");
-    const user = JSON.parse(jsonString);
+    const user = JSON.parse(jsonString); //JSON.parse() can throw an error if the JSON is invalid.
     console.log("Success! User:", user.name);
     return user;
   } catch (error) {
@@ -22,9 +22,9 @@ function parseUser(jsonString) {
   }
 }
 
-parseUser(potentiallyBadJson);
+parseUser(potentiallyBadJson); // This will trigger the catch block
 console.log("\n");
-parseUser(validJson);
+parseUser(validJson); // This will succeed and log the user information.
 
 
 // --- 2. Example with throw ---
