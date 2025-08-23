@@ -12,7 +12,7 @@ Here’s the complete list of 100 JavaScript interview questions:
 10. What is the purpose of the “this” keyword in JavaScript?
 
 11. What are the different ways to create objects in JavaScript?
-12. Explain the concept of callback functions in JavaScript.
+12. Explain the concept of callback functions in JavaScript. ✔️
 13. What is event bubbling and event capturing in JavaScript?
 14. What is the purpose of the “bind” method in JavaScript?
 15. Explain the concept of AJAX in JavaScript.

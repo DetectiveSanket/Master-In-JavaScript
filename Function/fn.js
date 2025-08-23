@@ -136,3 +136,76 @@
 
         const sum = numbers.reduce((acc, num) => acc + num, 0);
         console.log(sum); // Output: 15
+
+
+        
+
+        
+//  Callback Function    
+    /* 
+        In JavaScript, functions are "first-class citizens." This means they can be treated like any other variable: they can be passed as arguments to other functions, returned from functions, and assigned to variables.
+
+        ⁡⁣⁣⁢A callback function⁡ is simply a function that is passed as an ⁡⁣⁢⁣argument to another function⁡. The outer function can then "call back" this function at a later time to perform a specific task.
+
+        This pattern is fundamental to JavaScript, especially for handling asynchronous operations.  
+        
+       # Why Use Callbacks?
+        - JavaScript is single-threaded, meaning it can only do one thing at a time. If it has to wait for a long operation (like fetching data from a server, reading a file, or waiting for a timer), the entire program would freeze.
+
+        - Callbacks allow you to start an operation and provide a function that will be executed once that operation completes, without blocking the main thread.
+    */
+
+        //todo: ------- Synchronous Callback Example
+
+        //? This is our main function that accepts a callback
+        function processUserInput(name, callback) {
+            const greeting = `Hello, ${name}!`;
+            // We "call back" the function that was passed in
+            callback(greeting);
+        }
+
+        // This is our callback function
+        function logGreeting(message) {
+            console.log(message);
+        }
+
+        // We call processUserInput and pass logGreeting as the callback
+        processUserInput('Alice', logGreeting);
+
+        // Output:
+        // Hello, Alice!
+
+        //todo:- ----- Asynchronous Callback Example
+
+        console.log("Program started.");
+
+        // This function simulates fetching data from a server
+        function fetchData(callback) {
+
+            console.log("Fetching data... this will take 3 seconds.");
+            // setTimeout simulates a network delay
+            setTimeout(() => {
+                const data = { id: 1, name: "John Doe" };
+                console.log("Data has been fetched.");
+                // The callback is executed only after the 3-second delay
+                callback(data);
+            }, 3000);
+            
+        }
+
+        // We call fetchData and provide an anonymous function as the callback
+        fetchData((data) => {
+            console.log("Processing received data:");
+            console.log(data);
+        });
+
+        console.log("Program continues to run while data is being fetched...");
+
+        // Output:
+        // Program started.
+        // Fetching data... this will take 3 seconds.
+        // Program continues to run while data is being fetched...
+        // (after 3 seconds)
+        // Data has been fetched.
+        // Processing received data:
+        // { id: 1, name: 'John Doe' }
