@@ -1,6 +1,6 @@
 
 
-Main concept in array
+## ⁡⁢⁣⁣𝗠𝗮𝗶𝗻 𝗰𝗼𝗻𝗰𝗲𝗽𝘁 𝗶𝗻 𝗮𝗿𝗿𝗮𝘆⁡
 
  1) Map - creates a new array by applying a function to each element
  2) Filter - creates a new array with all elements that pass the test implemented by the provided function
