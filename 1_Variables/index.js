@@ -43,6 +43,17 @@ functionScopeExample();
 console.log("\nExample 3: Scope outside functions");
 scopeOutsideFunction();
 
+// Hoisting impact per type
+// hoisting -> ek variable ko jab js mein banaate hai to wo
+//  variable do hisso mein toot jaata hai and uska declare part upar chala jaata hai and uska initialization part neeche rehjata hai
+
+ 
+console.log(a); // undefined
+var a; 
+
+let b;
+// console.log(b); // ReferenceError: Cannot access 'b' before initialization
+
 /* 
     • Block scope is created by let and const
     • Function scope is created by var
