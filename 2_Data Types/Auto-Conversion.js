@@ -12,6 +12,8 @@ console.log("5" + null);    // "5null" → null converted to string
 console.log("5" + undefined); // "5undefined" → undefined converted to string
 console.log(1 + "5");       // "15"   → number converted to string
 console.log(true + "5");    // "true5" → boolean converted to string
+console.log(null + 1);      // 1      → null converted to 0
+console.log(true + false); // 1      → true becomes 1, false becomes 0, then 1+0=1
 
 console.log("\n=== NUMERIC COERCION (-, *, /, % operators) ===");
 console.log("5" - 1);       // 4      → string converted to number
