@@ -2,12 +2,12 @@
 
 ## ⁡⁢⁣⁣𝗠𝗮𝗶𝗻 𝗰𝗼𝗻𝗰𝗲𝗽𝘁 𝗶𝗻 𝗮𝗿𝗿𝗮𝘆⁡
 
- 1) Map - creates a new array by applying a function to each element
+ 1) Map - creates a new array by applying a function to each element. return values
  2) Filter - creates a new array with all elements that pass the test implemented by the provided function
  3) Reduce - executes a reducer function on each element of the array, resulting in a single output value
- 4) forEach - executes a provided function once for each array element
+ 4) forEach - executes a provided function once for each array element. Does not create a new array. but return undefined.
 
- # common about all four methods
+ # Common about all four methods
    - They all take a callback function as an argument.
    - They do not change the original array (they return a new array or value).
    - They can all be chained together.
@@ -15,15 +15,21 @@
 
    -----------------------------------------------------------------
 
-1) Map
+1) ⁡⁣⁢⁣𝗠𝗮𝗽⁡
     - ⁡⁣⁣⁢creates a new array by applying a function to each element⁡
+    * use when you want to transform data
+    - does not modify the original array
+    - compuslary return a value for each element
     - map away return values
     - can be used to transform data
     - can be chained with other array methods
 
 
-4) forEach
+4) ⁡⁣⁢⁣𝗳𝗼𝗿𝗘𝗮𝗰𝗵⁡
     - executes a provided function once for each array element
+    * Used when you want to perform an action for each element (e.g., logging)
+    - does not modify the original array
+    - does not return a new array
     - ⁡⁣⁣⁢does not create a new array⁡
     - is often used for side effects (e.g., logging)
 
@@ -35,9 +41,9 @@
 
 
     • forEach vs map
-        - forEach is used for side effects (e.g., logging), while map is used for       transforming data.
+        - forEach is used for side effects (e.g., logging), while map is used for transforming data.
 
-        - forEach does not return a new array, while map returns a new array with the   transformed elements.
+        - forEach does not return a new array, while map returns a new array with the transformed elements.
 
         - forEach can be used with any type of function, while map requires a specific ⁡⁣⁣⁢return value for each element.⁡
 
