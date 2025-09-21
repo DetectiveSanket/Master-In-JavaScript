@@ -4,6 +4,7 @@ let obj = {} // empty object
 obj.name = "John"; // adding a property
 obj.age = 30;      // adding another property
 console.log(obj);
+console.log("\n");
 
 //------------------------------------------------------------
 
@@ -15,6 +16,12 @@ let person = {
 person.age; // 25
 person["city"]; // "New York"
 console.log(person); // { name: "Alice", age: 25, city: "New York" }
+person.country = "USA"; // adding a new property
+person.age = 26; // updating an existing property
+delete person.city; // deleting a property
+console.log(person); // { name: "Alice", age: 26, country: "USA" }
+console.log(typeof person); // "object"
+console.log("\n");
 
 //-------------------------------------------------------------
 
