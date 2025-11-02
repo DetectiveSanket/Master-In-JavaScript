@@ -1,5 +1,4 @@
 
-
 ------------------------------------------
 |                                        |                            
 |           ⁡⁢⁣⁢ 𝗦𝗰𝗼𝗽𝗲 𝗜𝗻𝗳𝗼𝗿𝗺𝗮𝘁𝗶𝗼𝗻  ⁡          |
@@ -11,7 +10,7 @@
 
     # Type of Scope:
       - Function Scope : (var) 
-      - Global Scope : (let, const)
+      - Global Scope : (let, const , var)
       - Block Scope : (let, const) -> {}
 
     Q2. What is Function Scope?

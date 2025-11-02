@@ -43,7 +43,7 @@
                 return `Hello, ${name}!`;
             };
 
-            const namedSayHello = function greet(name) { // Named function expression
+            const namedSayHello = function greet(name) { // Named function expression -> (not anonymous)...
                 return `Hello, ${name}!`;
             };
 
