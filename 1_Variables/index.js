@@ -11,6 +11,7 @@ function blockScopeExample() {
     console.log("Outside block x:", x); // Will print 10
 }
 
+
 // Example 2: Function scope with var
 function functionScopeExample() {
     var y = 10;
@@ -39,12 +40,12 @@ blockScopeExample();
 
 console.log("\nExample 2: Function scope with var");
 functionScopeExample();
-
+ 
 console.log("\nExample 3: Scope outside functions");
 scopeOutsideFunction();
 
 // Hoisting impact per type
-//* hoisting -> ek variable ko jab js mein banaate hai to wo variable do hisso mein toot jaata hai and uska declare part upar chala jaata hai and uska initialization part neeche rehjata hai
+//* hoisting -> ek variable ko jab JavaScript mein banaate hai to wo variable do hisso mein toot jaata hai and uska declare part upar chala jaata hai and uska initialization part neeche rehjata hai
 
  
 console.log(a); // undefined

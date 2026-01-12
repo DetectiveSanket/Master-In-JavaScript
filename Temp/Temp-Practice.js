@@ -1,16 +1,21 @@
 
-
-let arr = [1, 2, 3, 4, 5];
-
-for(let key in arr) {
-    console.log(`Index ${key} has value ${arr[key]}`);
+function outer() {
+    let counter = 0;
+    return function () {
+        counter++;
+        console.log("count is : " , counter);
+    }
 }
+outer();
 
-console.log("len is : ", arr.length);
 
-delete arr[2];
-console.log("len is ; " , arr.length)
+function hello() {
+    console.log("sanket");
+}
+hello()
 
-console.log(arr);
+outer();
 
-console.log(arr[2])
+let counter = outer();
+counter(); // 1
+counter() // 2

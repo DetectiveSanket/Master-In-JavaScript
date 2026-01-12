@@ -1,4 +1,6 @@
-Here’s the complete list of 100 JavaScript interview questions:
+⁡⁢⁣⁣    _______________________________________________________________________________  
+    |    Here’s the complete list of 100 JavaScript interview questions:           | 
+    |______________________________________________________________________________|
 
 1. What is JavaScript? ✔️
 2. What are the data types in JavaScript?  ✔️

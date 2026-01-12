@@ -1,3 +1,13 @@
+/* 
+ ⁡⁢⁣⁣ 1. What is JavaScript ?⁡
+    - JavaScript is a programming language mainly used to make web pages interactive and also used on servers using Node.js.
+    - Example: button click, form validation, showing/hiding content, animations.
+    - It works with:
+        HTML = structure, CSS = design, JavaScript = action.
+    - JavaScript can run in the browser and also on the server using Node.js.
+*/
+
+// !-------------------------------------3. Next Question --------------------------------
 
 // ⁡⁢⁣⁣3. What is the difference between null and undefined?⁡
 
@@ -20,7 +30,7 @@ console.log("null == undefined:", null == undefined); // true
 
 // Strict equality (===) considers them different because it checks type and value.
 console.log("null === undefined:", null === undefined); // false
-
+ 
 // *--- 4. Mathematical Operations ---
 // `null` is treated ⁡⁣⁣⁢as 0⁡ in numeric operations. (falsy value)
 console.log("10 + null:", 10 + null); // 10
@@ -28,7 +38,7 @@ console.log("10 + null:", 10 + null); // 10
 // `undefined` becomes ⁡⁣⁣⁢NaN⁡ (Not a Number) in numeric operations.
 console.log("10 + undefined:", 10 + undefined); // NaN
 
-// *⁡⁣⁢⁣--- 5. Practical Examples ---⁡
+// * ---- Practical example --------
 // A function that doesn't return anything implicitly returns undefined.
 function doNothing() { /* No return statement */ }
 console.log("Function with no return:", doNothing()); // undefined
@@ -38,7 +48,7 @@ function findUser(name) { return name === "Admin" ? { name: "Admin" } : null; }
 console.log("Function returning null:", findUser("John")); // null
 
 
-// !------------------------------------- Next Question--------------------------------
+// !-------------------------------------4 Next Question--------------------------------
 
 // ⁡⁢⁣⁣4. Explain the concept of hoisting in JavaScript.⁡
 
@@ -58,13 +68,13 @@ console.log(myVar); // Outputs: "Hello, Hoisting!"
 // console.log(myVar)⁡;
 
 
-// *--- 2. Hoisting with `let` and `const` (Temporal Dead Zone - TDZ) ---
+// *--- 2. Hoisting with `let` and `const` (⁡⁣⁣⁢Temporal Dead Zone - TDZ⁡) ---
 // `let` and `const` are hoisted but not initialized. Accessing them before the declaration results in a ReferenceError. This is the TDZ.
 
 try {
   console.log(myLet); // This line will throw a ReferenceError
 } catch (e) {
-  console.log(e.message); // "Cannot access 'myLet' before initialization"
+  console.log("error -> ", e.message); // "Cannot access 'myLet' before initialization"
 }
 let myLet = "No more TDZ!";
 console.log(myLet); // "No more TDZ!"
@@ -93,7 +103,7 @@ var sayGoodbye = function() {
 // Now this works because the function is defined after the call
 sayGoodbye(); // "Goodbye!"
 
-// !------------------------------------- Next Question--------------------------------
+// !-------------------------------------7. Next Question--------------------------------
 
 // ⁡⁢⁣⁣7. Explain the concept of prototypal inheritance in JavaScript.⁡
 

@@ -9,12 +9,12 @@ console.log(typeof p);
 let str = 0;
 console.log(typeof str)
 
-console.log(!!"sanket");
-console.log(!"sanket");
 console.log("sanket")
+console.log(!"sanket");
+console.log(!!"sanket");
 
-console.log(!!"");
 console.log(!"");
+console.log(!!"");
 
 let string = "34";
 console.log(typeof string);
