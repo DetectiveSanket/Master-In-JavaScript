@@ -9,7 +9,7 @@
 
 // !-------------------------------------3. Next Question --------------------------------
 
-// ⁡⁢⁣⁣3. What is the difference between null and undefined?⁡
+// ⁡⁢⁣⁣3. What is the difference between null and undefined?⁡u
 
 // *--- 1. Basic Definition ---
 // `null` is an explicit assignment. It means "no value".

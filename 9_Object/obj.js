@@ -8,20 +8,23 @@ console.log("\n");
 
 //------------------------------------------------------------
 
-let person = {
-    name: "Alice",
-    age: 25,
-    city: "New York",
-};
-person.age; // 25
-person["city"]; // "New York"
-console.log(person); // { name: "Alice", age: 25, city: "New York" }
-person.country = "USA"; // adding a new property
-person.age = 26; // updating an existing property
-delete person.city; // deleting a property
-console.log(person); // { name: "Alice", age: 26, country: "USA" }
-console.log(typeof person); // "object"
-console.log("\n");
+    let person = {
+        name: "Alice",
+        age: 25,
+        city: "New York",
+    };
+
+    person.age; // 25
+    person["city"]; // "New York"
+    console.log(person); // { name: "Alice", age: 25, city: "New York" }
+
+    person.country = "USA"; // adding a new property
+    person.age = 26; // updating an existing property
+    delete person.city; // deleting a property
+
+    console.log(person); // { name: "Alice", age: 26, country: "USA" }
+    console.log(typeof person); // "object"
+    console.log("\n");
 
 //-------------------------------------------------------------
 
@@ -43,6 +46,10 @@ details.address.location.latitude; // 19.0760
 //# ⁡⁢⁣⁣destructuring⁡
 let {latitude , longitude} = details.address.location; 
 console.log(latitude, longitude); // 19.0760 72.8777
+
+let {a , b} = details.address.location
+console.log(a , b) // undefine undefine
+
 // let { name, address: { city, pin, location: { latitude, longitude } } } = details;
 
 //-------------------------------------------------------------

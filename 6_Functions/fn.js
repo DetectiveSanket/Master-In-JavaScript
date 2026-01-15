@@ -15,7 +15,6 @@
             - Callback Hell
             - Promise Function
 
-
 */
 
 // ⁡⁢⁣⁣function declaration⁡
@@ -26,7 +25,7 @@
         // call before declaration
         console.log(great("sanket")); // works fine
         function great(name) { // great is named or anonymous function
-        return `Hello ${name}`;
+            return `Hello ${name}`;
         }
 
         console.log(great("John")); // works fine
@@ -115,11 +114,11 @@
         const ans = await hello();
         console.log(ans); // Output: Result of fetch
 
-            async function fetchData() {
-                const response = await fetch('https://api.example.com/data');
-                const data = await response.json();
-                return data;
-            }
+        async function fetchData() {
+            const response = await fetch('https://api.example.com/data');
+            const data = await response.json();
+            return data;
+        }
 
 // ⁡⁢⁣⁣Higher-Order Function⁡
     /* 
