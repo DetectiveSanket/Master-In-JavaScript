@@ -1,6 +1,6 @@
 
-# Error Handling in JavaScript
-
+# 𝙀͟𝙧͟𝙧͟𝙤͟𝙧 𝙃͟𝙖͟𝙣͟𝙙͟𝙡͟𝙞͟𝙣͟𝙜 𝙞͟𝙣 𝙅͟𝙖͟𝙫͟𝙖͟𝙎͟𝙘͟𝙧͟𝙞͟𝙥͟𝙩
+____________________________________________________________________________________________________
 
     • What is Error Handling in JavaScript?
     -> Error handling is the process of managing errors that occur during the execution of a program. It allows developers to gracefully handle unexpected situations, preventing the program from crashing and providing a way to recover or log errors.

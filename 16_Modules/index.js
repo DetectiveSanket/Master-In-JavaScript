@@ -1,7 +1,5 @@
 //! CommonJS Modules (CJS)
 
-
-
 //* single file import and export
 // const great = require('./first.js');
 // great();

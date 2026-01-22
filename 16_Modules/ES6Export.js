@@ -29,7 +29,6 @@ export { // Exporting multiple named exports
 
 
 //* change the name in import file
-
 export const sanket = () => {
   console.log("Sanket");
 }

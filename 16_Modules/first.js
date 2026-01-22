@@ -22,7 +22,7 @@ const divide = (a , b) => {
     return a / b;
 }
 
-//*//*Export multiple item
+//* Export multiple item
 module.exports = {
     add , 
     sub , 

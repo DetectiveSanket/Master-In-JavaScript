@@ -1,9 +1,58 @@
 
+================================================================================
+                  13. ASYNCHRONOUS JAVASCRIPT: EVOLUTION
+================================================================================
 
-# JavaScript is by default Synchronous in nature and and single-threaded.
-# All indian mother are by default Asynchronous in nature.
+🔹 THREE MAIN WAYS TO HANDLE ASYNCHRONOUS TASKS
+------------------------------------------------
+In JavaScript, some tasks take time (like fetching data from a database). 
+We handle them in three main ways:
 
-# Synchronous
+
+   A. CALLBACKS (The Old Way)
+   ---------------------------
+   A callback is just a function passed into another function to be called 
+   later.
+
+   📞 Analogy: 
+      You leave your phone number at a shop and ask them to "call you back" 
+      when a product arrives.
+
+   ❌ The Problem: 
+      "Callback Hell" - If you have to do 5 things in a row, your code starts 
+      looking like a sideways pyramid (messy and hard to read).
+
+
+
+   B. PROMISES (The Better Way)
+   -----------------------------
+   As discussed above, Promises replaced messy callbacks with a cleaner 
+   .then().then() chain. It makes the code look more like a list of 
+   instructions.
+
+
+
+   C. ASYNC / AWAIT (The Modern Way)
+   ----------------------------------
+   This is "Syntactic Sugar" - built on top of Promises but makes asynchronous 
+   code look and behave like synchronous (line-by-line) code.
+
+   • async: 
+     Tells JS that this function will handle asynchronous tasks
+
+   • await: 
+     Tells JS to "pause and wait" for the promise to finish before moving to 
+     the next line. Much easier to read!
+
+
+
+
+
+
+# JavaScript is by default ⁡⁣⁣⁢Synchronous⁡ in nature and single-threaded.
+# All indian mother are by default Asynchronous in nature. <- They do all type of works...
+
+# ⁡⁢⁣⁣𝗦𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀⁡
    - This means that code is executed line by line, one at a time.
    - The JavaScript engine can only process one statement at a time in a single sequence. 
    - The next line of code is not executed until the current one has finished.
@@ -46,33 +95,34 @@
         // Output:
         // Start
         // End
-        // Inside setTimeout after 2 seconds⁡/**
- * @param {Promise} promise1
- * @param {Promise} promise2
- * @return {Promise}
- */
-var addTwoPromises = async function(promise1, promise2) {
+        // Inside setTimeout after 2 seconds
+
+* @param {Promise} promise1
+* @param {Promise} promise2
+* @return {Promise}
+
+    var addTwoPromises = async function(promise1, promise2) {
 
         const a = new Promise((resolve , reject) => {
             resolve(promise1,promise2);
         })
         
-    return a;
-};
+        return a;
+    };
 
-/**
- * addTwoPromises(Promise.resolve(2), Promise.resolve(2))
- *   .then(console.log); // 4
- */
+    
+    addTwoPromises(Promise.resolve(2), Promise.resolve(2))
+      .then(console.log); // 4
+    
 
     - This demonstrates the ⁡⁣⁣⁢non-blocking⁡ nature of asynchronous JavaScript. 
     - The long-running task (⁡⁣⁣⁢setTimeout⁡) didn't stop the rest of the code from executing.   
 
 
-# 𝗠𝗼𝗱𝗲𝗿𝗻 𝗔𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 :
+# ⁡⁢⁣⁣𝗠𝗼𝗱𝗲𝗿𝗻 𝗔𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁⁡ :
     * Promises and async/await
 
-        - While callbacks are the underlying mechanism, modern JavaScript uses ⁡⁣⁣⁢Promises⁡ and the ⁡⁣⁣⁢async/await⁡ syntax to make asynchronous code much cleaner and easier to manage, avoiding "⁡⁢⁣⁢callback hell⁡." They are essentially syntactic sugar over the same event loop mechanism.
+        - While callbacks are the underlying mechanism, modern JavaScript uses ⁡⁣⁣⁢Promises⁡ and the ⁡⁣⁣⁢async/await⁡ syntax to make ⁡⁣⁣⁢asynchronous⁡ code much cleaner and easier to manage, avoiding "⁡⁢⁣⁢callback hell⁡." They are essentially syntactic sugar over the same event loop mechanism.
 
      -> Table
            ⁡⁢⁣⁣ feature             Synchronous         Asynchronous⁡
@@ -81,7 +131,7 @@ var addTwoPromises = async function(promise1, promise2) {
         -   Use Case            Simple Tasks        Api calls , DB query , timers , fetch
         -   Error Handling      No                  Yes
 
-Q. Why Do we Get Promise Instead of Data ?
+⁡⁣⁢⁣Q. Why Do we Get Promise Instead of Data ?⁡
     ex-
         ⁡⁢⁢⁢let data = fetch("https://jsonplaceholder.typicode.com/todos/1")
         console.log(data);⁡
@@ -92,7 +142,7 @@ Q. Why Do we Get Promise Instead of Data ?
             - so instead , its gives you Promise , saying
                 "I will give you the data later , once it arrives."
 
-Q. 𝗘𝘅𝗽𝗹𝗮𝗶𝗻 𝗣𝗿𝗼𝗺𝗶𝘀𝗲𝘀 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 𝘄𝗶𝘁𝗵 𝗮 𝘀𝗶𝗺𝗽𝗹𝗲  
+⁡⁣⁢⁣Q. 𝗘𝘅𝗽𝗹𝗮𝗶𝗻 𝗣𝗿𝗼𝗺𝗶𝘀𝗲𝘀 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 𝘄𝗶𝘁𝗵 𝗮 𝘀𝗶𝗺𝗽𝗹𝗲⁡  
     - A ⁡⁣⁣⁢Promise⁡ is a special JavaScript ⁡⁣⁣⁢object⁡ that acts as a placeholder for a future value
 
     A Promise can be in one of three states:
@@ -100,6 +150,14 @@ Q. 𝗘𝘅𝗽𝗹𝗮𝗶𝗻 𝗣𝗿𝗼𝗺𝗶𝘀𝗲𝘀 𝗶𝗻 𝗝�
        1) Pending: The initial state. The asynchronous operation has not completed yet.
        2) Fulfilled (or Resolved): The operation completed successfully, and the promise now has a resulting value.
        3) Rejected: The operation failed, and the promise has a reason for the failure (an error).
+
+       >< Type of Promise.
+           a) Promise.all():
+           b) Promise.race():
+           c) Promise.allSettled():
+           d) Promise.any():
+           e) Promise.resolve():
+           f) Promise.reject():
 
       -> A Simple Example: Simulating a Data Fetch
             Let's create a function that simulates fetching user data from a server. This operation takes time, so it's a perfect use case for a Promise. Our function will return a promise that either resolves with user data or rejects with an error.
@@ -119,7 +177,6 @@ Q. 𝗘𝘅𝗽𝗹𝗮𝗶𝗻 𝗣𝗿𝗼𝗺𝗶𝘀𝗲𝘀 𝗶𝗻 𝗝�
                                 age : 30
                             }
                             resolve(userData);
-
                         }
                         else {
                             reject(new Error("Failed to fetch data"));
@@ -155,11 +212,11 @@ Q. 𝗘𝘅𝗽𝗹𝗮𝗶𝗻 𝗣𝗿𝗼𝗺𝗶𝘀𝗲𝘀 𝗶𝗻 𝗝�
 
         /*
             Expected Output:
-            Fetching data... please wait.
-            (after 2 seconds)
-            ✅ Success!
-            User Name: John Doe
-            User Email: john.doe@example.com
+                Fetching data... please wait.
+                (after 2 seconds)
+                ✅ Success!
+                User Name: John Doe
+                User Email: john.doe@example.com
         */
 
         ⁡⁣⁢⁣Handling a Failure⁡
@@ -182,16 +239,16 @@ Q. 𝗘𝘅𝗽𝗹𝗮𝗶𝗻 𝗣𝗿𝗼𝗺𝗶𝘀𝗲𝘀 𝗶𝗻 𝗝�
 ⁡
         /*
             Expected Output:
-            Fetching data... please wait.
-            (after 2 seconds)
-            ❌ Error!
-            Failed to fetch user data from the server.
+                Fetching data... please wait.
+                (after 2 seconds)
+                ❌ Error!
+                Failed to fetch user data from the server.
         */
 
                        
-- 𝗕𝘂𝘁 𝘄𝗲 𝗺𝗮𝘅 𝗼𝗳 𝘁𝗵𝗲 𝘁𝗶𝗺𝗲 𝘂𝘀𝗲 𝗮𝘀𝘆𝗻𝗰/𝘄𝗮𝗶𝘁 𝘁𝗼 𝗔𝗰𝗵𝗶𝗲𝘃𝗲𝗱 𝗮𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝗽𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴.
-- 𝘀𝗮𝗺𝗲 𝘁𝗶𝗺𝗲 𝘄𝗲 𝘂𝘀𝗲 𝗽𝗿𝗼𝗺𝗶𝘀𝗲 𝗯𝘂𝘁 𝗶𝗻 𝘃𝗲𝗿𝘆 𝗿𝗲𝗮𝗿 𝘁𝗶𝗺𝗲. 
-- 𝗜𝗻 𝗺𝗼𝗱𝗲𝗿𝗻 𝗰𝗼𝗱𝗲, 𝘄𝗲 𝗮𝘃𝗼𝗶𝗱 𝗻𝗲𝘀𝘁𝗶𝗻𝗴 𝗰𝗮𝗹𝗹𝗯𝗮𝗰𝗸𝘀 ("𝗖𝗮𝗹𝗹𝗯𝗮𝗰𝗸 𝗛𝗲𝗹𝗹") 𝗳𝗼𝗿 𝗰𝗼𝗺𝗽𝗹𝗲𝘅 𝗮𝘀𝘆𝗻𝗰 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀. 𝗛𝗼𝘄𝗲𝘃𝗲𝗿, 𝘄𝗲 𝘀𝘁𝗶𝗹𝗹 𝘂𝘀𝗲 𝘁𝗵𝗲𝗺 𝗳𝗼𝗿 𝘀𝗶𝗺𝗽𝗹𝗲 𝘁𝗮𝘀𝗸𝘀 (𝗹𝗶𝗸𝗲 𝗶𝗻 `setTimeout`) 𝗮𝗻𝗱 𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝗔𝗣𝗜𝘀 (𝗹𝗶𝗸𝗲 `Array.map`).
+    * ⁡⁣⁣⁢𝗕𝘂𝘁 𝘄𝗲 𝗺𝗮𝘅 𝗼𝗳 𝘁𝗵𝗲 𝘁𝗶𝗺𝗲 𝘂𝘀𝗲 𝗮𝘀𝘆𝗻𝗰/𝘄𝗮𝗶𝘁 𝘁𝗼 𝗔𝗰𝗵𝗶𝗲𝘃𝗲𝗱 𝗮𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝗽𝗿𝗼𝗴𝗿𝗮𝗺𝗺𝗶𝗻𝗴.⁡
+    - 𝘀𝗮𝗺𝗲 𝘁𝗶𝗺𝗲 𝘄𝗲 𝘂𝘀𝗲 𝗽𝗿𝗼𝗺𝗶𝘀𝗲 𝗯𝘂𝘁 𝗶𝗻 𝘃𝗲𝗿𝘆 𝗿𝗲𝗮𝗿 𝘁𝗶𝗺𝗲. 
+    - 𝗜𝗻 𝗺𝗼𝗱𝗲𝗿𝗻 𝗰𝗼𝗱𝗲, 𝘄𝗲 𝗮𝘃𝗼𝗶𝗱 𝗻𝗲𝘀𝘁𝗶𝗻𝗴 𝗰𝗮𝗹𝗹𝗯𝗮𝗰𝗸𝘀 ("𝗖𝗮𝗹𝗹𝗯𝗮𝗰𝗸 𝗛𝗲𝗹𝗹") 𝗳𝗼𝗿 𝗰𝗼𝗺𝗽𝗹𝗲𝘅 𝗮𝘀𝘆𝗻𝗰 𝗼𝗽𝗲𝗿𝗮𝘁𝗶𝗼𝗻𝘀. 𝗛𝗼𝘄𝗲𝘃𝗲𝗿, 𝘄𝗲 𝘀𝘁𝗶𝗹𝗹 𝘂𝘀𝗲 𝘁𝗵𝗲𝗺 𝗳𝗼𝗿 𝘀𝗶𝗺𝗽𝗹𝗲 𝘁𝗮𝘀𝗸𝘀 (𝗹𝗶𝗸𝗲 𝗶𝗻 `setTimeout`) 𝗮𝗻𝗱 𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝗔𝗣𝗜𝘀 (𝗹𝗶𝗸𝗲 `Array.map`).
 
     Callback -> 
        |
@@ -200,14 +257,14 @@ Q. 𝗘𝘅𝗽𝗹𝗮𝗶𝗻 𝗣𝗿𝗼𝗺𝗶𝘀𝗲𝘀 𝗶𝗻 𝗝�
     async/await -> 
 
 
-  async => setTimeout
-  async => setInterval
-  async => fetch
+    > async code => setTimeout
+    > async code => setInterval
+    > async code => fetch
 
-# 𝗠𝗼𝗱𝗲𝗿𝗻 𝗔𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀
+⁡⁢⁣⁣# 𝗠𝗼𝗱𝗲𝗿𝗻 𝗔𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀⁡
 
 
-# Callback 
+⁡⁢⁣⁣# Callback⁡ 
     - It is an function.
     - In the simplest terms, a callback is a function that you pass as an argument to another function.
     - The function that receives the callback will then execute ("call back") your function at a later time, when a specific task is complete.
