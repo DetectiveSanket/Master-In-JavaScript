@@ -98,17 +98,17 @@ Here are the other types of Promise methods used in professional development:
 
 
 ================================================================================
-                  13. ASYNCHRONOUS JAVASCRIPT: EVOLUTION
+                  ⁡⁢⁣⁣13. ASYNCHRONOUS JAVASCRIPT: EVOLUTION⁡
 ================================================================================
 
-🔹 THREE MAIN WAYS TO HANDLE ASYNCHRONOUS TASKS
+🔹 ⁡⁣⁢⁣𝙏𝙃𝙍𝙀𝙀 𝙈𝘼𝙄𝙉 𝙒𝘼𝙔𝙎 𝙏𝙊 𝙃𝘼𝙉𝘿𝙇𝙀 𝘼𝙎𝙔𝙉𝘾𝙃𝙍𝙊𝙉𝙊𝙐𝙎 𝙏𝘼𝙎𝙆𝙎⁡
 ------------------------------------------------
 In JavaScript, some tasks take time (like fetching data from a database). 
 We handle them in three main ways:
 
 
 
-   A. CALLBACKS (The Old Way)
+   ⁡⁣⁣⁢A. CALLBACKS (The Old Way)⁡
    ---------------------------
    A callback is just a function passed into another function to be called 
    later.
@@ -123,7 +123,7 @@ We handle them in three main ways:
 
 
 
-   B. PROMISES (The Better Way)
+   ⁡⁣⁣⁢B. PROMISES (The Better Way)⁡
    -----------------------------
    As discussed above, Promises replaced messy callbacks with a cleaner 
    .then().then() chain. It makes the code look more like a list of 
@@ -131,16 +131,16 @@ We handle them in three main ways:
 
 
 
-   C. ASYNC / AWAIT (The Modern Way)
+   ⁡⁣⁣⁢C. ASYNC / AWAIT (The Modern Way)⁡
    ----------------------------------
    This is "Syntactic Sugar" - built on top of Promises but makes asynchronous 
    code look and behave like synchronous (line-by-line) code.
 
-   • async: 
-     Tells JS that this function will handle asynchronous tasks
+    • async: 
+       - Tells JS that this function will handle asynchronous tasks
 
-   • await: 
-     Tells JS to "pause and wait" for the promise to finish before moving to 
+    • await: 
+       - Tells JS to "pause and wait" for the promise to finish before moving to 
      the next line. Much easier to read!
 
 
@@ -153,7 +153,7 @@ ordering a pizza—and see how the code evolved from messy Callbacks to clean
 Async/Await.
 
 
-🔹 1. THE CALLBACK WAY (The "Pyramid of Doom")
+🔹 ⁡⁣⁢⁣1. THE CALLBACK WAY (The "Pyramid of Doom")⁡
 -----------------------------------------------
 In the old days, if you wanted to order, prepare, and deliver a pizza, you 
 had to nest functions inside functions. This is hard to read and even harder 
@@ -162,30 +162,30 @@ to fix if something goes wrong.
    📝 Code Example:
    
       // This is "Callback Hell"
-      orderPizza("Pepperoni", (pizza) => {
+        ⁡⁢⁢⁢orderPizza("Pepperoni", (pizza) => {
           preparePizza(pizza, (preparedPizza) => {
               deliverPizza(preparedPizza, (status) => {
                   console.log(status); // "Pizza Delivered!"
-              });
-          });
-      });
+                });
+            });
+        });⁡
 
 
-🔹 2. THE PROMISE WAY (Chaining)
+🔹 ⁡⁣⁢⁣2. THE PROMISE WAY (Chaining)⁡
 --------------------------------
 Promises made this "flat." Instead of nesting, we chain actions using .then(). 
 It reads like a sequence of events.
 
    📝 Code Example:
    
-      orderPizza("Pepperoni")
+       ⁡⁢⁢⁢ orderPizza("Pepperoni")
           .then(pizza => preparePizza(pizza))
           .then(preparedPizza => deliverPizza(preparedPizza))
           .then(status => console.log(status))
-          .catch(error => console.error("Something went wrong:", error));
+          .catch(error => console.error("Something went wrong:", error));⁡
 
 
-🔹 3. THE ASYNC/AWAIT WAY (The Gold Standard ⭐)
+🔹 ⁡⁣⁢⁣3. THE ASYNC/AWAIT WAY (The Gold Standard ⭐)⁡
 ------------------------------------------------
 This is how we write code in 2026. It looks like "normal" synchronous code, 
 but it's actually running asynchronously in the background. We use try/catch 
@@ -193,23 +193,23 @@ to handle any errors (like the pizza shop being closed).
 
    📝 Code Example:
    
-      async function processPizzaOrder() {
-          try {
-              // We "await" the result of each step
-              const pizza = await orderPizza("Pepperoni");
-              const preparedPizza = await preparePizza(pizza);
-              const status = await deliverPizza(preparedPizza);
-              
-              console.log(status); // Success!
-          } catch (error) {
-              // This catches errors from ANY of the steps above
-              console.error("Order failed:", error);
-          } finally {
-              console.log("Process finished."); // Runs no matter what
-          }
-      }
+      ⁡⁢⁢⁢  async function processPizzaOrder() {
+            try {
+                // We "await" the result of each step
+                const pizza = await orderPizza("Pepperoni");
+                const preparedPizza = await preparePizza(pizza);
+                const status = await deliverPizza(preparedPizza);
+                
+                console.log(status); // Success!
+            } catch (error) {
+                // This catches errors from ANY of the steps above
+                console.error("Order failed:", error);
+            } finally {
+                console.log("Process finished."); // Runs no matter what
+            }
+        }⁡
 
-      processPizzaOrder();
+       ⁡⁢⁢⁢processPizzaOrder();⁡
 
 
 --------------------------------------------------------------------------------
