@@ -427,7 +427,68 @@ You have now covered:
    ✅ Patterns: 
       Request Timeouts and Aborting tasks
 
+--------------------------------------------------------------------------------
+Study Guide: JavaScript Promises & Asynchronous Patterns
 
+Subject: Advanced JavaScript (ES6+)
+
+Topics:
+
+Promise Lifecycle and States
+
+The Event Loop (Microtasks vs. Macrotasks)
+
+Promise Combinators (all, allSettled, race, any)
+
+Modern Request Management (AbortController)
+
+Summary
+
+This guide covers the fundamental and advanced aspects of how JavaScript handles time-consuming operations. It moves from the three core states of a Promise to the architectural "Priority Rules" of the JavaScript Engine (Event Loop), and concludes with professional strategies for managing multiple concurrent tasks and network request cancellation.
+
+Key Concepts
+
+The Initial State (Pending): A Promise always starts as Pending. It only becomes "Resolved" or "Rejected" once the task completes. A common mistake is thinking a promise in progress is "Resolved" just because it hasn't failed yet.
+
+The VIP Lane (Microtask Queue): Promises do not go to the same place as setTimeout. They enter the Microtask Queue, which is higher priority. The engine will finish every single Microtask before it even looks at a single Macrotask (like a timer).
+
+Awaiting Non-Promises: If you await a regular number or string, JavaScript doesn't crash. It automatically wraps that value in a Promise.resolve(value) so the code can continue in its asynchronous flow without interruption.
+
+Resilience with allSettled: While Promise.all is "all-or-nothing," Promise.allSettled is used when you need the results of all tasks regardless of individual failures. It returns an array of objects showing the status (fulfilled/rejected) and the value or reason.
+
+Request Cancellation: The AbortController is the modern standard for stopping a fetch request. It is essential for performance, allowing developers to kill "stale" requests that are no longer needed by the UI.
+
+Vocabulary List
+
+Pending: The "in-between" state of a Promise where the result is not yet available.
+
+Microtask: A high-priority task (like Promise callbacks) that executes immediately after the current script and before the next event loop tick.
+
+Macrotask: A standard priority task (like setTimeout or setInterval) scheduled for the next turn of the event loop.
+
+Settled: A term used when a Promise is no longer pending (it is either fulfilled or rejected).
+
+AbortController: A JavaScript object used to communicate with and terminate asynchronous tasks like Web Requests.
+
+Key Questions
+
+Explain the difference between a Promise that is "Pending" and one that is "Fulfilled."
+
+Why does a Promise callback run before a setTimeout(..., 0)?
+
+What is the specific return format of Promise.allSettled()?
+
+How would you implement a 5-second timeout for a network request using Promise.race()?
+
+If a function is marked async, but has no await inside, does it still return a Promise? (Answer: Yes!)
+
+
+-------------------------------------------
+
+Important Links:
+    • Main quiz: https://gemini.google.com/share/aa89e154448e
+    • Flash card: https://gemini.google.com/share/aa89e154448e
+    - 
 --------------------------------------------------------------------------------
                     END OF PROMISES & ASYNC JAVASCRIPT GUIDE
 --------------------------------------------------------------------------------
