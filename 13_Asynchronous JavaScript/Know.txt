@@ -45,9 +45,7 @@ We handle them in three main ways:
      the next line. Much easier to read!
 
 
-
-
-
+--------------------------------------------------------------------------------------------------------
 
 # JavaScript is by default ⁡⁣⁣⁢Synchronous⁡ in nature and single-threaded.
 # All indian mother are by default Asynchronous in nature. <- They do all type of works...
