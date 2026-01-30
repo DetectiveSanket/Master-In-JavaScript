@@ -1,0 +1,197 @@
+
+// #### 20 Interview Questions on JavaScript Concepts  ### //
+
+
+1) Tech Mahindra:- Analyze the given code and explain what it does.
+
+    ⁡⁢⁢⁢const obj = {
+        a:1,
+        c: () => {
+            return this.a;
+        }
+    };
+
+    console.log(obj.c());⁡
+
+    output: undefined
+    Explanation: The arrow function does not have its own 'this' context, so 'this.a' refers to the global context where 'a' is not defined, resulting in 'undefined'.'this' value is lexically inherited from the surrounding code, which in this case is the global scope.which is point to parent scope
+
+
+    ⁡⁢⁢⁢console.log(obj.c.call({a:1}))⁡
+ 
+    output: undefined
+    Explanation: Even when using 'call' to set the context, arrow functions do not bind 'this', so it still refers to the global context, resulting in 'undefined'.
+
+----------------------------------------------------------------------------------------------------
+
+2) Walmart:- What will be the output of the following code snippet?
+
+    ⁡⁢⁢⁢const one ="😂";
+
+    const obj = {
+        ['one']: "😊",
+        [one]: "😍"  // 😂 <- key : 😍 <- value
+    }
+
+    console.log(obj.one)⁡
+
+    output: 😊
+    Explanation: Here we are uses dynamic property names in the object. The first property is named 'one' (a string), and the second property uses the value of the variable 'one', which is '😂'. Therefore, obj.one accesses the first property, resulting in '😊'.
+    
+    ⁡⁢⁢⁢console.log(obj)⁡ // { one: '😊', '😂': '😍' }
+
+----------------------------------------------------------------------------------------------------
+
+3) Zapto
+
+    ⁡⁢⁢⁢var magic = 1;
+    function magic() {
+        console.log("😩")
+    };
+
+    magic();⁡
+
+     output: TypeError: magic is not a function
+     Explanation: In JavaScript, function declarations are hoisted above variable declarations. However, when a variable and a function share the same name, the variable declaration takes precedence during hoisting. As a result, 'magic' is treated as a variable that is initially undefined, leading to a TypeError when attempting to call it as a function.
+
+    ⁡⁢⁢⁢console.log(magic);⁡ // output: 1
+     Explanation: After the initial hoisting and assignment, 'magic' is assigned the value 1. Therefore, logging 'magic' outputs 1.
+
+----------------------------------------------------------------------------------------------------
+
+4) Walmart:- What will be the output of the following code snippet?
+
+    const users = {
+        frontendMaster:{},
+        rahul:{}
+    };
+    let name = 'rahul';
+
+    if(users[name]) {
+        console.log("User found");
+    } else {
+        console.log("User not found");
+    }
+
+     output: User found
+     Explanation: The code checks if the 'users' object has a property that matches the value of the 'name' variable, which is 'rahul'. Since 'users' does contain a property named 'rahul', the condition evaluates to true, and "User found" is logged to the console.
+
+     to fix this
+    if(users.hasOwnProperty(name)) { 
+        console.log("User found");
+    } else {
+        console.log("User not found");
+    }
+
+----------------------------------------------------------------------------------------------------
+
+5) Slit the string with comma and semicolon both
+
+    ⁡⁢⁢⁢const list = "apple,banana;grape,orange;kiwi";
+
+    const result1 = list.split(",");
+    console.log(result1) // Output: [ 'apple', 'banana;grape', 'orange;kiwi' ]
+
+    const result2 = list.split(/[,;]/); 
+    console.log(result2) // Output: [ 'apple', 'banana', 'grape', 'orange', 'kiwi' ]⁡
+
+    ^> Explanation: we can pass regular expression in split. The regular expression /[,;]/ matches both commas and semicolons, allowing the split method to separate the string at either delimiter.
+
+----------------------------------------------------------------------------------------------------
+
+6) Guest the output
+
+    ⁡⁢⁢⁢let str = 'JS';
+    JSON.stringify(str) === str;⁡
+    
+    output: false
+     ^> Explanation: JSON.stringify(str) converts the string 'JS' into a JSON string format, which includes quotes around it, resulting in '"JS"'. Therefore, the comparison between '"JS"' and 'JS' evaluates to false.
+
+----------------------------------------------------------------------------------------------------
+
+7) ⁡⁢⁣⁣Guest the output⁡
+
+    ⁡⁢⁢⁢function text(a,a) { // a = 1 , a = undefined and second a will overwrite first a
+        console.log(a);
+    }
+    text(1);⁡  -- undefined
+    
+    OUTPUT:- undefined
+    ^> Explanation: In JavaScript, when a function has multiple parameters with the same name, the last parameter takes precedence. In this case, the second 'a' parameter is undefined because no value is passed for it when calling text(1). Therefore, when console.log(a) is executed, it logs undefined.
+    
+    ⁡⁢⁢⁢text(1,2);⁡ -- 2 >> a: 1 , a:2 second a will overwrite first a
+
+----------------------------------------------------------------------------------------------------
+
+8) ⁡⁢⁣⁣Guest the output⁡
+
+    ⁡⁢⁢⁢console.log(typeof typeof 1);⁡
+    
+    output: string
+    ^> Explanation: The inner typeof 1 evaluates to 'number', which is a string. Then, the outer typeof 'number' evaluates to 'string', resulting in the final output of 'string'.
+
+----------------------------------------------------------------------------------------------------
+
+9) ⁡⁢⁣⁣Guest the output⁡
+
+    ⁡⁢⁢⁢let a = [1,2,3];
+    a[10] = 11;
+    console.log(a.length);⁡
+    
+    output: 11
+    ^> Explanation: In JavaScript, arrays are dynamic and can have non-contiguous indices. When you assign a value to an index that is beyond the current length of the array, JavaScript automatically expands the array to accommodate that index. In this case, assigning a value to a[10] sets the length of the array to 11, as the indices range from 0 to 10.
+
+----------------------------------------------------------------------------------------------------
+
+10) ⁡⁢⁣⁣Guest the output⁡
+
+    ⁡⁢⁢⁢console.log(0.1 + 0.2 == 0.3);⁡
+    
+    output: false
+    ^> Explanation: In JavaScript, floating-point numbers are represented using binary fractions, which can lead to precision issues. The sum of 0.1 and 0.2 results in a value that is very close to, but not exactly equal to, 0.3 due to these precision limitations. Therefore, the comparison evaluates to false.
+
+----------------------------------------------------------------------------------------------------
+
+11) ⁡⁢⁣⁣Guest the output⁡
+
+    let r = [1,2,3][1,2,1];
+    > [1,2,3][1] -> so print value on index 1
+    ⁡⁢⁢⁢console.log(r);⁡ // output: 3
+
+    ^> Explanation: In JavaScript, the comma operator evaluates each of its operands (from left to right) and returns the value of the last operand. In this case, [4,5,6] is evaluated but not used, and the expression effectively becomes [1,2,3][6], which is undefined. However, since the last evaluated expression is 3 (the last element of the first array), it returns 3.
+
+----------------------------------------------------------------------------------------------------
+
+12)
+    functoin a() {return 'a'};
+    function b() {return 'b'};
+    ⁡⁢⁢⁢function c() {return 'c'};
+
+    console.log(a() , b() , c());⁡  
+    console.log(c() , a() , b());⁡ 
+    console.log(b() , c() , a());⁡
+
+    OUTPUT:
+        c 
+        b 
+        a 
+        because comman is used to separate the expressions and returns the last one.
+
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
+----------------------------------------------------------------------------------------------------
