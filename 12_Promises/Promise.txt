@@ -11,95 +11,9 @@ from a server.
 Let's break these down step-by-step with real-world analogies.
 
 
-================================================================================
-                         12. PROMISES IN JAVASCRIPT
-================================================================================
-
-🔹 WHAT IS A PROMISE?
----------------------
-A Promise is an object representing the eventual completion (or failure) of 
-an asynchronous operation.
-
-🍔 Real-World Example: 
-   Imagine you go to a burger joint. You order a burger, and they give you 
-   a buzzer.
-
-   • The buzzer is the Promise
-   • The burger is the Data you want
-
-
-
-🔹 PROMISE STATES
------------------
-A promise is always in one of these THREE states:
-
-   1. PENDING: 
-      - This is the initial state
-      - You have the buzzer, and the kitchen is still cooking
-      - Nothing has happened yet
-
-   2. FULFILLED (Resolved): 
-      - Success! The buzzer glows, and you get your burger
-      - The operation finished successfully
-
-   3. REJECTED: 
-      - Failure. The waiter tells you they ran out of ingredients
-      - The operation failed
-
-
-
-🔹 PROMISE METHODS (How to handle the result)
-----------------------------------------------
-
-   .then()
-   • This runs when the promise is fulfilled
-   • Example: "Then I will eat the burger"
-
-   .catch()
-   • This runs if the promise is rejected
-   • Example: "If they are out of food, I'll go to the pizza place instead"
-
-   .finally()
-   • This runs no matter what happened (success or failure)
-   • Example: "Regardless of whether I ate, I will leave the restaurant"
-
-
-
-🔹 PROMISE.ALL() (The Group Order)
-----------------------------------
-Imagine you are with 5 friends. You all order burgers. Promise.all() waits 
-for every single person to get their food before the group sits down to eat.
-
-⚠️ CATCH: 
-   If even one person's order is rejected (out of ingredients), the whole 
-   Promise.all() fails immediately.
-
-================================================================================
-              DEEP DIVE: THE 4 PROMISE "COMBINATORS"
-================================================================================
-
-Here are the other types of Promise methods used in professional development:
-
-    Method,Behavior
-        - Promise.all(),"Waits for all to succeed. If one fails, it all fails."
-        - Promise.allSettled(),"Waits for all to finish, regardless of success or failure. Useful for ""bulk"" tasks."
-        - Promise.race(),Returns the result of the first promise to settle (either success or fail). Like a literal race!
-        - Promise.any(),Returns the first successful promise. It ignores failures unless all fail.
-
---------------------------------------------------------------------------------
-                  SUMMARY: PROMISES IN JAVASCRIPT
-
---------------------------------------------------------------------------------
-   ✔️ Promises help manage asynchronous tasks in a cleaner way than callbacks.
-    ✔️ They have three states: Pending, Fulfilled, and Rejected.
-     ✔️ Key methods include .then(), .catch(), and .finally().
-      ✔️ Promise combinators like Promise.all() help manage multiple promises.
---------------------------------------------------------------------------------
-
-
-================================================================================
-                  ⁡⁢⁣⁣13. ASYNCHRONOUS JAVASCRIPT: EVOLUTION⁡
-================================================================================
+================================================================================================
+                  ⁡⁢⁣⁣𝟭𝟯. 𝗔𝗦𝗬𝗡𝗖𝗛𝗥𝗢𝗡𝗢𝗨𝗦 𝗝𝗔𝗩𝗔𝗦𝗖𝗥𝗜𝗣𝗧: 𝗧𝗛𝗘 𝗕𝗜𝗚 𝗣𝗜𝗖𝗧𝗨𝗥𝗘 --> 𝗛𝗶𝘀𝘁𝗼𝗿𝘆 𝗯𝗲𝗵𝗶𝗻𝗱 𝗪𝗵𝗮𝘁 𝗣𝗿𝗼𝗺𝗶𝘀𝗲⁡
+================================================================================================
 
 🔹 ⁡⁣⁢⁣𝙏𝙃𝙍𝙀𝙀 𝙈𝘼𝙄𝙉 𝙒𝘼𝙔𝙎 𝙏𝙊 𝙃𝘼𝙉𝘿𝙇𝙀 𝘼𝙎𝙔𝙉𝘾𝙃𝙍𝙊𝙉𝙊𝙐𝙎 𝙏𝘼𝙎𝙆𝙎⁡
 ------------------------------------------------
@@ -125,8 +39,10 @@ We handle them in three main ways:
 
    ⁡⁣⁣⁢B. PROMISES (The Better Way)⁡
    -----------------------------
-   As discussed above, Promises replaced messy callbacks with a cleaner 
-   .then().then() chain. It makes the code look more like a list of 
+    - A Promise is a object that represent a future value. It can be in one of three states: 
+    Pending, Fulfilled, or Rejected.
+    - As discussed below, Promises replaced messy callbacks with a cleaner 
+   ⁡⁣⁣⁢.then().then()⁡⁣⁣⁢.catch()⁡ chain. It makes the code look more like a list of 
    instructions.
 
 
@@ -136,12 +52,100 @@ We handle them in three main ways:
    This is "Syntactic Sugar" - built on top of Promises but makes asynchronous 
    code look and behave like synchronous (line-by-line) code.
 
-    • async: 
+    • ⁡⁣⁢⁣async⁡: 
        - Tells JS that this function will handle asynchronous tasks
 
-    • await: 
+    • ⁡⁣⁢⁣await⁡: 
        - Tells JS to "pause and wait" for the promise to finish before moving to 
      the next line. Much easier to read!
+
+
+    * Pro Tip for Beginners:
+        - Always use ⁡⁣⁣⁢Async/⁡⁣⁣⁢Await⁡ with ⁡⁣⁣⁢try/catch blocks⁡. It is currently the industry standard for writing clean, professional JavaScript.
+
+================================================================================
+                         ⁡⁢⁣⁣𝟭͟𝟮. 𝗣͟𝗥͟𝗢͟𝗠͟𝗜͟𝗦͟𝗘͟𝗦 𝗜͟𝗡 𝗝͟𝗔͟𝗩͟𝗔͟𝗦͟𝗖͟𝗥͟𝗜͟𝗣͟𝗧⁡
+================================================================================
+
+🔹 ⁡⁢⁣⁣WHAT IS A PROMISE?⁡
+---------------------
+A Promise is an object representing a future value (or failure) of 
+an ⁡⁣⁣⁢asynchronous⁡ operation.
+
+🍔 Real-World Example: 
+   Imagine you go to a burger joint. You order a burger, and they give you 
+   a buzzer.
+
+   • The buzzer is the Promise
+   • The burger is the Data you want
+
+
+
+⁡⁢⁣⁣🔹 PROMISE STATES⁡
+-----------------
+A promise is always in one of these THREE states:
+
+   1. ⁡⁣⁢⁣PENDING⁡: 
+      - This is the initial state
+      - You have the buzzer, and the kitchen is still cooking
+      - Nothing has happened yet
+
+   2. ⁡⁣⁢⁣FULFILLED⁡ (⁡⁣⁢⁣Resolved⁡): 
+      - Success! The buzzer glows, and you get your burger
+      - The operation finished successfully
+
+   3. ⁡⁣⁢⁣REJECTED⁡: 
+      - Failure. The waiter tells you they ran out of ingredients
+      - The operation failed
+
+
+
+🔹 ⁡⁢⁣⁣PROMISE METHODS (How to handle the result)⁡
+----------------------------------------------
+
+   ⁡⁣⁢⁣.then()⁡
+   • This runs when the promise is fulfilled
+   • Example: "Then I will eat the burger"
+
+   ⁡⁣⁢⁣.catch()⁡
+   • This runs if the promise is rejected
+   • Example: "If they are out of food, I'll go to the pizza place instead"
+
+   ⁡⁣⁢⁣.finally()⁡
+   • This runs no matter what happened (success or failure)
+   • Example: "Regardless of whether I ate, I will leave the restaurant"
+
+
+
+🔹 ⁡⁢⁣⁣PROMISE.ALL() (The Group Order)⁡
+----------------------------------
+Imagine you are with 5 friends. You all order burgers. Promise.all() waits 
+for every single person to get their food before the group sits down to eat.
+
+⚠️ CATCH: 
+   If even one person's order is rejected (out of ingredients), the whole 
+   Promise.all() fails immediately.
+
+================================================================================
+              ⁡⁢⁣⁣𝗗͟𝗘͟𝗘͟𝗣 𝗗͟𝗜͟𝗩͟𝗘͟: 𝗧͟𝗛͟𝗘 ͟𝟰 𝗣͟𝗥͟𝗢͟𝗠͟𝗜͟𝗦͟𝗘 "͟𝗖͟𝗢͟𝗠͟𝗕͟𝗜͟𝗡͟𝗔͟𝗧͟𝗢͟𝗥͟𝗦͟"⁡
+================================================================================
+
+Here are the other types of Promise methods used in professional development:
+
+    Method,Behavior
+        - Promise.all(),"Waits for all to succeed. If one fails, it all fails."
+        - Promise.allSettled(),"Waits for all to finish, regardless of success or failure. Useful for ""bulk"" tasks."
+        - Promise.race(),Returns the result of the first promise to settle (either success or fail). Like a literal race!
+        - Promise.any(),Returns the first successful promise. It ignores failures unless all fail.
+
+--------------------------------------------------------------------------------
+                  ⁡⁣⁢⁢SUMMARY: PROMISES IN JAVASCRIPT⁡
+-------------------------------------------------⁡-------------------------------
+   ✔️ Promises help manage asynchronous tasks in a cleaner way than callbacks.
+    ✔️ They have three states: Pending, Fulfilled, and Rejected.
+     ✔️ Key methods include .then(), .catch(), and .finally().
+      ✔️ Promise combinators like Promise.all() help manage multiple promises.
+--------------------------------------------------------------------------------
 
 
 ================================================================================
@@ -211,12 +215,18 @@ to handle any errors (like the pizza shop being closed).
 
        ⁡⁢⁢⁢processPizzaOrder();⁡
 
+    • ⁡⁣⁢⁣A Quick Deep-Dive Topic: The "Event Loop"⁡
+        - To truly be an expert, you should know that JavaScript is Single-Threaded. This means it can only do one thing at a time.
+
+        - ⁡⁣⁣⁢When you use await, JavaScript doesn't stop the whole browser.⁡
+
+        - It puts that task in the "Web API" background, continues running other code (like animations or button clicks), and comes back to your await once the data is ready. This is called the "Event Loop," and it's what makes JavaScript feel fast and responsive even when doing complex tasks.
 
 ================================================================================
-            REAL-WORLD PROMISE COMBINATORS: Managing Multiple Tasks
+           ⁡⁢⁣⁣ 𝙍𝙀𝘼𝙇-𝙒𝙊𝙍𝙇𝘿 𝙋𝙍𝙊𝙈𝙄𝙎𝙀 𝘾𝙊𝙈𝘽𝙄𝙉𝘼𝙏𝙊𝙍𝙎: 𝙈𝙖𝙣𝙖𝙜𝙞𝙣𝙜 𝙈𝙪𝙡𝙩𝙞𝙥𝙡𝙚 𝙏𝙖𝙨𝙠𝙨⁡ 
 ================================================================================
 
-📌 THE SCENARIO:
+📌 ⁡⁣⁢⁣THE SCENARIO:⁡
 ----------------
 When you start working on real-world apps, you'll rarely just do one thing at 
 a time. Imagine a User Dashboard: you need to fetch the Profile, the Recent 

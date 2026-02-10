@@ -27,7 +27,7 @@ We handle them in three main ways:
    B. PROMISES (The Better Way)
    -----------------------------
    As discussed above, Promises replaced messy callbacks with a cleaner 
-   .then().then() chain. It makes the code look more like a list of 
+   .then().then().catch() chain. It makes the code look more like a list of 
    instructions.
 
 

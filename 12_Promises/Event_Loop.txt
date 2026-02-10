@@ -1,5 +1,5 @@
 ================================================================================
-                    THE EVENT LOOP: JavaScript's Brain
+                    ⁡⁢⁣⁣𝗧͟𝗛͟𝗘 𝗘͟𝗩͟𝗘͟𝗡͟𝗧 𝗟͟𝗢͟𝗢͟𝗣͟: 𝗝͟𝗮͟𝘃͟𝗮͟𝗦͟𝗰͟𝗿͟𝗶͟𝗽͟𝘁͟'͟𝘀 𝗕͟𝗿͟𝗮͟𝗶͟𝗻⁡
 ================================================================================
 
 📌 INTRODUCTION
@@ -14,7 +14,7 @@ to be "fast" even though it can only do one thing at a time.
 
 
 ================================================================================
-              1. THE GROUND REALITY: JavaScript is Single-Threaded
+              ⁡⁢⁣⁣𝟭. 𝗧͟𝗛͟𝗘 𝗚͟𝗥͟𝗢͟𝗨͟𝗡͟𝗗 𝗥͟𝗘͟𝗔͟𝗟͟𝗜͟𝗧͟𝗬͟: 𝗝͟𝗮͟𝘃͟𝗮͟𝗦͟𝗰͟𝗿͟𝗶͟𝗽͟𝘁 𝗶͟𝘀 𝗦͟𝗶͟𝗻͟𝗴͟𝗹͟𝗲͟-͟𝗧͟𝗵͟𝗿͟𝗲͟𝗮͟𝗱͟𝗲͟𝗱⁡
 ================================================================================
 
 👨‍🍳 The Kitchen Analogy:
@@ -35,7 +35,7 @@ Imagine a tiny kitchen with only one Chef (the JavaScript Engine).
 
 
 ================================================================================
-                    2. THE THREE PARTS OF THE ENGINE
+                    ⁡⁢⁣⁣𝟮. 𝗧͟𝗛͟𝗘 𝗧͟𝗛͟𝗥͟𝗘͟𝗘 𝗣͟𝗔͟𝗥͟𝗧͟𝗦 𝗢͟𝗙 𝗧͟𝗛͟𝗘 𝗘͟𝗡͟𝗚͟𝗜͟𝗡͟𝗘⁡
 ================================================================================
 
 To manage tasks, JavaScript uses three main areas:
@@ -45,24 +45,37 @@ To manage tasks, JavaScript uses three main areas:
    ------------------------------------------
    • This is where code currently being executed lives
    • It's "Last In, First Out" (LIFO)
+   • If you call a function, it goes on top of the Stack. When it finishes, it gets removed.
+   • If you have a long-running task here, it blocks everything else (like the Slow
+   • Def:- ⁡⁣⁣⁢Call Stack is the place where JavaScript keeps track of function calls and executes code.⁡
 
 
    🔹 THE WEB APIs (The Kitchen Assistants)
    ----------------------------------------
-   • When you have a slow task (like fetching data or a timer), the Chef 
+   • When you have a slow task [asychronos code] (like fetching data or a timer), the Chef 
      hands it off to an assistant
    • The Chef doesn't wait; they move to the next order in the Stack
+   • Once the assistant finishes the task, they put the result in the Callback Queue
+   • Examples of Web APIs include: setTimeout, fetch, and DOM events
+   • Def:- ⁡⁣⁣⁢Web APIs are browser-provided tools that handle asynchronous tasks outside of the main JavaScript thread.⁡⁡
 
 
    🔹 THE CALLBACK QUEUE (The "Ready to Serve" Counter)
    ----------------------------------------------------
    • Once an assistant finishes a task, they put the result here
    • Waiting to be picked up by the Event Loop
+   • Def:- ⁡⁣⁣⁢Callback Queue is where tasks that are ready to be executed wait until the Call Stack is empty.⁡
+   • Callback Queue is also called the "Task Queue" or "⁡⁣⁣⁢Macrotask Queue⁡".
+   • The Event Loop checks this queue when the Call Stack is empty
+     and moves tasks back to the Stack to be executed
+   • It's "First In, First Out" (FIFO)
+   • Callback Queue is where setTimeout, setInterval, and DOM events go after they finish
+     their work in the Web API
 
 
 
 ================================================================================
-                  3. HOW THE EVENT LOOP WORKS (The Cycle)
+                  ⁡⁢⁣⁣𝟯. 𝗛͟𝗢͟𝗪 𝗧͟𝗛͟𝗘 𝗘͟𝗩͟𝗘͟𝗡͟𝗧 𝗟͟𝗢͟𝗢͟𝗣 𝗪͟𝗢͟𝗥͟𝗞͟𝗦 (͟𝗧͟𝗵͟𝗲 𝗖͟𝘆͟𝗰͟𝗹͟𝗲͟)⁡
 ================================================================================
 
 🔄 The Simple Job:
@@ -71,12 +84,12 @@ The Event Loop has one simple job: It looks at the Call Stack and the
 Callback Queue.
 
    RULE: 
-   If the Call Stack is empty, it takes the first task from the Queue and 
-   pushes it onto the Stack to be executed.
+   I⁡⁣⁣⁢f the Call Stack is empty, it takes the first task from the Queue and 
+   pushes it onto the Stack to be executed.⁡
 
 
 
-🔹 REAL-TIME EXAMPLE: The setTimeout Mystery
+🔹 ⁡⁣⁢⁣REAL-TIME EXAMPLE: The setTimeout Mystery⁡
 --------------------------------------------
 Look at this code. What do you think prints first?
 
@@ -106,7 +119,7 @@ Look at this code. What do you think prints first?
 
 
 ================================================================================
-                4. LET'S BUILD: A Simple Weather Fetcher
+                ⁡⁢⁣⁣𝟰. 𝗟͟𝗘͟𝗧͟'͟𝗦 𝗕͟𝗨͟𝗜͟𝗟͟𝗗͟: ͟𝗔 𝗦͟𝗶͟𝗺͟𝗽͟𝗹͟𝗲 𝗪͟𝗲͟𝗮͟𝘁͟𝗵͟𝗲͟𝗿 𝗙͟𝗲͟𝘁͟𝗰͟𝗵͟𝗲͟𝗿⁡
 ================================================================================
 
 Now that you know how the background works, let's use Async/Await to do 
@@ -153,7 +166,7 @@ something real: Getting weather data from an API.
 
 
 ================================================================================
-                    CHALLENGE: "The Race" 🏁
+                   ⁡⁢⁣⁣ 𝗖͟𝗛͟𝗔͟𝗟͟𝗟͟𝗘͟𝗡͟𝗚͟𝗘͟: "͟𝗧͟𝗵͟𝗲 𝗥͟𝗮͟𝗰͟𝗲͟" 🏁⁡
 ================================================================================
 
 Here is your challenge. I have mixed Synchronous code (fast), a Promise 
@@ -167,7 +180,7 @@ messages.
 
    📝 Code Example:
    
-      console.log("A: Morning alarm goes off!");
+     ⁡⁢⁢⁢ console.log("A: Morning alarm goes off!");
 
       setTimeout(() => {
         console.log("B: Checked social media (10 mins later)");
@@ -177,21 +190,21 @@ messages.
         console.log("C: Brushed teeth (Important task)");
       });
 
-      console.log("D: Sat down to work");
+      console.log("D: Sat down to work");⁡
 
 
 💡 HINTS TO HELP YOU:
 ---------------------
 
-   1️⃣ Sync First: 
+   1️⃣ ⁡⁣⁢⁣Sync First⁡: 
       The "Chef" (Call Stack) finishes all immediate tasks first.
 
-   2️⃣ The Priority Lane (Microtasks): 
+   2️⃣ ⁡⁣⁢⁣The Priority Lane (Microtasks): ⁡
       Promises have a "VIP" status. Once the Chef is free, they check the 
       Microtask Queue (Promises) before checking the regular Callback Queue 
       (Timeouts).
 
-   3️⃣ The Slow Lane (Macrotasks): 
+   3️⃣ ⁡⁣⁢⁣The Slow Lane (Macrotasks):⁡ 
       setTimeout always goes to the back of the regular queue, even if the 
       timer is 0
 
@@ -205,7 +218,7 @@ messages.
 
 
 ================================================================================
-          THE PRIORITY RULE: Microtasks vs. Macrotasks
+         ⁡⁢⁣⁣ 𝗧͟𝗛͟𝗘 𝗣͟𝗥͟𝗜͟𝗢͟𝗥͟𝗜͟𝗧͟𝗬 𝗥͟𝗨͟𝗟͟𝗘͟: 𝗠͟𝗶͟𝗰͟𝗿͟𝗼͟𝘁͟𝗮͟𝘀͟𝗸͟𝘀 𝘃͟𝘀. 𝗠͟𝗮͟𝗰͟𝗿͟𝗼͟𝘁͟𝗮͟𝘀͟𝗸͟𝘀⁡
 ================================================================================
 
 In JavaScript, not all "background tasks" are equal. When the Call Stack 
