@@ -1,5 +1,5 @@
 
-//To make sure we're still on the same page, try to convert this .then() block into an async/await function:
+//* To make sure we're still on the same page, try to convert this .then() block into an async/await function:
     
     function fetchData() {
         return fetch('https://api.example.com/data')
@@ -27,22 +27,21 @@
 //----------------------------------------------------------------------------------------------//
 
 /*     
-        Imagine you need to fetch User Data and User Posts. Currently, your code does this:
+        ^ Imagine you need to fetch User Data and User Posts. Currently, your code does this:
+            - ⁡⁢⁣⁣Wait for User.⁡
+            - ⁡⁢⁣⁣𝗧𝗵𝗲𝗻⁡ ⁡⁢⁣⁣wait for Posts.⁡
 
-            - Wait for User.
-            - Then wait for Posts.
+        * The Task: How would you change the code below so that both fetches start at the same time (in parallel) rather than waiting for one to finish before starting the next?
 
-        The Task: How would you change the code below so that both fetches start at the same time (in parallel) rather than waiting for one to finish before starting the next?
+        & Hint: Think about Promise.all(). 
 
-        Hint: Think about Promise.all(). 
-
-        Q): Would you like to try optimizing this code, or would you prefer I explain how Promise.all works first?
+        ! Q): Would you like to try optimizing this code, or would you prefer I explain how Promise.all works first?
 
 */
 
 async function getUserDashboard() {
     try {
-        // These are currently happening one after the other (slow!)
+        //^ These are currently happening one after the other (slow!)
         const user = await fetch('https://api.example.com/user');
         const posts = await fetch('https://api.example.com/posts');
         
@@ -56,10 +55,10 @@ async function getUserDashboard() {
 //*: Using async/await with Promise.all to optimize the fetches
 async function getUserDashboardOptimized() {
     try {
-        // Start both fetches in parallel
+        //^ Start both fetches in parallel
         const userPromise = fetch('https://api.example.com/user');
         const postsPromise = fetch('https://api.example.com/posts');
-        // Wait for both to complete
+        //^ Wait for both to complete
         const [user, posts] = await Promise.all([userPromise, postsPromise]);
         // console.log("Dashboard loaded", user, posts);
 
@@ -94,17 +93,17 @@ fetchBoth();
 async function fetchBothOptimized() {
 
     try {
-            const [res1 , res2] = await Promise.all([
-               fetch("https://api.example.com/one"),
-               fetch('https://api.example.com/two')
-            ])
+        const [res1 , res2] = await Promise.all([
+           fetch("https://api.example.com/one"),
+           fetch('https://api.example.com/two')
+        ])
 
-            const [data1 , data2] = await Promise.all([
-                res1.json(),
-                res2.json()
-            ]);
+        const [data1 , data2] = await Promise.all([
+            res1.json(),
+            res2.json()
+        ]);
 
-            console.log('Data' , data1 , data2);
+        console.log('Data' , data1 , data2);
     }catch (e) {
         console.log(e);
     }
@@ -165,7 +164,7 @@ async function fetchDashboard() {
 */
 
 /* 
-    Task: scenario: You are fetching a user's Profile and their Settings. If the Settings fails, you want to show a message: "Settings could not be loaded."
+    & Task: scenario: You are fetching a user's Profile and their Settings. If the Settings fails, you want to show a message: "Settings could not be loaded."
 
     * In JavaScript, Promise.allSettled doesn't use the word "success"—it uses fulfilled for success and rejected for failure.
 */
@@ -345,4 +344,4 @@ fetchFastestImage();
             <> Promise.race is unreliable here because it settles on the first completion, even if that completion is a failure. We don't want to show an 'Error' message to the user just because one server responded with a failure slightly faster than the others responded with success."
 */
 
-//------------------------------------- End of File ------------------------------------------//
+//------------------------------------- ⁡⁢⁣⁢𝗘𝗻𝗱 𝗼𝗳 𝗙𝗶𝗹𝗲⁡ ------------------------------------------//

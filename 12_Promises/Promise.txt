@@ -1,5 +1,5 @@
 ================================================================================
-                    PROMISES & ASYNCHRONOUS JAVASCRIPT
+                   ⁡⁢⁣⁣ 𝗣𝗥𝗢𝗠𝗜𝗦𝗘𝗦 & 𝗔𝗦𝗬𝗡𝗖𝗛𝗥𝗢𝗡𝗢𝗨𝗦 𝗝𝗔𝗩𝗔𝗦𝗖𝗥𝗜𝗣𝗧⁡
 ================================================================================
 
 📌 OVERVIEW
@@ -24,8 +24,8 @@ We handle them in three main ways:
 
    ⁡⁣⁣⁢A. CALLBACKS (The Old Way)⁡
    ---------------------------
-   A callback is just a function passed into another function to be called 
-   later.
+   - A callback is just a function passed into another function to be called later.
+   - It was the original way to handle async tasks, but it quickly became messy when you had to do multiple things in a row. You would end up with nested functions that looked like a "pyramid of doom."
 
    📞 Analogy: 
       You leave your phone number at a shop and ask them to "call you back" 
@@ -237,12 +237,12 @@ Posts, and the Notifications all at once.
    Promise Combinators.
 
 
-🔹 1. PROMISE.ALL() — "The All or Nothing" 💥
+🔹 ⁡⁣⁢⁣𝟭. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗔𝗟𝗟() — "𝗧𝗵𝗲 𝗔𝗹𝗹 𝗼𝗿 𝗡𝗼𝘁𝗵𝗶𝗻𝗴"⁡ 💥
 ----------------------------------------------
-This is the most common method. It runs all promises in parallel and waits 
-for them to finish.
+    - This is the most common method. 
+    - It runs all promises in parallel and waits for them to finish.
 
-   ✅ The Success Case: 
+   ✅ The Success Case⁡: 
       If all promises succeed, you get an array of all the results.
 
    💥 The "Boom" Case: 
@@ -255,23 +255,24 @@ for them to finish.
 
    📝 Code Example:
    
-      const p1 = fetch('/profile');
+⁡⁢⁢⁢      const p1 = fetch('/profile');
       const p2 = fetch('/posts');
       const p3 = fetch('/notifications');
 
         try {
             // Starts all 3 at the same time!
             const results = await Promise.all([p1, p2, p3]); 
+
             console.log("All data loaded:", results);
         } catch (error) {
             console.log("One task failed, so the whole batch failed.");
-        }
+        }⁡
 
 
-🔹 2. PROMISE.ALLSETTLED() — "The Completionist" 📋
+🔹 ⁡⁣⁢⁣𝟮. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗔𝗟𝗟𝗦𝗘𝗧𝗧𝗟𝗘𝗗() — "𝗧𝗵𝗲 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗶𝗼𝗻𝗶𝘀𝘁" 📋⁡
 ----------------------------------------------------
-Introduced in ES2020, this is much more "forgiving." It waits for every 
-promise to finish, regardless of whether it succeeded or failed.
+    - Introduced in ES2020, this is much more "forgiving." 
+    - It waits for every promise to finish, regardless of whether it succeeded or failed.
 
    📊 The Result: 
       It returns an array of objects describing the outcome of each promise.
@@ -282,9 +283,9 @@ promise to finish, regardless of whether it succeeded or failed.
       one person can't come!
 
 
-🔹 3. PROMISE.RACE() — "The Speedster" 🏃
+🔹 ⁡⁣⁢⁣𝟯. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗥𝗔𝗖𝗘() — "𝗧𝗵𝗲 𝗦𝗽𝗲𝗲𝗱𝘀𝘁𝗲𝗿" 🏃⁡
 ------------------------------------------
-This returns the result of the first promise that settles (either success 
+    - This returns the result of the first promise that settles (either success 
 or failure).
 
    🚖 Real-world Analogy: 
@@ -296,9 +297,9 @@ or failure).
       than 5 seconds, you "race" it against a timer and stop waiting.
 
 
-🔹 4. PROMISE.ANY() — "The First Success" ⭐
+🔹 ⁡⁣⁢⁣𝟰. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗔𝗡𝗬() — "𝗧𝗵𝗲 𝗙𝗶𝗿𝘀𝘁 𝗦𝘂𝗰𝗰𝗲𝘀𝘀" ⭐⁡
 ---------------------------------------------
-This waits for the first successful promise. It ignores failures unless 
+    - This waits for the first successful promise. It ignores failures unless 
 all of them fail.
 
    🔌 Real-world Analogy: 
@@ -307,7 +308,7 @@ all of them fail.
       "Yes," you're done!
 
 
-📊 COMPARISON AT A GLANCE
+📊 ⁡⁣⁢⁣𝘊𝘖𝘔𝘗𝘈𝘙𝘐𝘚𝘖𝘕 𝘈𝘛 𝘈 𝘎𝘓𝘈𝘕𝘊𝘌⁡
 --------------------------
 
    ┌─────────────────────┬──────────────────────────┬─────────────────────────┐
@@ -322,7 +323,7 @@ all of them fail.
 
 
 ================================================================================
-        ADVANCED PATTERN: Request Timeout using Promise.race()
+        ⁡⁢⁣⁣𝗔𝗗𝗩𝗔𝗡𝗖𝗘𝗗 𝗣𝗔𝗧𝗧𝗘𝗥𝗡: 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗧𝗶𝗺𝗲𝗼𝘂𝘁 𝘂𝘀𝗶𝗻𝗴 𝗣𝗿𝗼𝗺𝗶𝘀𝗲.𝗿𝗮𝗰𝗲()⁡
 ================================================================================
 
 💬 DEVELOPER'S MILESTONE:
@@ -361,34 +362,34 @@ We create a race between two things:
 📝 THE CODE EXAMPLE:
 --------------------
 
-   // 1. A function that just waits and then fails
-   function timeout(seconds) {
-       return new Promise((_, reject) => {
-           setTimeout(() => {
-               reject(new Error("Request took too long!"));
-           }, seconds * 1000);
-       });
-   }
+⁡⁢⁢⁢    // 1. A function that just waits and then fails
+    function timeout(seconds) {
+        return new Promise((_, reject) => {
+            setTimeout(() => {
+                reject(new Error("Request took too long!"));
+            }, seconds * 1000);
+        });
+    }
 
    // 2. The actual data fetch
    async function getProfile() {
-       try {
-           // RACE! 
-           // Either the fetch finishes first, or the 5s timer finishes first.
-           const response = await Promise.race([
-               fetch('https://api.example.com/profile'),
-               timeout(5) 
-           ]);
+        try {
+            // RACE! 
+            // Either the fetch finishes first, or the 5s timer finishes first.
+            const response = await Promise.race([
+                fetch('https://api.example.com/profile'),
+                timeout(5) 
+            ]);
 
-           const data = await response.json();
-           console.log("Success:", data);
-       } catch (err) {
-           // This will catch if the fetch fails OR if the timeout wins!
-           console.error("Race Error:", err.message);
-       }
-   }
+            const data = await response.json();
+            console.log("Success:", data);
+        } catch (err) {
+            // This will catch if the fetch fails OR if the timeout wins!
+            console.error("Race Error:", err.message);
+        }
+    }
 
-   getProfile();
+   getProfile();⁡
 
 
 🛠️ THE "EXPERT" REFINEMENT: Cleanup
@@ -417,7 +418,7 @@ is actually still running in the background! It doesn't just disappear.
 
 
 ================================================================================
-                    🎓 SUMMARY OF YOUR PROGRESS
+                    ⁡⁢⁣⁣͟🎓⁡⁣⁢⁢ 𝘚͟𝘜͟𝘔͟𝘔͟𝘈͟𝘙͟𝘠 𝘖͟𝘍 𝘠͟𝘖͟𝘜͟𝘙 𝘗͟𝘙͟𝘖͟𝘎͟𝘙͟𝘌͟𝘚͟𝘚⁡
 ================================================================================
 
 You have now covered:
@@ -500,7 +501,7 @@ Important Links:
     • Flash card: https://gemini.google.com/share/aa89e154448e
     - 
 --------------------------------------------------------------------------------
-                    END OF PROMISES & ASYNC JAVASCRIPT GUIDE
+                ⁡⁢⁣⁢𝘌͟𝘕͟𝘋 𝘖͟𝘍 𝘗͟𝘙͟𝘖͟𝘔͟𝘐͟𝘚͟𝘌͟𝘚 ͟& 𝘈͟𝘚͟𝘠͟𝘕͟𝘊 𝘑͟𝘈͟𝘝͟𝘈͟𝘚͟𝘊͟𝘙͟𝘐͟𝘗͟𝘛 𝘎͟𝘜͟𝘐͟𝘋͟𝘌⁡
 --------------------------------------------------------------------------------
 
 
