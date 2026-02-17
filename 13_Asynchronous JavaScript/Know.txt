@@ -1,15 +1,15 @@
 
 ================================================================================
-                  13. ASYNCHRONOUS JAVASCRIPT: EVOLUTION
+                  ⁡⁢⁣⁣𝟭𝟯. 𝗔𝗦𝗬𝗡𝗖𝗛𝗥𝗢𝗡𝗢𝗨𝗦 𝗝𝗔𝗩𝗔𝗦𝗖𝗥𝗜𝗣𝗧: 𝗘𝗩𝗢𝗟𝗨𝗧𝗜𝗢𝗡⁡
 ================================================================================
 
-🔹 THREE MAIN WAYS TO HANDLE ASYNCHRONOUS TASKS
+🔹 ⁡⁢⁣⁣THREE MAIN WAYS TO HANDLE ASYNCHRONOUS TASKS⁡
 ------------------------------------------------
 In JavaScript, some tasks take time (like fetching data from a database). 
 We handle them in three main ways:
 
 
-   A. CALLBACKS (The Old Way)
+   ⁡⁣⁢⁣A. CALLBACKS (The Old Way)⁡
    ---------------------------
    A callback is just a function passed into another function to be called 
    later.
@@ -24,7 +24,7 @@ We handle them in three main ways:
 
 
 
-   B. PROMISES (The Better Way)
+   ⁡⁣⁢⁣𝗕. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘𝗦 (𝗧𝗵𝗲 𝗕𝗲𝘁𝘁𝗲𝗿 𝗪𝗮𝘆)⁡
    -----------------------------
    As discussed above, Promises replaced messy callbacks with a cleaner 
    .then().then().catch() chain. It makes the code look more like a list of 
@@ -32,15 +32,15 @@ We handle them in three main ways:
 
 
 
-   C. ASYNC / AWAIT (The Modern Way)
+   ⁡⁣⁢⁣𝗖. 𝗔𝗦𝗬𝗡𝗖 / 𝗔𝗪𝗔𝗜𝗧 (𝗧𝗵𝗲 𝗠𝗼𝗱𝗲𝗿𝗻 𝗪𝗮𝘆)⁡
    ----------------------------------
    This is "Syntactic Sugar" - built on top of Promises but makes asynchronous 
    code look and behave like synchronous (line-by-line) code.
 
-   • async: 
+   • ⁡⁣⁣⁢async⁡: 
      Tells JS that this function will handle asynchronous tasks
 
-   • await: 
+   • ⁡⁣⁣⁢await⁡: 
      Tells JS to "pause and wait" for the promise to finish before moving to 
      the next line. Much easier to read!
 

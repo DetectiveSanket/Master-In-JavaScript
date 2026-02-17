@@ -2,8 +2,8 @@
     ⁡⁢⁣⁣𝙀𝙧𝙧𝙤𝙧 𝙃𝙖𝙣𝙙𝙡𝙞𝙣𝙜 𝙞𝙣 𝘼𝙨𝙮𝙣𝙘𝙝𝙧𝙤𝙣𝙤𝙪𝙨 𝙅𝙖𝙫𝙖𝙎𝙘𝙧𝙞𝙥𝙩⁡
 
         * In Asynchronous JS, there are two main ways to handle errors depending on which syntax you use.
-            1) The Async/Await Way (try...catch)
-            2) The Promise Way (.catch())
+            1) ⁡⁣⁣⁢𝗧𝗵𝗲 𝗔𝘀𝘆𝗻𝗰/𝗔𝘄𝗮𝗶𝘁 𝗪𝗮𝘆 (𝘁𝗿𝘆...𝗰𝗮𝘁𝗰𝗵)⁡
+            2) ⁡⁣⁣⁢𝗧𝗵𝗲 𝗣𝗿𝗼𝗺𝗶𝘀𝗲 𝗪𝗮𝘆 (.𝗰𝗮𝘁𝗰𝗵())⁡
 
         ⁡⁣⁢⁣𝟭. 𝗧𝗵𝗲 𝗔𝘀𝘆𝗻𝗰/𝗔𝘄𝗮𝗶𝘁 𝗪𝗮𝘆 (𝘁𝗿𝘆...𝗰𝗮𝘁𝗰𝗵) ⁡ 
             - This is the most common and readable method. It "wraps" your risky code.  

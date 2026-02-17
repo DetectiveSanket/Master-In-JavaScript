@@ -2,7 +2,7 @@
                     ⁡⁢⁣⁣𝗧͟𝗛͟𝗘 𝗘͟𝗩͟𝗘͟𝗡͟𝗧 𝗟͟𝗢͟𝗢͟𝗣͟: 𝗝͟𝗮͟𝘃͟𝗮͟𝗦͟𝗰͟𝗿͟𝗶͟𝗽͟𝘁͟'͟𝘀 𝗕͟𝗿͟𝗮͟𝗶͟𝗻⁡
 ================================================================================
 
-📌 INTRODUCTION
+📌 ⁡⁣⁢⁢𝗜𝗡𝗧𝗥𝗢𝗗𝗨𝗖𝗧𝗜𝗢𝗡⁡
 ---------------
 Since you want to start from the ground up, let's look at the "Brain" of 
 JavaScript.
@@ -14,7 +14,7 @@ to be "fast" even though it can only do one thing at a time.
 
 
 ================================================================================
-              ⁡⁢⁣⁣𝟭. 𝗧͟𝗛͟𝗘 𝗚͟𝗥͟𝗢͟𝗨͟𝗡͟𝗗 𝗥͟𝗘͟𝗔͟𝗟͟𝗜͟𝗧͟𝗬͟: 𝗝͟𝗮͟𝘃͟𝗮͟𝗦͟𝗰͟𝗿͟𝗶͟𝗽͟𝘁 𝗶͟𝘀 𝗦͟𝗶͟𝗻͟𝗴͟𝗹͟𝗲͟-͟𝗧͟𝗵͟𝗿͟𝗲͟𝗮͟𝗱͟𝗲͟𝗱⁡
+              ⁡⁢⁣⁣𝟭. 𝙏𝙃𝙀 𝙂𝙍𝙊𝙐𝙉𝘿 𝙍𝙀𝘼𝙇𝙄𝙏𝙔: 𝙅𝙖𝙫𝙖𝙎𝙘𝙧𝙞𝙥𝙩 𝙞𝙨 𝙎𝙞𝙣𝙜𝙡𝙚-𝙏𝙝𝙧𝙚𝙖𝙙𝙚𝙙⁡
 ================================================================================
 
 👨‍🍳 The Kitchen Analogy:
@@ -41,7 +41,7 @@ Imagine a tiny kitchen with only one Chef (the JavaScript Engine).
 To manage tasks, JavaScript uses three main areas:
 
 
-   🔹 THE CALL STACK (The Chef's To-Do List)
+   🔹 ⁡⁣⁢⁣THE CALL STACK (The Chef's To-Do List)⁡
    ------------------------------------------
    • This is where code currently being executed lives
    • It's "Last In, First Out" (LIFO)
@@ -95,13 +95,13 @@ Look at this code. What do you think prints first?
 
    📝 Code Example:
    
-        console.log("1. Start");
+        ⁡⁢⁢⁢console.log("1. Start");
 
         setTimeout(() => {
             console.log("2. Timer Finished");
         }, 0); // 0 milliseconds!
 
-        console.log("3. End");
+        console.log("3. End");⁡
 
 
    📤 The Result: 
@@ -220,6 +220,31 @@ messages.
 ================================================================================
          ⁡⁢⁣⁣ 𝗧͟𝗛͟𝗘 𝗣͟𝗥͟𝗜͟𝗢͟𝗥͟𝗜͟𝗧͟𝗬 𝗥͟𝗨͟𝗟͟𝗘͟: 𝗠͟𝗶͟𝗰͟𝗿͟𝗼͟𝘁͟𝗮͟𝘀͟𝗸͟𝘀 𝘃͟𝘀. 𝗠͟𝗮͟𝗰͟𝗿͟𝗼͟𝘁͟𝗮͟𝘀͟𝗸͟𝘀⁡
 ================================================================================
+
+   - In JavaScript, the Event Loop handles asynchronous operations by managing two distinct queues: the Microtask Queue and the Macrotask Queue (often just called Task Queue). 
+
+   - The core difference lies in their priority: Microtasks are executed immediately after the current synchronous code finishes and before the browser renders or moves to the next macrotask. 
+
+   - This means that even if a macrotask is scheduled with a delay of 0 milliseconds, it will still be executed after all microtasks have been processed.
+
+   •  ⁡⁣⁢⁣𝗠𝗶𝗰𝗿𝗼𝘁𝗮𝘀𝗸𝘀 𝘃𝘀. 𝗠𝗮𝗰𝗿𝗼𝘁𝗮𝘀𝗸𝘀: 𝗞𝗲𝘆 𝗗𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲𝘀⁡
+
+   ┌────────────────┬─────────────────────────────────────────────┬─────────────────────────────────────────────────────┐
+   │    FEATURE     │     MICROTASK QUEUE (High Priority)         │        MACROTASK QUEUE (Low Priority)               │
+   ├────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+   │ Priority       │ Higher (Executed immediately after          │ Lower (Executed one by one after                    │
+   │                │ current script/task)                        │ microtask queue is empty)                           │
+   ├────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+   │ Examples       │ Promise.then/catch/finally, queueMicrotask, │ setTimeout, setInterval, setImmediate,              │
+   │                │ MutationObserver, process.nextTick (Node.js)│ I/O, UI rendering, event handlers                   │
+   ├────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+   │ Execution Loop │ All queued microtasks are run in one go     │ Only one macrotask runs per event loop tick         │
+   ├────────────────┼─────────────────────────────────────────────┼─────────────────────────────────────────────────────┤
+   │ Use Case       │ Need to do something immediately after      │ Deferring tasks to the future                       │
+   │                │ the current code, before rendering          │ (timers, network requests)                          │
+   └────────────────┴─────────────────────────────────────────────┴─────────────────────────────────────────────────────┘
+
+   ----------------------
 
 In JavaScript, not all "background tasks" are equal. When the Call Stack 
 (the Chef) is empty, the Event Loop looks at two different queues:

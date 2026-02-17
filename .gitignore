@@ -1,4 +1,6 @@
 /.qodo
 
 # Ignore temp files
+Temp
+Temp/
 Temp/*
