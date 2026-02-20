@@ -1,4 +1,43 @@
 
+// ⁡⁢⁣⁣𝗝𝗦𝗢𝗡.𝗦𝘁𝗿𝗶𝗻𝗴𝗶𝗳𝘆()?⁡
+    // Ojbect to JSON string
+    const objectJ = {
+        name: "John",
+        age: 30,
+        city: "New York",
+        pin: 12345,
+        status : true
+    }
+
+    console.log(objectJ);
+    console.log(typeof objectJ); // "object"
+
+    // convert object to JSON string
+    const jsonString = JSON.stringify(objectJ);
+    console.log(jsonString);
+    console.log(typeof jsonString); // "string"
+    
+
+// ⁡⁣⁣⁢𝗝𝗦𝗢𝗡.𝗽𝗮𝗿𝘀𝗲()?⁡
+    // convert JSON string back to object
+    const parseredObject = JSON.parse(jsonString);
+    console.log(parseredObject);
+    console.log(typeof parseredObject); // "object"
+//-------------------------------------------------------------
+    // Array
+    const array = [1, 2, 3, 4, 5];
+    console.log(array);
+    console.log(typeof array)
+
+    const jsonArrayString = JSON.stringify(array);
+    console.log(jsonArrayString);
+    console.log(typeof jsonArrayString); // "string"
+
+    const parseredArray = JSON.parse(jsonArrayString);
+    console.log(parseredArray);
+    console.log(typeof parseredArray); // "object"
+
+//-----------------------------------------------
 let obj = {} // empty object
 
 obj.name = "John"; // adding a property
@@ -100,3 +139,47 @@ deepCopy.address.city = "Chennai";
 console.log(details.address.city); // "Bangalore"
 console.log(shallowCopy.address.city); // "Bangalore"
 console.log(deepCopy.address.city); // "Chennai"
+
+
+// ## Shallow Copy
+    let obj1 = {
+        name: "sanket",
+        age: 21,
+        city: "pune",
+    }
+    // object are reference type data type , when we copy the object it will create a new reference to the same object in memory. this is called shallow copy.
+    let copyObjRef = obj1; // copy by reference
+    console.log(copyObjRef); // {name: "sanket", age: 21, city: "pune"}
+    copyObjRef.name = "Sanket Talekar";
+    console.log(copyObjRef.name); // Sanket Talekar
+    console.log(obj1.name); // original object also changed Sanket Talekar
+
+    // to solve this issue we use spread operator to create a new object with the same properties. this is called shallow copy. BUt you should be careful when using spread operator for copying objects with nested objects, because it will create a new reference to the same nested object in memory. this is called deep copy.
+
+    let copyObjSpread = { ...obj1 }; // shallow copy
+    console.log(copyObjSpread); // {name: "Sanket Talekar", age: 21, city: "pune"}
+    copyObjSpread.name = "Sanket Talekar";
+    console.log(copyObjSpread.name); // Sanket Talekar
+    console.log(obj1.name); // original object remain same Sanket Talekar
+
+    // but if the object has nested object then it will create a new reference to the same nested object in memory. this is called deep copy.
+    let obj2 = {
+        name: "sanket",
+        age: 21,
+        address: {
+            city: "pune",   
+            pin: 344,
+        }
+    }
+    let copyObjNested = { ...obj2 };
+    console.log(copyObjNested); // {name: "sanket", age: 21, address: {city: "pune", pin: 344}}
+    copyObjNested.address.city = "mumbai";
+    console.log(copyObjNested.address.city);
+    console.log(obj2.address.city); // original object also changed mumbai
+
+    // to solve this issue we use deep copy
+    let copyObjDeep = JSON.parse(JSON.stringify(obj2)); // deep copy
+    copyObjDeep.address.city = "delhi";
+    console.log(copyObjDeep.address.city); // delhi
+    console.log(obj2.address.city); // original object remain same mumbai
+    
