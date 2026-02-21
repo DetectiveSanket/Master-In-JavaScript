@@ -2,6 +2,10 @@
 
 ## ⁡⁢⁣⁣𝗠𝗮𝗶𝗻 𝗰𝗼𝗻𝗰𝗲𝗽𝘁 𝗶𝗻 𝗮𝗿𝗿𝗮𝘆⁡
 
+    >< The six falsy values in JavaScript are: false, 0, "", null, undefined, and NaN.
+    >< Truthy values are all values that are not falsy. This includes: true, any non-zero number, any non-empty string, any object, and any array.
+    >< In JavaScript, arrays are a type of object that can hold multiple values. They are ordered, mutable, and can contain elements of different types.
+
  1) Map - creates a new array by applying a function to each element. return values
  2) Filter - creates a new array with all elements that pass the test implemented by the provided function
  3) Reduce - executes a reducer function on each element of the array, resulting in a single output value
@@ -24,6 +28,37 @@
     - can be used to transform data
     - can be chained with other array methods
 
+    ex-
+        ⁡⁢⁢⁢let arr = [1, 2, 3, 4];
+        let newArra = arr.map(num => num * 2);
+        console.log(newArr); // [2, 4, 6, 8]⁡
+
+2) ⁡⁣⁢⁣𝗙𝗶𝗹𝘁𝗲𝗿⁡
+    - creates a new array with all elements that pass the test implemented by the provided function
+    * use when you want to filter data based on a condition
+    - does not modify the original array
+    - compuslary return a boolean value for each element
+    - can be used to filter data
+    - can be chained with other array methods
+
+    ex-
+        ⁡⁢⁢⁢let arr = [1, 2, 3, 4];
+        let newArr = arr.filter(num => num % 2 === 0);
+        console.log(newArr); // [2, 4]⁡
+
+3) ⁡⁣⁢⁣𝗥𝗲𝗱𝘂𝗰𝗲⁡
+    - executes a reducer function on each element of the array, resulting in a single output value
+    * use when you want to reduce an array to a single value (e.g., sum, product)
+    - does not modify the original array
+    - compuslary return a single value
+    - can be used to reduce an array to a single value
+    - can be chained with other array methods
+
+    ex-
+        ⁡⁢⁢⁡⁢⁢⁢let arr = [1, 2, 3, 4];
+        let sum = arr.reduce((accumulator, currentValue) => accumulator + currentValue, 0);
+        console.log(sum); // 10⁡
+
 
 4) ⁡⁣⁢⁣𝗳𝗼𝗿𝗘𝗮𝗰𝗵⁡
     - executes a provided function once for each array element
@@ -34,13 +69,13 @@
     - is often used for side effects (e.g., logging)
 
     ex-
-        let arr = [1, 2, 3, 4];
+        ⁡⁢⁢⁢let arr = [1, 2, 3, 4];
         arr.forEach(num => {
             console.log(num * 2);
-        });
+        });⁡
 
 
-    • forEach vs map
+    • ⁡⁢⁣⁣𝗳𝗼𝗿𝗘𝗮𝗰𝗵 𝘃𝘀 𝗺𝗮𝗽⁡
         - forEach is used for side effects (e.g., logging), while map is used for transforming data.
 
         - forEach does not return a new array, while map returns a new array with the transformed elements.
