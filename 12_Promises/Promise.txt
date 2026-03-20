@@ -116,6 +116,12 @@ A promise is always in one of these THREE states:
    • Example: "Regardless of whether I ate, I will leave the restaurant"
 
 
+## Types of Promise....
+   1. Promise.All().
+   2. Promise.AllSettled().
+   3. Promise.Race().
+   4. Promise.Any().
+
 
 🔹 ⁡⁢⁣⁣PROMISE.ALL() (The Group Order)⁡
 ----------------------------------
@@ -170,9 +176,9 @@ to fix if something goes wrong.
           preparePizza(pizza, (preparedPizza) => {
               deliverPizza(preparedPizza, (status) => {
                   console.log(status); // "Pizza Delivered!"
-                });
+               });
             });
-        });⁡
+         });⁡
 
 
 🔹 ⁡⁣⁢⁣2. THE PROMISE WAY (Chaining)⁡
@@ -211,7 +217,7 @@ to handle any errors (like the pizza shop being closed).
             } finally {
                 console.log("Process finished."); // Runs no matter what
             }
-        }⁡
+         }⁡
 
        ⁡⁢⁢⁢processPizzaOrder();⁡
 
@@ -240,14 +246,14 @@ Posts, and the Notifications all at once.
 🔹 ⁡⁣⁢⁣𝟭. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗔𝗟𝗟() — "𝗧𝗵𝗲 𝗔𝗹𝗹 𝗼𝗿 𝗡𝗼𝘁𝗵𝗶𝗻𝗴"⁡ 💥
 ----------------------------------------------
     - This is the most common method. 
-    - It runs all promises in parallel and waits for them to finish.
+    - ⁡⁣⁣⁢It runs all promises in parallel and waits for them to finish.⁡
 
    ✅ The Success Case⁡: 
-      If all promises succeed, you get an array of all the results.
+     ⁡⁣⁣⁢ If all promises succeed, you get an array of all the results.⁡
 
    💥 The "Boom" Case: 
-      If even one promise fails (rejects), the whole thing stops immediately 
-      and throws an error.
+      ⁡⁣⁣⁢If even one promise fails (rejects), the whole thing stops immediately 
+      and throws an error.⁡
 
    🍕 Real-world Analogy: 
       You and 3 friends order pizza. You agree that if even one person's 
@@ -264,15 +270,15 @@ Posts, and the Notifications all at once.
             const results = await Promise.all([p1, p2, p3]); 
 
             console.log("All data loaded:", results);
-        } catch (error) {
+         } catch (error) {
             console.log("One task failed, so the whole batch failed.");
-        }⁡
+         }⁡
 
 
 🔹 ⁡⁣⁢⁣𝟮. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗔𝗟𝗟𝗦𝗘𝗧𝗧𝗟𝗘𝗗() — "𝗧𝗵𝗲 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗶𝗼𝗻𝗶𝘀𝘁" 📋⁡
 ----------------------------------------------------
-    - Introduced in ES2020, this is much more "forgiving." 
-    - It waits for every promise to finish, regardless of whether it succeeded or failed.
+   - Introduced in ES2020, this is much more "forgiving." 
+   ^ ⁡⁣⁣⁢It waits for every promise to finish, regardless of whether it succeeded or failed.⁡
 
    📊 The Result: 
       It returns an array of objects describing the outcome of each promise.
@@ -282,11 +288,22 @@ Posts, and the Notifications all at once.
       and who said "No." You don't want to cancel the party just because 
       one person can't come!
 
+      ⁡⁢⁢⁢const p1 = fetch('/profile');
+      const p2 = fetch('/posts');
+      const p3 = fetch('/notifications');
+
+      try (
+         const result = await Promise.allSettled([p1, p2, p3]);
+         console.log("Results:", result);
+      ) ctch (error) {
+         console.log("This will never run, because allSettled never fails!");
+      }⁡
+
 
 🔹 ⁡⁣⁢⁣𝟯. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗥𝗔𝗖𝗘() — "𝗧𝗵𝗲 𝗦𝗽𝗲𝗲𝗱𝘀𝘁𝗲𝗿" 🏃⁡
 ------------------------------------------
-    - This returns the result of the first promise that settles (either success 
-or failure).
+    - ⁡⁣⁣⁢This returns the result of the first promise that settles (either success 
+or failure).⁡
 
    🚖 Real-world Analogy: 
       You call two different taxi companies. Whichever one arrives first 

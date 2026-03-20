@@ -1,38 +1,42 @@
 
 
     Q) ⁡⁢⁣⁣What is JSON.Stringify()?⁡
-    --> JSON.stringify() is a method in JavaScript that converts a JavaScript object or value to a JSON string. It is commonly used to serialize data for storage or transmission over a network. The resulting JSON string can be easily parsed back into a JavaScript object using JSON.parse().
+    --> ⁡⁣⁣⁢JSON.stringify() is a method in JavaScript that converts a JavaScript object or value to a JSON string.⁡ It is commonly used to serialize data for storage or transmission over a network. The resulting JSON string can be easily parsed back into a JavaScript object using JSON.parse().
 
     Example usage:
-        const obj = { name: "Alice", age: 30, city: "New York" };
+       ⁡⁢⁢⁢ const obj = { name: "Alice", age: 30, city: "New York" };
         const jsonstrng = JSON.stringify(obj);
-        console.log(jsonstrng); // Output: {"name":"Alice","age":30,"city":"New York"}
+        console.log(jsonstrng); // Output: {"name":"Alice","age":30,"city":"New York"}⁡
 
 
         - In this example, we have a JavaScript object `obj` with three properties: `name`, `age`, and `city`. We use JSON.stringify() to convert this object into a JSON string, which is then logged to the console. The output is a string representation of the original object in JSON format.
 
-    > You can also use JSON.stringify() to convert arrays, nested objects, and other data types to JSON strings. For example:
-        const arr = [1, 2, 3, 4, 5];
+    > ⁡⁣⁢⁣You can also use JSON.stringify() to convert arrays, nested objects, and other data types to JSON strings. For example:⁡
+        ⁡⁢⁢⁢const arr = [1, 2, 3, 4, 5];
         const jsonArr = JSON.stringify(arr);
 
-        console.log(jsonArr); // Output: [1,2,3,4,5]
+        console.log(jsonArr);⁡ ⁡⁣⁢⁢// Output: [1,2,3,4,5] -> type is string⁡
             - In this case, we have an array of numbers that is converted into a JSON string. The output is a string representation of the array in JSON format.
-        - Overall, JSON.stringify() is a powerful method for converting JavaScript objects and values into a format that can be easily stored or transmitted as JSON.
+
+        * Overall, ⁡⁣⁣⁢JSON.stringify() is a powerful method for converting JavaScript objects and values into a format that can be easily stored or transmitted as JSON.⁡
 
 
-    Q) Array is an object so can we use JSON.stringify() and JSON.parse() on arrays?
-    -> Yes, you can use JSON.stringify() and JSON.parse() on arrays in JavaScript. When you use JSON.stringify() on an array, it converts the array into a JSON string representation. When you use JSON.parse() on that JSON string, it converts it back into an array.
+    Q)⁡⁣⁢⁣ Array is an object so can we use JSON.stringify() and JSON.parse() on arrays?⁡
+    ->  - ⁡⁣⁣⁢Yes⁡, you can use ⁡⁣⁣⁢JSON.stringify() and JSON.parse() on arrays⁡ in JavaScript. 
+        - When you use JSON.stringify() on an array, it converts the⁡⁣⁣⁢ array into a JSON ⁡⁣⁣⁢string⁡ representation.
+        - When you use JSON.parse() on that JSON string, ⁡⁣⁣⁢it converts it back json into an array.⁡
 
     // Example:
-        const arr = [1, 2, 3, 4, 5];
+       ⁡⁢⁢⁢ const arr = [1, 2, 3, 4, 5];
         const jsonString = JSON.stringify(arr);
         console.log(jsonString); // Output: [1,2,3,4,5]
 
         const parsedArr = JSON.parse(jsonString);
-        console.log(parsedArr); // Output: [1, 2, 3, 4, 5]    
+        console.log(parsedArr); // Output: [1, 2, 3, 4, 5]  ⁡  
 
 
-    Why we need to use JSON.stringify() and JSON.parse() on object and array?
+    Q) ⁡⁣⁢⁣Why we need to use JSON.stringify() and JSON.parse() on object and array?⁡
     --> We need to use JSON.stringify() and JSON.parse() on objects and arrays in JavaScript for several reasons: 
-        - Data Serialization: JSON.stringify() allows us to convert JavaScript objects and arrays into a string format that can be easily stored or transmitted. This is particularly useful when we want to send data over a network or save it to a file.
-        - Data Transmission: When sending data from a client to a server or vice versa, JSON is a common format for data exchange. Using JSON.stringify() allows us to convert our JavaScript objects and arrays into a format that can be easily transmitted as part of an HTTP request or response.    
+        - ⁡⁢⁣⁣𝗗𝗮𝘁𝗮 𝗦𝗲𝗿𝗶𝗮𝗹𝗶𝘇𝗮𝘁𝗶𝗼𝗻:⁡ JSON.stringify() allows us to convert JavaScript objects and arrays into a string format that can be easily stored or transmitted. This is particularly useful when we want to send data over a network or save it to a file.
+
+        - ⁡⁢⁣⁣𝗗𝗮𝘁𝗮 𝗧𝗿𝗮𝗻𝘀𝗺𝗶𝘀𝘀𝗶𝗼𝗻:⁡ When sending data from a client to a server or vice versa, JSON is a common format for data exchange. Using JSON.stringify() allows us to convert our JavaScript objects and arrays into a format that can be easily transmitted as part of an HTTP request or response.    

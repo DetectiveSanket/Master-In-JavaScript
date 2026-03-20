@@ -17,7 +17,7 @@ to be "fast" even though it can only do one thing at a time.
               ⁡⁢⁣⁣𝟭. 𝙏𝙃𝙀 𝙂𝙍𝙊𝙐𝙉𝘿 𝙍𝙀𝘼𝙇𝙄𝙏𝙔: 𝙅𝙖𝙫𝙖𝙎𝙘𝙧𝙞𝙥𝙩 𝙞𝙨 𝙎𝙞𝙣𝙜𝙡𝙚-𝙏𝙝𝙧𝙚𝙖𝙙𝙚𝙙⁡
 ================================================================================
 
-👨‍🍳 The Kitchen Analogy:
+👨‍🍳 ⁡⁣⁢⁣The Kitchen Analogy:⁡
 ------------------------
 Imagine a tiny kitchen with only one Chef (the JavaScript Engine).
 
@@ -50,7 +50,7 @@ To manage tasks, JavaScript uses three main areas:
    • Def:- ⁡⁣⁣⁢Call Stack is the place where JavaScript keeps track of function calls and executes code.⁡
 
 
-   🔹 THE WEB APIs (The Kitchen Assistants)
+   🔹 ⁡⁣⁢⁣THE WEB APIs (The Kitchen Assistants)⁡
    ----------------------------------------
    • When you have a slow task [asychronos code] (like fetching data or a timer), the Chef 
      hands it off to an assistant
@@ -60,7 +60,7 @@ To manage tasks, JavaScript uses three main areas:
    • Def:- ⁡⁣⁣⁢Web APIs are browser-provided tools that handle asynchronous tasks outside of the main JavaScript thread.⁡⁡
 
 
-   🔹 THE CALLBACK QUEUE (The "Ready to Serve" Counter)
+   🔹 ⁡⁣⁢⁣THE CALLBACK QUEUE (The "Ready to Serve" Counter)⁡
    ----------------------------------------------------
    • Once an assistant finishes a task, they put the result here
    • Waiting to be picked up by the Event Loop
@@ -150,7 +150,7 @@ something real: Getting weather data from an API.
 
 
 ================================================================================
-                SUMMARY: Ground Level Concepts
+                ⁡⁢⁣⁣𝗦𝗨𝗠𝗠𝗔𝗥𝗬: 𝗚𝗿𝗼𝘂𝗻𝗱 𝗟𝗲𝘃𝗲𝗹 𝗖𝗼𝗻𝗰𝗲𝗽𝘁𝘀⁡
 ================================================================================
 
    📊 Quick Reference Table:
@@ -250,7 +250,7 @@ In JavaScript, not all "background tasks" are equal. When the Call Stack
 (the Chef) is empty, the Event Loop looks at two different queues:
 
 
-🔹 1. THE SYNCHRONOUS TASKS (The "Right Now" Lane)
+🔹 ⁡⁣⁢⁣𝟭. 𝗧𝗛𝗘 𝗦𝗬𝗡𝗖𝗛𝗥𝗢𝗡𝗢𝗨𝗦 𝗧𝗔𝗦𝗞𝗦 (𝗧𝗵𝗲 "𝗥𝗶𝗴𝗵𝘁 𝗡𝗼𝘄" 𝗟𝗮𝗻𝗲)⁡
 ---------------------------------------------------
 Anything that isn't wrapped in a Promise or a Timeout runs immediately.
 

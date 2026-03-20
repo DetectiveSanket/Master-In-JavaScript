@@ -1,3 +1,4 @@
+
 ⁡⁢⁣⁣    _______________________________________________________________________________  
     |    Here’s the complete list of 100 JavaScript interview questions:           | 
     |______________________________________________________________________________|
@@ -23,8 +24,8 @@
 18. Explain the concept of event-driven programming in JavaScript.
 19. What is the purpose of the “async” and “await” keywords in JavaScript?
 
-20. What is the difference between a deep copy and a shallow copy in JavaScript?
-21. How does JavaScript handle memory management?
+20. What is the difference between a deep copy and a shallow copy in JavaScript? ✔️
+21. How does JavaScript handle memory management? ✔️
 22. Explain the concept of the event loop in JavaScript.
 23. What is the purpose of the “map” method in JavaScript?
 24. What is a promise in JavaScript?

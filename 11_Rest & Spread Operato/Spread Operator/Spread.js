@@ -1,7 +1,7 @@
 /* 
-    > Spread and Rest Operators
+    ⁡⁢⁣⁢> 𝗦𝗽𝗿𝗲𝗮𝗱 𝗮𝗻𝗱 𝗥𝗲𝘀𝘁 𝗢𝗽𝗲𝗿𝗮𝘁𝗼𝗿𝘀⁡
 
-    1. Spread Operator
+   ⁡⁢⁣⁣ 𝟭. 𝗦𝗽𝗿𝗲𝗮𝗱 𝗢𝗽𝗲𝗿𝗮𝘁𝗼𝗿⁡
        - It's spread or expands the values of an iterable (like an array)
        - copy the array , merge array , spread the array ,  (use cases)
        - Used to split up array elements OR object properties
@@ -10,43 +10,45 @@
 */
 
 
-// # Lest start From Spread Operator
+// # ⁡⁣⁢⁣𝗟𝗲𝘀𝘁 𝘀𝘁𝗮𝗿𝘁 𝗙𝗿𝗼𝗺 𝗦𝗽𝗿𝗲𝗮𝗱 𝗢𝗽𝗲𝗿𝗮𝘁𝗼𝗿⁡
 
 /*   
-    • explin me what is spread operator with example?
+    • ⁡⁣⁢⁣𝗲𝘅𝗽𝗹𝗶𝗻 𝗺𝗲 𝘄𝗵𝗮𝘁 𝗶𝘀 𝘀𝗽𝗿𝗲𝗮𝗱 𝗼𝗽𝗲𝗿𝗮𝘁𝗼𝗿 𝘄𝗶𝘁𝗵 𝗲𝘅𝗮𝗺𝗽𝗹𝗲?⁡
     --> spread operator is use to spread the value of array or object. 
         - spread means copy
 
         for example:
-            let arr1 = [1,2,3];
+            ⁡⁢⁢⁢let arr1 = [1,2,3];
             let arr2 = [...arr1,4,5,6];
-            clg(arr2); // [1,2,3,4,5,6]
-                >• so basically spread operator is use to copy the value of array or object and add some more value (if you want its option or choise).
+            clg(arr2);⁡ // [1,2,3,4,5,6]
+
+        * so basically spread operator is use to copy the value of array or object and add some more value (if you want its option or choise).
 
     >< To be more clear:- spread operation actually get or collect all the vlaues from array and oject and spread (means copy) them to new array or object.   
     
-    • so tell me all the use case of spread operator?
-    --> 1. copy the array
+    • ⁡⁣⁢⁣𝘀𝗼 𝘁𝗲𝗹𝗹 𝗺𝗲 𝗮𝗹𝗹 𝘁𝗵𝗲 𝘂𝘀𝗲 𝗰𝗮𝘀𝗲 𝗼𝗳 𝘀𝗽𝗿𝗲𝗮𝗱 𝗼𝗽𝗲𝗿𝗮𝘁𝗼𝗿?⁡
+    --> ⁡⁢⁣⁣1. copy the array
         2. merge the array
         3. spread the string
         4. spread the object
-        5. function call
+        5. function call⁡
 
-    1) copy the array
-        let arr1 = [1,2,3];
+   ⁡⁢⁣⁣ 𝟭) 𝗰𝗼𝗽𝘆 𝘁𝗵𝗲 𝗮𝗿𝗿𝗮𝘆⁡
+        ⁡⁢⁢⁢let arr1 = [1,2,3];
         let arr2 = [...arr1];
-        clg(arr2); // [1,2,3] // this is called shallow copy 
+        clg(arr2);⁡ // [1,2,3] // this is called shallow copy 
         
-          -• So i have confusion between copy the array with the help of spread operator and direct assign the array to new array like let arr1 = arr2; so what is the difference between them
-            --> when we direct assign the array to new array like let arr1 = arr2; then both arr1 and arr2 point to same memory location so if we change the value of arr2 then arr1 will also change. > But when we use ⁡⁣⁣⁢spread operator⁡ to copy the array like let arr2 = [...arr1]; then both arr1 and arr2 point to different memory location so if we change the value of arr2 then arr1 will not change
+        * So i have confusion between copy the array with the help of spread operator and direct assign the array to new array like let arr1 = arr2; so what is the difference between them
 
-        -• ok got it , new question what is what it called shallow copy and deep copy?
-            --> when we use ⁡⁣⁣⁢spread operator⁡ to copy the array or object then it is called shallow copy because it only copies the first level of the array or object. > But when we use JSON.parse(JSON.stringify(obj)) to copy the object then it is called deep copy because it copies all the levels of the object.
+            --> when we direct assign the array to new array ⁡⁣⁣⁢like let arr1 = arr2; then both arr1 and arr2 point to same memory location⁡ so if we change the value of arr2 then arr1 will also change. > But when we use ⁡⁣⁣⁢spread operator⁡ to copy the array like let arr2 = [...arr1]; then both arr1 and arr2 point to different memory location so if we change the value of arr2 then arr1 will not change
+     
+      - ⁡⁣⁢⁣𝗻𝗲𝘄 𝗾𝘂𝗲𝘀𝘁𝗶𝗼𝗻 W𝗵𝗮𝘁 𝗶𝘀 𝘀𝗵𝗮𝗹𝗹𝗼𝘄 𝗰𝗼𝗽𝘆 𝗮𝗻𝗱 𝗱𝗲𝗲𝗽 𝗰𝗼𝗽𝘆?⁡
+            --> when we use ⁡⁣⁣⁢spread operator⁡ to copy the array or object then it is called ⁡⁣⁣⁢shallow copy⁡ because it only copies the first level of the array or object. > But when we use ⁡⁣⁣⁢𝗝𝗦𝗢𝗡.𝗽𝗮𝗿𝘀𝗲(𝗝𝗦𝗢𝗡.𝘀𝘁𝗿𝗶𝗻𝗴𝗶𝗳𝘆(𝗼𝗯𝗷))⁡ to copy the object then it is called deep copy because it copies all the levels of the object.
 
-        -• ok all the level means nested object also?
+        -• ⁡⁣⁢⁣𝗼𝗸 𝗮𝗹𝗹 𝘁𝗵𝗲 𝗹𝗲𝘃𝗲𝗹 𝗺𝗲𝗮𝗻𝘀 𝗻𝗲𝘀𝘁𝗲𝗱 𝗼𝗯𝗷𝗲𝗰𝘁 𝗮𝗹𝘀𝗼?⁡
             --> yes nested object also
 
-        >> can you make deep capy with array also?
+        >> ⁡⁣⁢⁣can you make deep capy with array also?⁡
             --> no deep copy is only for object because array don't have nested structure like object.     
 
     -• perfect , got it... so what i understood is that spread operator is use to copy the array or object and it is called shallow copy because it only copies the first level of the array or object. > But when we use JSON.parse(JSON.stringify(obj)) to copy the object then it is called deep copy because it copies all the levels of the object including nested object.
@@ -56,25 +58,25 @@
         let deepCopy = JSON.parse(JSON.stringify(obj)); // deep copy
            ->> deepCopy is used in real life application when we want to copy the object and we don't want to change the original object.
 
-    2) merge the array
-        let arr1 = [1,2,3];
-        let arr2 = [4,5,6];
-        let arr3 = [...arr1,...arr2];
-        clg(arr3); // [1,2,3,4,5,6]
+    ⁡⁢⁣⁣𝟮) 𝗺𝗲𝗿𝗴𝗲 𝘁𝗵𝗲 𝗮𝗿𝗿𝗮𝘆⁡
+        ⁡⁢⁢⁢𝗹𝗲𝘁 𝗮𝗿𝗿𝟭 = [𝟭,𝟮,𝟯];
+        𝗹𝗲𝘁 𝗮𝗿𝗿𝟮 = [𝟰,𝟱,𝟲];
+        𝗹𝗲𝘁 𝗮𝗿𝗿𝟯 = [...𝗮𝗿𝗿𝟭,...𝗮𝗿𝗿𝟮];
+        𝗰𝗹𝗴(𝗮𝗿𝗿𝟯);⁡ // [1,2,3,4,5,6]
         
-    3) spread the string
-        let str = "sanket";
-        let arr1 = [...str];
-        clg(arr1); // ["s","a","n","k","e","t"] // convert into array
+    ⁡⁢⁣⁣𝟯) 𝘀𝗽𝗿𝗲𝗮𝗱 𝘁𝗵𝗲 𝘀𝘁𝗿𝗶𝗻𝗴⁡
+        ⁡⁢⁢⁢𝗹𝗲𝘁 𝘀𝘁𝗿 = "𝘀𝗮𝗻𝗸𝗲𝘁";
+        𝗹𝗲𝘁 𝗮𝗿𝗿𝟭 = [...𝘀𝘁𝗿];
+        𝗰𝗹𝗴(𝗮𝗿𝗿𝟭)⁡; // ["s","a","n","k","e","t"] // convert into array
 
-    4) spread the object
+   ⁡⁢⁣⁣ 𝟰) 𝘀𝗽𝗿𝗲𝗮𝗱 𝘁𝗵𝗲 𝗼𝗯𝗷𝗲𝗰𝘁
 
 
-    5) spread the array
-        let arr = [1, 2, 3];
-        console.log(...arr); // 1 2 3
+    𝟱) 𝘀𝗽𝗿𝗲𝗮𝗱 𝘁𝗵𝗲 𝗮𝗿𝗿𝗮𝘆⁡
+        ⁡⁢⁢⁢𝗹𝗲𝘁 𝗮𝗿𝗿 = [𝟭, 𝟮, 𝟯];
+        𝗰𝗼𝗻𝘀𝗼𝗹𝗲.𝗹𝗼𝗴(...𝗮𝗿𝗿);⁡ // 1 2 3
 
-    6) function call
+   ⁡⁢⁣⁣ 𝟲) 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗰𝗮𝗹𝗹⁡
        ->> what is function call with spread operator?
             --> function call with spread operator is use to spread the value of array or object as function arguments.
 
