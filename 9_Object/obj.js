@@ -183,3 +183,96 @@ console.log(deepCopy.address.city); // "Chennai"
     console.log(copyObjDeep.address.city); // delhi
     console.log(obj2.address.city); // original object remain same mumbai
     
+
+    //------------------------------------------------------------------------//
+
+    
+// diff way to to create object.
+
+// 1. Object literal syntax
+const person = {
+    name: "John",
+    age: 30,
+    city: "New York"
+};
+console.log("person: " , person);
+console.log("\n");
+
+
+// 2. Using the Object constructor
+
+const person2 = new Object();
+
+person2.name = "Jane";
+person2.age = 25;
+person2.city = "Los Angeles";
+
+console.log("person2: " , person2);
+console.log("persor2", person2)
+console.log("\n");
+
+// 3. Using a constructor function
+
+function personn(name , age , city) {
+    this.name = name;
+    this.age= age;
+    this.city = city;
+}
+
+const person3 = new personn("Alice" , 28 , "Chicago");
+console.log("person3: " , person3);
+console.log("\n");
+
+// 4. Using a class
+
+class personnn {
+    constructor(name , age , city) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+    }
+
+}
+const person4 = new personnn("Bob" , 35 , "San Francisco");
+console.log("person4: " , person4);
+console.log("\n");
+
+// 5. Using Object.create()
+
+const person5 = Object.create();
+person5.name = "Charlie";
+person5.age = 40;
+person5.city = "Miami";
+
+console.log("person5: " , person5);
+console.log("\n");
+
+// 6. Using JSON.parse()
+
+const personJson = '{"name": "David", "age": 22, "city": "Seattle"}';
+const person6 = JSON.parse(personJson);
+console.log("person6: " , person6);
+console.log("\n");
+
+// 7. Using a factory function
+
+function createPerson(name , age , city) {  
+    return {
+        name: name,
+        age: age,
+        city: city
+    };
+}
+
+const person7 = ct.assign()
+
+const person8 = Object.assign({}, person);
+console.log("person8: " , person8);
+console.log("\n");
+createPerson("Eve" , 27 , "Austin");
+console.log("person7: " , person7);
+console.log("\n");
+
+// 8. Using Obje
+
+
