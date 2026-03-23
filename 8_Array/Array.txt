@@ -2,9 +2,9 @@
 
 ## ⁡⁢⁣⁣𝗠𝗮𝗶𝗻 𝗰𝗼𝗻𝗰𝗲𝗽𝘁 𝗶𝗻 𝗮𝗿𝗿𝗮𝘆⁡
 
-    >< The six falsy values in JavaScript are: false, 0, "", null, undefined, and NaN.
-    >< Truthy values are all values that are not falsy. This includes: true, any non-zero number, any non-empty string, any object, and any array.
-    >< In JavaScript, arrays are a type of object that can hold multiple values. They are ordered, mutable, and can contain elements of different types.
+    ><⁡⁣⁢⁣ The six falsy values in JavaScript are:⁡ false, 0, "", null, undefined, and NaN.
+    >< ⁡⁣⁢⁣Truthy values are all values that are not falsy. This includes:⁡ true, any non-zero number, any non-empty string, any object, and any array.
+    >< In JavaScript, ⁡⁣⁣⁢arrays are a type of object⁡ that can hold multiple values. They are ordered, ⁡⁣⁣⁢mutable⁡, and can contain elements of different types.
 
  1) Map - creates a new array by applying a function to each element. return values
  2) Filter - creates a new array with all elements that pass the test implemented by the provided function
@@ -25,7 +25,6 @@
     - does not modify the original array
     - compuslary return a value for each element
     - map away return values
-    - can be used to transform data
     - can be chained with other array methods
 
     ex-
@@ -83,3 +82,15 @@
         - forEach can be used with any type of function, while map requires a specific ⁡⁣⁣⁢return value for each element.⁡
 
         - forEach is generally used when you want to perform an action for each element, while map is used when you want to create a new array based on the original array.
+
+## Practicle use case of both
+    a) forEach:-    
+        - Logging each element of an array to the console.
+        - Updating the DOM for each item in a list.
+        - Performing side effects, such as sending data to an API for each element.
+    b) map:-
+        - Transforming an array of numbers by multiplying each element by 2.
+        - Extracting a specific property from an array of objects (e.g., getting an array of names from an array of user objects).
+        - Creating a new array of elements based on the original array (e.g., creating an array of JSX elements in React based on an array of data).
+
+        
