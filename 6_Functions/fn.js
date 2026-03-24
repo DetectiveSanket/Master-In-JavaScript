@@ -208,3 +208,30 @@
         // Data has been fetched.
         // Processing received data:
         // { id: 1, name: 'John Doe' }
+
+
+        // ## What is diff bwt Higher-Order function and Callback Function
+        /*
+            - A higher-order function is a function that takes another function as an argument or returns a function as its result. It can be used to create more abstract and reusable code. For example, the map method is a higher-order function because it takes a callback function as an argument.
+
+            - A callback function is a function that is passed as an argument to another function and is executed after some operation has been completed. It is often used for handling asynchronous operations, such as fetching data from an API or responding to user events.   
+
+            - ex:-
+                • Higher-Order Function
+                function higherOrderFunction(callback) {
+                    console.log("This is a higher-order function.");
+                    callback(); // Calling the callback function
+                }
+                higherOrderFunction(callbackFunction);
+
+                • Callback Function
+                function callbackFunction() {
+                    console.log("This is a callback function.");
+                }
+
+                    
+                Output:
+                This is a higher-order function.
+                This is a callback function.
+
+        */

@@ -17,7 +17,7 @@ A1: The purpose of `this` in JavaScript is to refer to the current object or the
 
 - Q2: How does the value of `this` change in different contexts?
 A2: The value of `this` can change based on how a function is called:
-  - In the global context, `this` refers to the global object (e.g., `window` in browsers).
+  - In the global context, `this` refers to the ⁡⁣⁣⁢global object⁡ (e.g., `window` in browsers).
   - In a function, `this` refers to the object that called the function.
   - In an event handler, `this` refers to the element that triggered the event.
   - In a class method, `this` refers to the instance of the class.

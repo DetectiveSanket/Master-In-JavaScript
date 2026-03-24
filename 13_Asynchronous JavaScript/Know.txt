@@ -3,7 +3,7 @@
                   ⁡⁢⁣⁣𝟭𝟯. 𝗔𝗦𝗬𝗡𝗖𝗛𝗥𝗢𝗡𝗢𝗨𝗦 𝗝𝗔𝗩𝗔𝗦𝗖𝗥𝗜𝗣𝗧: 𝗘𝗩𝗢𝗟𝗨𝗧𝗜𝗢𝗡⁡
 ================================================================================
 
-🔹 ⁡⁢⁣⁣THREE MAIN WAYS TO HANDLE ASYNCHRONOUS TASKS⁡
+🔹 ⁡⁢⁣⁣𝗧͟𝗛͟𝗥͟𝗘͟𝗘 𝗠͟𝗔͟𝗜͟𝗡 𝗪͟𝗔͟𝗬͟𝗦 𝗧͟𝗢 𝗛͟𝗔͟𝗡͟𝗗͟𝗟͟𝗘 𝗔͟𝗦͟𝗬͟𝗡͟𝗖͟𝗛͟𝗥͟𝗢͟𝗡͟𝗢͟𝗨͟𝗦 𝗧͟𝗔͟𝗦͟𝗞͟𝗦⁡
 ------------------------------------------------
 In JavaScript, some tasks take time (like fetching data from a database). 
 We handle them in three main ways:
