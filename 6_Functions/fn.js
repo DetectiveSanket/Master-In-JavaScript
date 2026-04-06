@@ -37,7 +37,7 @@
         ⁡⁣⁢⁣• Can be anonymous (no name) or have a name
         • Useful for creating functions conditionally⁡
     */
-
+            // console.log(sayHello("sanket")) // ReferenceError: Cannot access 'sayHello' before initialization
             const sayHello = function(name) { // Anonymous function expression
                 return `Hello, ${name}!`;
             };
@@ -102,6 +102,12 @@
 // - ⁡⁢⁣⁣Async Function⁡
     /* 
         • ⁡⁣⁢⁣These are functions that allow for asynchronous, non-blocking code execution. They are defined using the async keyword and can contain await expressions to pause execution until a Promise is resolved.⁡
+
+        • An arrow function use => instead of function keyword.
+
+        - Async functions always return a Promise. If the function returns a value, the Promise will be resolved with that value. If the function throws an error, the Promise will be rejected with that error.
+         
+         
     */
 
         const hello = async () => {
@@ -114,11 +120,28 @@
         const ans = await hello();
         console.log(ans); // Output: Result of fetch
 
+        //& __Uses `=>`__
+            const greet = () => "Hello";
+
+        
+        //& If one parameter, brackets are optional
+            const square = x => x * x;
+
+        //&__If one line, `return` is automatic__
+            const summ = (a, b) => a + b;
+            
+        //& __`this` behaves differently__
+            // * Arrow function does __not__ have its own `this`
+            // * It takes `this` from the surrounding scope
+            
+
         async function fetchData() {
             const response = await fetch('https://api.example.com/data');
             const data = await response.json();
             return data;
         }
+
+
 
 // ⁡⁢⁣⁣Higher-Order Function⁡
     /* 
@@ -140,7 +163,7 @@
         
 
         
-//  Callback Function    
+// ⁡⁢⁣⁣ Callback Function    ⁡
     /* 
         In JavaScript, functions are "first-class citizens." This means they can be treated like any other variable: they can be passed as arguments to other functions, returned from functions, and assigned to variables.
 
@@ -217,21 +240,20 @@
             - A callback function is a function that is passed as an argument to another function and is executed after some operation has been completed. It is often used for handling asynchronous operations, such as fetching data from an API or responding to user events.   
 
             - ex:-
-                • Higher-Order Function
-                function higherOrderFunction(callback) {
-                    console.log("This is a higher-order function.");
-                    callback(); // Calling the callback function
-                }
-                higherOrderFunction(callbackFunction);
+            
+*/
+            //• Higher-Order Function
+            function higherOrderFunction(callback) {
+                console.log("This is a higher-order function.");
+                callback(); // Calling the callback function
+            }
+            higherOrderFunction(callbackFunction);
 
-                • Callback Function
-                function callbackFunction() {
-                    console.log("This is a callback function.");
-                }
-
-                    
-                Output:
-                This is a higher-order function.
-                This is a callback function.
-
-        */
+            //• Callback Function
+            function callbackFunction() {
+                console.log("This is a callback function.");
+            }
+           
+            //Output:
+            //This is a higher-order function.
+            //This is a callback function.

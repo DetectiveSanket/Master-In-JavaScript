@@ -5,6 +5,27 @@
     - It works with:
         HTML = structure, CSS = design, JavaScript = action.
     - JavaScript can run in the browser and also on the server using Node.js.
+
+    2) What are the data types in JavaScript?⁡
+    - In js , data types means the type of value a variable can store.
+        for ex: variable may store number, string, boolean, object, etc.
+
+        - Data types tell us what kind of daa we are working with.   
+
+        • Two main type
+            1) Primitive data types: These are basic data types that are not objects and have no methods. They include:
+                - String: Represents text. Example: "Hello, World!"
+                - Number: Represents both integer and floating-point numbers. Example: 42, 3.14
+                - Boolean: Represents true or false values. Example: true, false
+                - Null: Represents the intentional absence of any object value. Example: null
+                - Undefined: Represents a variable that has been declared but not assigned a value. Example: undefined
+                - Symbol: Represents a unique identifier. Example: Symbol('id')
+                - BigInt: Represents integers with arbitrary precision. Example: 9007199254740991n
+
+            2) Non-primitive data types: These are complex data types that can store collections of values and more complex entities. They include:
+                - Object: Represents a collection of key-value pairs. Example: { name: "Alice", age: 30 }
+                - Array: Represents an ordered list of values. Example: [1, 2, 3, 4, 5]
+                - Function: Represents a reusable block of code that performs a specific task. Example: function greet() { console.log("Hello!"); }
 */
 
 // !-------------------------------------3. Next Question --------------------------------
@@ -109,9 +130,7 @@ sayGoodbye(); // "Goodbye!"
 
 /* 
     • Prototypal inheritance is a mechanism where objects can inherit properties and methods from other objects.
-
     • Each object has a hidden `[[Prototype]]` property that links to another object. This forms a "prototype chain". 
-
     • When a property is accessed, JavaScript searches up this chain until it's found or the chain ends (at null). 
 */
 

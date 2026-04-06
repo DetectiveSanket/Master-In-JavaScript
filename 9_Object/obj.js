@@ -187,7 +187,7 @@ console.log(deepCopy.address.city); // "Chennai"
     //------------------------------------------------------------------------//
 
     
-// diff way to to create object.
+// ⁡⁢⁣⁣𝕕͟𝕚͟𝕗͟𝕗 𝕨͟𝕒͟𝕪 𝕥͟𝕠 𝕥͟𝕠 𝕔͟𝕣͟𝕖͟𝕒͟𝕥͟𝕖 𝕠͟𝕓͟𝕛͟𝕖͟𝕔͟𝕥.⁡
 
 // 1. Object literal syntax
 const person = {
