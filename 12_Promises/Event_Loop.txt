@@ -40,7 +40,7 @@ Imagine a tiny kitchen with only one Chef (the JavaScript Engine).
 
 ⁡⁣⁣⁢𝗧𝗵𝗲 𝗲𝘃𝗲𝗻𝘁 𝗹𝗼𝗼𝗽 𝗶𝘀 𝗮 𝗺𝗲𝗰𝗵𝗮𝗻𝗶𝘀𝗺 𝘁𝗵𝗮𝘁 𝗵𝗲𝗹𝗽𝘀 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁 𝗵𝗮𝗻𝗱𝗹𝗲 𝗮𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝘁𝗮𝘀𝗸𝘀 𝘄𝗶𝘁𝗵𝗼𝘂𝘁 𝗯𝗹𝗼𝗰𝗸𝗶𝗻𝗴 𝘁𝗵𝗲 𝗺𝗮𝗶𝗻 𝘁𝗵𝗿𝗲𝗮𝗱.
 ⁡
-To manage tasks, JavaScript uses three main areas:
+>> To manage tasks, JavaScript uses three main areas:
 
 
    🔹 ⁡⁣⁢⁣THE CALL STACK (The Chef's To-Do List)⁡

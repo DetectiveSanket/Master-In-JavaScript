@@ -22,11 +22,11 @@ ________________________________________________________________________________
 
         ⁡⁢⁣⁢3. Types of Errors in JavaScript⁡
         - JavaScript has several built-in error types, including:
-            Error: The generic base type for all errors.
-            SyntaxError: An error in parsing code (e.g., a missing parenthesis).
-            ReferenceError: Thrown when you try to use a variable that hasn't been declared.
-            TypeError: Thrown when a value is not of the expected type (e.g., calling a number as a function, or accessing a property on null).
-            RangeError: Thrown when a number is outside its allowed range
+            > Error: The generic base type for all errors.
+            > SyntaxError: An error in parsing code (e.g., a missing parenthesis).
+            > ReferenceError: Thrown when you try to use a variable that hasn't been declared.
+            > TypeError: Thrown when a value is not of the expected type (e.g., calling a number as a function, or accessing a property on null).
+            > RangeError: Thrown when a number is outside its allowed range
 
         ⁡⁢⁣⁢4. Error Handling in Asynchronous Code⁡
         - Handling errors in asynchronous operations like fetching data from an API is critical. You can use the .catch() method with Promises or try...catch with async/await to manage errors effectively.

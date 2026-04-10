@@ -1,26 +1,26 @@
 
-    __________________________________________
-    |                                         |  
-    |            ⁡⁢⁣⁢𝗧𝗵𝗶𝘀 𝗸𝗲𝘆𝘄𝗼𝗿𝗱⁡                 |             
-    |_________________________________________|
+    _________________________________________
+                                             
+                ⁡⁢⁣⁢𝗧𝗵𝗶𝘀 𝗸𝗲𝘆𝘄𝗼𝗿𝗱⁡                              
+    _________________________________________
 
 ✔️✔️ this in global scope , function scope , method , event handler, class
 
 ------------------------------------------
 
-⁡⁢⁣⁣Q1: What is this keyword in JavaScript?⁡
+⁡⁢⁣⁣𝗤𝟭: 𝗪𝗵𝗮𝘁 𝗶𝘀 `𝘁𝗵𝗶𝘀` 𝗸𝗲𝘆𝘄𝗼𝗿𝗱 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁?⁡
 A1: The purpose of `this` in JavaScript is to refer to the current object or the context in which the code is running.
 
     * ## Simple meaning
         - `this` tells you __"whose data or object is being used right now?"__
 
 
-- Q2: How does the value of `this` change in different contexts?
-A2: The value of `this` can change based on how a function is called:
-  - In the global context, `this` refers to the ⁡⁣⁣⁢global object⁡ (e.g., `window` in browsers).
-  - In a function, `this` refers to the object that called the function.
-  - In an event handler, `this` refers to the element that triggered the event.
-  - In a class method, `this` refers to the instance of the class.
+𝗤𝟮: 𝗛𝗼𝘄 𝗱𝗼𝗲𝘀 𝘁𝗵𝗲 𝘃𝗮𝗹𝘂𝗲 𝗼𝗳 `𝘁𝗵𝗶𝘀` 𝗰𝗵𝗮𝗻𝗴𝗲 𝗶𝗻 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝘁 𝗰𝗼𝗻𝘁𝗲𝘅𝘁𝘀?⁡
+     ->: The value of `this` can change based on how a function is called:
+        - In the global context, `this` refers to the ⁡⁣⁣⁢global object⁡ (e.g., `window` in browsers).
+        - In a function, `this` refers to the object that called the function.
+        - In an event handler, `this` refers to the element that triggered the event.
+        - In a class method, `this` refers to the instance of the class.
 
   ex=
 

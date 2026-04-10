@@ -58,6 +58,7 @@ async function getUserDashboardOptimized() {
         //^ Start both fetches in parallel
         const userPromise = fetch('https://api.example.com/user');
         const postsPromise = fetch('https://api.example.com/posts');
+        
         //^ Wait for both to complete
         const [user, posts] = await Promise.all([userPromise, postsPromise]);
         // console.log("Dashboard loaded", user, posts);

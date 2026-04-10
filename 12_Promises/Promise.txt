@@ -116,7 +116,7 @@ A promise is always in one of these THREE states:
    • Example: "Regardless of whether I ate, I will leave the restaurant"
 
 
-## Types of Promise....
+## 𝗧͟𝘆͟𝗽͟𝗲͟𝘀 𝗼͟𝗳 𝗣͟𝗿͟𝗼͟𝗺͟𝗶͟𝘀͟𝗲....
    1. Promise.All().
    2. Promise.AllSettled().
    3. Promise.Race().
@@ -270,9 +270,9 @@ Posts, and the Notifications all at once.
             const results = await Promise.all([p1, p2, p3]); 
 
             console.log("All data loaded:", results);
-         } catch (error) {
-            console.log("One task failed, so the whole batch failed.");
-         }⁡
+        } catch (error) {
+           console.log("One task failed, so the whole batch failed.");
+        }⁡
 
 
 🔹 ⁡⁣⁢⁣𝟮. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗔𝗟𝗟𝗦𝗘𝗧𝗧𝗟𝗘𝗗() — "𝗧𝗵𝗲 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗶𝗼𝗻𝗶𝘀𝘁" 📋⁡
@@ -281,23 +281,23 @@ Posts, and the Notifications all at once.
    ^ ⁡⁣⁣⁢It waits for every promise to finish, regardless of whether it succeeded or failed.⁡
 
    📊 The Result: 
-      It returns an array of objects describing the outcome of each promise.
+    - ⁡⁣⁣⁢It returns an array of objects describing the outcome of each promise.⁡
 
    🎉 Real-world Analogy: 
       You send out 100 party invitations. You want to know who said "Yes" 
       and who said "No." You don't want to cancel the party just because 
       one person can't come!
 
-      ⁡⁢⁢⁢const p1 = fetch('/profile');
-      const p2 = fetch('/posts');
-      const p3 = fetch('/notifications');
+        ⁡⁢⁢⁢const p1 = fetch('/profile');
+        const p2 = fetch('/posts');
+        const p3 = fetch('/notifications');
 
-      try (
-         const result = await Promise.allSettled([p1, p2, p3]);
-         console.log("Results:", result);
-      ) ctch (error) {
-         console.log("This will never run, because allSettled never fails!");
-      }⁡
+        try (
+            const result = await Promise.allSettled([p1, p2, p3]);
+            console.log("Results:", result);
+        ) ctch (error) {
+            console.log("This will never run, because allSettled never fails!");
+        }⁡
 
 
 🔹 ⁡⁣⁢⁣𝟯. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗥𝗔𝗖𝗘() — "𝗧𝗵𝗲 𝗦𝗽𝗲𝗲𝗱𝘀𝘁𝗲𝗿" 🏃⁡
@@ -316,8 +316,8 @@ or failure).⁡
 
 🔹 ⁡⁣⁢⁣𝟰. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗔𝗡𝗬() — "𝗧𝗵𝗲 𝗙𝗶𝗿𝘀𝘁 𝗦𝘂𝗰𝗰𝗲𝘀𝘀" ⭐⁡
 ---------------------------------------------
-    - This waits for the first successful promise. It ignores failures unless 
-all of them fail.
+    - ⁡⁣⁣⁢This waits for the first successful promise. It ignores failures unless 
+all of them fail.⁡
 
    🔌 Real-world Analogy: 
       You ask 3 friends for a spare phone charger. You only need one. 
@@ -329,7 +329,7 @@ all of them fail.
 --------------------------
 
    ┌─────────────────────┬──────────────────────────┬─────────────────────────┐
-   │       METHOD        │   WHEN DOES IT FINISH?   │   WHAT IF ONE FAILS?    │
+   │      ⁡⁢⁣⁣ 𝗠𝗘𝗧𝗛𝗢𝗗       │   𝗪𝗛𝗘𝗡 𝗗𝗢𝗘𝗦 𝗜𝗧 𝗙𝗜𝗡𝗜𝗦𝗛?  │   𝗪𝗛𝗔𝗧 𝗜𝗙 𝗢𝗡𝗘 𝗙𝗔𝗜𝗟𝗦?⁡   │
    ├─────────────────────┼──────────────────────────┼─────────────────────────┤
    │ Promise.all()       │ When all succeed         │ It fails immediately    │
    │ Promise.allSettled()│ When all are done        │ It keeps going          │
@@ -343,7 +343,7 @@ all of them fail.
         ⁡⁢⁣⁣𝗔𝗗𝗩𝗔𝗡𝗖𝗘𝗗 𝗣𝗔𝗧𝗧𝗘𝗥𝗡: 𝗥𝗲𝗾𝘂𝗲𝘀𝘁 𝗧𝗶𝗺𝗲𝗼𝘂𝘁 𝘂𝘀𝗶𝗻𝗴 𝗣𝗿𝗼𝗺𝗶𝘀𝗲.𝗿𝗮𝗰𝗲()⁡
 ================================================================================
 
-💬 DEVELOPER'S MILESTONE:
+💬 ⁡⁣⁢⁣DEVELOPER'S MILESTONE:⁡
 -------------------------
 That is exactly what I love to hear! Moving from "I've heard of this" to 
 "I can explain this perfectly" is the biggest jump in a developer's journey.
@@ -353,7 +353,7 @@ The "Request Timeout" using Promise.race().
 
 
 
-🚨 THE PROBLEM: The "Infinite Loading" Spinner
+🚨⁡⁣⁢⁣ 𝗧𝗛𝗘 𝗣𝗥𝗢𝗕𝗟𝗘𝗠: 𝗧𝗵𝗲 "𝗜𝗻𝗳𝗶𝗻𝗶𝘁𝗲 𝗟𝗼𝗮𝗱𝗶𝗻𝗴" 𝗦𝗽𝗶𝗻𝗻𝗲𝗿⁡
 ------------------------------------------------
 Imagine your app is trying to fetch a user's profile. Usually, it takes 
 1 second. But today, the server is extremely slow. If you just use 
@@ -362,13 +362,13 @@ or more. That's a terrible user experience.
 
 
 
-✅ THE SOLUTION: The "Timed Race"
+✅ ⁡⁣⁢⁣T͟H͟E S͟O͟L͟U͟T͟I͟O͟N͟: T͟h͟e "͟T͟i͟m͟e͟d R͟a͟c͟e͟"⁡
 ----------------------------------
 We create a race between two things:
 
-   1️⃣ The Real Data Fetch (The task we want)
+   1️⃣ ⁡⁣⁣⁢The Real Data Fetch (The task we want)
 
-   2️⃣ A "Timeout" Promise (A timer that rejects after 5 seconds)
+   2️⃣ A "Timeout" Promise (A timer that rejects after 5 seconds)⁡
 
 💡 RESULT:
    If the data doesn't arrive in 5 seconds, the "Timeout" wins the race, 
@@ -379,8 +379,9 @@ We create a race between two things:
 📝 THE CODE EXAMPLE:
 --------------------
 
-⁡⁢⁢⁢    // 1. A function that just waits and then fails
-    function timeout(seconds) {
+
+    // 1. A function that just waits and then fails
+   ⁡⁢⁢⁢ function timeout(seconds) {
         return new Promise((_, reject) => {
             setTimeout(() => {
                 reject(new Error("Request took too long!"));
@@ -388,12 +389,15 @@ We create a race between two things:
         });
     }
 
+
+
    // 2. The actual data fetch
    async function getProfile() {
-        try {
+        try {⁡
+
             // RACE! 
             // Either the fetch finishes first, or the 5s timer finishes first.
-            const response = await Promise.race([
+            ⁡⁢⁢⁢const response = await Promise.race([
                 fetch('https://api.example.com/profile'),
                 timeout(5) 
             ]);
@@ -409,14 +413,14 @@ We create a race between two things:
    getProfile();⁡
 
 
-🛠️ THE "EXPERT" REFINEMENT: Cleanup
--------------------------------------
+⁡⁣⁢⁣🛠️ THE "EXPERT" REFINEMENT: Cleanup
+⁡-------------------------------------
 In a real production environment, if the timeout wins the race, the fetch 
 is actually still running in the background! It doesn't just disappear.
 
 ⚠️ SENIOR DEVELOPER TIP:
    To be a true Senior Developer, you should use something called an 
-   AbortController. This allows you to literally "kill" the network request 
+   ⁡⁣⁣⁢AbortController⁡. This allows you to literally "kill" the network request 
    if it's taking too long.
 
 
