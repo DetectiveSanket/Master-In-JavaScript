@@ -73,3 +73,20 @@ myCar.drive();
 
 myCar.honk(); // Output: Toyota goes honk! (honk() is specific to Car)
 
+
+/* 
+    Q)⁡⁢⁣⁣ 𝗖𝗼𝘂𝗹𝗱 𝘆𝗼𝘂 𝗮𝗹𝘀𝗼 𝗲𝘅𝗽𝗹𝗮𝗶𝗻 𝗵𝗼𝘄 𝘆𝗼𝘂 𝘄𝗼𝘂𝗹𝗱 𝗰𝗿𝗲𝗮𝘁𝗲 𝗮𝗻 𝗼𝗯𝗷𝗲𝗰𝘁 𝘁𝗵𝗮𝘁 𝗶𝗻𝗵𝗲𝗿𝗶𝘁𝘀 𝗳𝗿𝗼𝗺 𝗮𝗻𝗼𝘁𝗵𝗲𝗿 𝗼𝗯𝗷𝗲𝗰𝘁 𝘂𝘀𝗶𝗻𝗴 𝗽𝗿𝗼𝘁𝗼𝘁𝘆𝗽𝗮𝗹 𝗶𝗻𝗵𝗲𝗿𝗶𝘁𝗮𝗻𝗰𝗲?⁡
+        - You can create an object that inherits from another object using the `Object.create()` method. This method creates a new object with the specified prototype object and properties. Here's how you can do it:
+
+*/
+
+const parentObject = {
+    greet() {
+        console.log("Hello from the parent object!");
+    }
+};
+
+const childObject = Object.create(parentObject);
+childObject.name = "Child Object";
+
+
