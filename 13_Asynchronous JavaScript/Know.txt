@@ -62,6 +62,18 @@ We handle them in three main ways:
         // The next line won't run until this one is done.
         console.log("Second");
         console.log("Third");⁡
+# ⁡⁢⁣⁣𝗔𝘀𝘆𝗻𝗰𝗵𝗿𝗼𝗻𝗼𝘂𝘀 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁⁡
+   - Asynchronous JavaScript allows you to perform long-running tasks without blocking the main thread. 
+   - It enables you to execute code that takes time (like fetching data from a server) while still allowing the rest of your program to run smoothly.
+   - This is achieved through mechanisms like callbacks, promises, and async/await, which allow you to handle tasks that may not complete immediately without freezing the user interface or blocking other operations.
+
+   • How to handle asynchronous tasks in JavaScript?
+     - Callbacks
+     - Promises
+     - Async/Await
+
+
+
     
 2. ⁡⁢⁣⁣How JavaScript Works Asynchronously⁡
     So, if JavaScript is ⁡⁣⁣⁢synchronous⁡, how does it handle tasks that take time, like fetching data from a server, reading a file, or waiting for a timer, without freezing the entire application?

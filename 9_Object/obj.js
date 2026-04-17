@@ -254,7 +254,7 @@ const person6 = JSON.parse(personJson);
 console.log("person6: " , person6);
 console.log("\n");
 
-// 7. Using a factory function
+// 7. Using a factory function -> factory function is a function that returns an object. it is a simple way to create objects without using classes or constructor functions.
 
 function createPerson(name , age , city) {  
     return {

@@ -24,7 +24,7 @@ We handle them in three main ways:
 
    ⁡⁣⁣⁢A. CALLBACKS (The Old Way)⁡
    ---------------------------
-   - A callback is just a function passed into another function to be called later.
+   - ⁡⁣⁢⁣A callback is just a function passed into another function to be called later.⁡
    - It was the original way to handle async tasks, but it quickly became messy when you had to do multiple things in a row. You would end up with nested functions that looked like a "pyramid of doom."
 
    📞 Analogy: 
@@ -39,8 +39,8 @@ We handle them in three main ways:
 
    ⁡⁣⁣⁢B. PROMISES (The Better Way)⁡
    -----------------------------
-    - A Promise is a object that represent a future value. It can be in one of three states: 
-    Pending, Fulfilled, or Rejected.
+    - ⁡⁣⁢⁣A Promise is a object that represent a future value. It can be in one of three states: 
+    Pending, Fulfilled, or Rejected.⁡
     - As discussed below, Promises replaced messy callbacks with a cleaner 
    ⁡⁣⁣⁢.then().then()⁡⁣⁣⁢.catch()⁡ chain. It makes the code look more like a list of 
    instructions.
@@ -49,8 +49,8 @@ We handle them in three main ways:
 
    ⁡⁣⁣⁢C. ASYNC / AWAIT (The Modern Way)⁡
    ----------------------------------
-   This is "Syntactic Sugar" - built on top of Promises but makes asynchronous 
-   code look and behave like synchronous (line-by-line) code.
+   ⁡⁣⁢⁣This is "Syntactic Sugar" - built on top of Promises but makes asynchronous 
+   code look and behave like synchronous (line-by-line) code.⁡
 
     • ⁡⁣⁢⁣async⁡: 
        - Tells JS that this function will handle asynchronous tasks
@@ -87,14 +87,17 @@ A promise is always in one of these THREE states:
 
    1. ⁡⁣⁢⁣PENDING⁡: 
       - This is the initial state
+      - Means Promise is still in progress.  
       - You have the buzzer, and the kitchen is still cooking
       - Nothing has happened yet
 
    2. ⁡⁣⁢⁣FULFILLED⁡ (⁡⁣⁢⁣Resolved⁡): 
+      - operation completed successfully, and the promise has a resolved value.   
       - Success! The buzzer glows, and you get your burger
       - The operation finished successfully
 
    3. ⁡⁣⁢⁣REJECTED⁡: 
+      - operation failed, and the promise has a reason for the failure
       - Failure. The waiter tells you they ran out of ingredients
       - The operation failed
 

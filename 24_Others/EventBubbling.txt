@@ -1,0 +1,475 @@
+# 🌟 13. Event Bubbling vs Event Capturing (JavaScript)
+
+> ## 🎯 Goal
+> Learn **event bubbling** and **event capturing** in a **simple, visual, and easy-to-remember** way.
+
+========================================
+
+# 🧭 Quick Map (Read This First)
+
+- ✅ **Bubbling** = inside ➜ outside
+- ✅ **Capturing** = outside ➜ inside
+- ✅ Default in JS = **Bubbling**
+
+========================================
+
+# 📚 Table of Contents
+
+1. [What is an Event?](#-1-what-is-an-event)
+2. [Nested HTML Elements](#-2-html-elements-are-inside-each-other)
+3. [Event Bubbling](#-3-event-bubbling)
+4. [Event Capturing](#-4-event-capturing)
+5. [Real-Life Analogy](#-5-very-simple-real-life-analogy)
+6. [Default Behavior](#-6-default-behavior)
+7. [Full Practical Example](#-7-full-simple-example)
+8. [stopPropagation()](#-8-stoppropagation)
+9. [Interview Definitions](#-9-interview-style-short-definition)
+10. [Bubbling vs Capturing Table](#-10-difference-between-bubbling-and-capturing)
+11. [Memory Trick](#-11-one-line-memory-trick)
+12. [Final Summary](#-12-final-simple-summary)
+13. [Common Mistakes](#-13-common-mistakes)
+14. [Mini Recap Quiz](#-14-mini-recap-quiz)
+
+========================================
+
+# 🔹 1. What is an Event?
+
+In JavaScript, an **event** is something that happens in the browser.
+
+## ✅ Common Examples of Events
+- 🖱️ User clicks a button
+- ⌨️ User types in an input field
+- 🖱️ User moves the mouse
+- 📩 User submits a form
+
+So when a user clicks on an element, JavaScript can detect that action.
+
+## Example:
+```javascript
+button.addEventListener("click", function () {
+  console.log("Button clicked");
+});
+```
+
+### 💡 Simple Meaning:
+When the button is clicked, JavaScript runs the given function.
+
+----------------------------------------
+
+# 🔹 2. HTML Elements Are Inside Each Other
+
+On a webpage, elements are usually **nested**.
+
+## Example:
+```html
+<div id="grandparent">
+  <div id="parent">
+    <button id="child">Click Me</button>
+  </div>
+</div>
+```
+
+## Structure:
+- `grandparent` → outer element
+- `parent` → inside grandparent
+- `child` → inside parent
+
+### Visual Flow:
+```text
+grandparent
+   ↓
+ parent
+   ↓
+ child
+```
+
+Or simply:
+
+`grandparent -> parent -> child`
+
+## Important Point:
+If you click the **button**, the browser knows:
+- you clicked the button
+- the button is inside `parent`
+- the `parent` is inside `grandparent`
+
+This is exactly where **event bubbling** and **event capturing** happen.
+
+----------------------------------------
+
+# 🔥 ⁡⁢⁣⁣𝟯. 𝗘𝘃𝗲𝗻𝘁 𝗕𝘂𝗯𝗯𝗹𝗶𝗻𝗴⁡
+
+## ✅ Simple Definition
+When an event happens on a child element, it first runs on that child, then moves upward to the parent, and then upward again.
+
+This upward movement is called **event bubbling**.
+
+## 🧠 Easy Line to Remember
+> **Bubbling means event goes from inside to outside.**
+
+### Direction:
+`child -> parent -> grandparent`
+
+### Phase Map (Bubbling)
+```text
+Target (child)
+   ↑
+Parent
+   ↑
+Grandparent
+```
+
+## Example of Event Bubbling
+
+### HTML:
+```html
+    <div id="grandparent">
+    Grandparent
+        <div id="parent">
+            Parent
+            <button id="child">Click Me</button>
+        </div>
+    </div>
+```
+
+### JavaScript:
+```javascript
+    document.getElementById("grandparent").addEventListener("click", function () {
+        console.log("Grandparent clicked");
+    });
+
+    document.getElementById("parent").addEventListener("click", function () {
+        console.log("Parent clicked");
+    });
+
+    document.getElementById("child").addEventListener("click", function () {
+        console.log("Child clicked");
+    });
+```
+
+## 📌 Output When Button is Clicked:
+```javascript
+    Child clicked
+    Parent clicked
+    Grandparent clicked
+```
+
+## 🤔 Why?
+Because the click starts on the actual clicked element (`child`) and then travels upward.
+
+✅ That is **event bubbling**.
+
+----------------------------------------
+
+# 🎯 ⁡⁢⁣⁣𝟰. 𝗘𝘃𝗲𝗻𝘁 𝗖𝗮𝗽𝘁𝘂𝗿𝗶𝗻𝗴⁡
+
+## ✅ Simple Definition
+Capturing is the opposite of bubbling.
+
+In capturing, the event starts from the outer element and moves inward to the target element.
+
+## 🧠 Easy Line to Remember
+> **Capturing means event goes from outside to inside.**
+
+### Direction:
+`grandparent -> parent -> child`
+
+### Phase Map (Capturing)
+```text
+Grandparent
+   ↓
+Parent
+   ↓
+Target (child)
+```
+
+## Example of Event Capturing
+
+To use capturing, pass `true` as the third argument in `addEventListener()`.
+
+### JavaScript:
+```javascript
+        document.getElementById("grandparent").addEventListener(
+            "click",
+            function () {
+                console.log("Grandparent clicked");
+            },
+            true
+        );
+
+        document.getElementById("parent").addEventListener(
+            "click",
+            function () {
+                console.log("Parent clicked");
+            },
+            true
+        );
+
+        document.getElementById("child").addEventListener(
+            "click",
+            function () {
+                console.log("Child clicked");
+            },
+            true
+        );
+```
+
+## 📌 Output When Button is Clicked:
+```javascript
+    Grandparent clicked
+    Parent clicked
+    Child clicked
+```
+
+## 🤔 Why?
+Because now the event travels from outer to inner.
+
+✅ That is **event capturing**.
+
+----------------------------------------
+
+# 📦 5. Very Simple Real-Life Analogy
+
+Imagine 3 boxes:
+
+- 📦 Big box = `grandparent`
+- 📦 Medium box = `parent`
+- 📦 Small box = `child`
+
+And you touch the smallest box.
+
+## Bubbling:
+The message goes:
+
+- small box
+- medium box
+- big box
+
+### Flow:
+`small -> medium -> big`
+
+## Capturing:
+The message goes:
+
+- big box
+- medium box
+- small box
+
+### Flow:
+`big -> medium -> small`
+
+----------------------------------------
+
+# ⚙️ 6. Default Behavior
+
+B⁡⁣⁣⁢y default, JavaScript uses **event bubbling**.⁡
+
+## Default Syntax:
+```javascript
+element.addEventListener("click", handler);
+```
+
+This works in the **bubbling phase**.
+
+## Capturing Syntax:
+```javascript
+element.addEventListener("click", handler, true);
+```
+
+This works in the **capturing phase**.
+
+----------------------------------------
+
+# 🧪 7. Full Simple Example
+
+## HTML:
+```html
+<div id="outer" style="padding: 30px; background: lightblue;">
+  Outer Div
+  <div id="inner" style="padding: 30px; background: lightgreen;">
+    Inner Div
+    <button id="btn">Click Me</button>
+  </div>
+</div>
+```
+
+----------------------------------------
+
+## 🔥 Bubbling Example
+
+```javascript
+document.getElementById("outer").addEventListener("click", function () {
+  console.log("Outer Div");
+});
+
+document.getElementById("inner").addEventListener("click", function () {
+  console.log("Inner Div");
+});
+
+document.getElementById("btn").addEventListener("click", function () {
+  console.log("Button");
+});
+```
+
+### Output when button is clicked:
+```javascript
+Button
+Inner Div
+Outer Div
+```
+
+----------------------------------------
+
+## 🎯 Capturing Example
+
+```javascript
+document.getElementById("outer").addEventListener("click", function () {
+  console.log("Outer Div");
+}, true);
+
+document.getElementById("inner").addEventListener("click", function () {
+  console.log("Inner Div");
+}, true);
+
+document.getElementById("btn").addEventListener("click", function () {
+  console.log("Button");
+}, true);
+```
+
+### Output when button is clicked:
+```javascript
+Outer Div
+Inner Div
+Button
+```
+
+----------------------------------------
+
+# ✋ 8. stopPropagation()
+
+Sometimes you do **not** want the event to continue moving.
+
+For that, JavaScript provides:
+
+```javascript
+event.stopPropagation();
+```
+
+## Example:
+```javascript
+document.getElementById("parent").addEventListener("click", function () {
+  console.log("Parent clicked");
+});
+
+document.getElementById("child").addEventListener("click", function (event) {
+  console.log("Child clicked");
+  event.stopPropagation();
+});
+```
+
+## Output:
+```javascript
+Child clicked
+```
+
+## Why did parent not run?
+Because `stopPropagation()` stops the event from moving further.
+
+✅ It can stop bubbling or capturing from continuing.
+
+----------------------------------------
+
+# 🎤 9. Interview-Style Short Definition
+
+## Event Bubbling
+Event bubbling is a process where an event starts from the target element and then propagates upward to its parent and ancestors.
+
+## Event Capturing
+Event capturing is a process where an event starts from the top ancestor and propagates downward to the target element.
+
+----------------------------------------
+
+# 📊 10. Difference Between Bubbling and Capturing
+
+| Feature | Event Bubbling | Event Capturing |
+|--------|-----------------|-----------------|
+| Direction | Child → Parent | Parent → Child |
+| Movement | Inside → Outside | Outside → Inside |
+| Default in JavaScript? | ✅ Yes | ❌ No |
+| Setup | Normal `addEventListener()` | Use `true` as 3rd argument |
+| Usage | More common | Less common |
+
+----------------------------------------
+
+# 🧠 11. One-Line Memory Trick
+
+- **Bubbling** = **bottom to top**
+- **Capturing** = **top to bottom**
+
+----------------------------------------
+
+# ✅ 12. Final Simple Summary
+
+When you click an element inside other elements, the event can travel in **two ways**:
+
+## 1. Event Capturing
+`outer -> inner`
+
+## 2. Event Bubbling
+`inner -> outer`
+
+----------------------------------------
+
+# ⚠️ 13. Common Mistakes
+
+- ❌ Forgetting that bubbling is the default
+- ❌ Thinking `true` turns bubbling on (it actually turns **capturing** on)
+- ❌ Using `stopPropagation()` and wondering why parent handlers do not fire
+
+----------------------------------------
+
+# ✅ 14. Mini Recap Quiz
+
+## Q1: What is the default event phase in JavaScript?
+**Answer:** Bubbling ✅
+
+## Q2: Which direction is capturing?
+**Answer:** Outside ➜ inside ✅
+
+## Q3: What does `event.stopPropagation()` do?
+**Answer:** Stops the event from traveling further ✅
+
+---
+
+# 🚀 Super Short Revision
+
+| Concept | Easy Meaning |
+|--------|---------------|
+| Event | Something that happens in browser |
+| Bubbling | Event moves upward |
+| Capturing | Event moves downward |
+| Default behavior | Bubbling |
+| Stop moving event | `event.stopPropagation()` |
+
+---
+
+# 📝 Final Note
+
+If you want to remember just one thing, remember this:
+
+> ### 🌟 Bubbling = inside to outside  
+> ### 🌟 Capturing = outside to inside
+
+And by default, JavaScript uses **bubbling**.
+
+```javascript
+event.stopPropagation();
+```
+
+is used when you want to stop the event from moving further.
+
+---
+
+# ✅ End Result in One Sentence
+
+**Event bubbling** means the event goes from child to parent, while **event capturing** means the event goes from parent to child.

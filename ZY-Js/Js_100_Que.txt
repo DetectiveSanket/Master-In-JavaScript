@@ -66,13 +66,13 @@
 59. What is the purpose of the “includes” method in JavaScript?
 60. How do you handle default values in JavaScript functions?
 
-61. What are template literals, and how are they used?
+61. What are template literals, and how are they used? ✔
 62. Explain the concept of modules in JavaScript.
-63. What is CORS, and why is it important?
+63. What is CORS, and why is it important? ✔️
 64. What is the “fetch” API, and how does it work? ✔️
 65. Explain the concept of immutability in JavaScript.
 66. What is the purpose of the “find” method in JavaScript arrays?
-67.How does “import” and “export” work in JavaScript?
+67. How does “import” and “export” work in JavaScript? ✔️
 68. What is a Proxy object in JavaScript?
 70. How do you flatten an array in JavaScript?
 
@@ -101,9 +101,9 @@
 92. What is a service worker in JavaScript?
 93. How do you use “try...catch” for error handling in JavaScript? ✔️
 94. Explain how promises can be chained. 
-95. What are the benefits of using closures in JavaScript?
+95. What are the benefits of using closures in JavaScript? ✔️
 96. How can you reverse a string in JavaScript?
 97. What is a Set in JavaScript?
 98. Explain the concept of promises with async/await.
 99. How do you use “Object.keys,” “Object.values,” and “Object.entries” in JavaScript?
-100. What is the purpose of “Promise.all” in JavaScript? 
+100. What is the purpose of “Promise.all” in JavaScript? ✔️

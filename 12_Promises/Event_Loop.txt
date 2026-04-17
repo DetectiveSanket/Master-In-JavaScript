@@ -49,6 +49,7 @@ Imagine a tiny kitchen with only one Chef (the JavaScript Engine).
    • It's "Last In, First Out" (LIFO)
    • If you call a function, it goes on top of the Stack. When it finishes, it gets removed.
    • If you have a long-running task here, it blocks everything else (like the Slow
+   
    • Def:- ⁡⁣⁣⁢Call Stack is the place where JavaScript keeps track of function calls and executes code.⁡
 
 
@@ -60,6 +61,7 @@ Imagine a tiny kitchen with only one Chef (the JavaScript Engine).
    • The Chef doesn't wait; they move to the next order in the Stack
    • Once the assistant finishes the task, they put the result in the Callback Queue
    • Examples of Web APIs include: setTimeout, fetch, and DOM events
+
    • Def:- ⁡⁣⁣⁢Web APIs are browser-provided tools that handle asynchronous tasks outside of the main JavaScript thread.⁡⁡
 
 
@@ -68,14 +70,15 @@ Imagine a tiny kitchen with only one Chef (the JavaScript Engine).
    •⁡⁢⁣⁣ 𝗪𝗵𝗲𝗻 𝗮𝗻 𝗮𝘀𝘆𝗻𝗰 𝘁𝗮𝘀𝗸 𝗶𝘀 𝗰𝗼𝗺𝗽𝗹𝗲𝘁𝗲𝗱, 𝗶𝘁𝘀 𝗰𝗮𝗹𝗹𝗯𝗮𝗰𝗸 𝘄𝗮𝗶𝘁𝘀 𝗶𝗻 𝗮 𝗾𝘂𝗲𝘂𝗲.⁡
    • Once an assistant finishes a task, they put the result here
    • Waiting to be picked up by the Event Loop
+
    • Def:- ⁡⁣⁣⁢Callback Queue is where tasks that are ready to be executed wait until the Call Stack is empty.⁡
+
    • Callback Queue is also called the "Task Queue" or "⁡⁣⁣⁢Macrotask Queue⁡".
+
    • The Event Loop checks this queue when the Call Stack is empty
      and moves tasks back to the Stack to be executed
    • It's "First In, First Out" (FIFO)
-   • Callback Queue is where setTimeout, setInterval, and DOM events go after they finish
-     their work in the Web API
-
+ 
 
 
 ================================================================================
@@ -103,7 +106,7 @@ Look at this code. What do you think prints first?
         ⁡⁢⁢⁢console.log("1. Start");
 
         setTimeout(() => {
-            console.log("2. Timer Finished");
+           console.log("2. Timer Finished");
         }, 0); // 0 milliseconds!
 
         console.log("3. End");⁡

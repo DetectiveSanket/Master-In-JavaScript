@@ -132,6 +132,7 @@ sayGoodbye(); // "Goodbye!"
     • Prototypal inheritance is a mechanism where objects can inherit properties and methods from other objects.
     • Each object has a hidden `[[Prototype]]` property that links to another object. This forms a "prototype chain". 
     • When a property is accessed, JavaScript searches up this chain until it's found or the chain ends (at null). 
+    • unlike classical inheritance which uses classes and instances, JavaScript’s prototypal inheritance is more flexible because objects inherit directly from other objects. This allows dynamic inheritance and method sharing without the need for rigid class structures.
 */
 
 // *--- 1. Using `Object.create()` ---

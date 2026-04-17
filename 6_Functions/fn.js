@@ -160,7 +160,23 @@
         console.log(sum); // Output: 15
 
 
+// ⁡⁢⁣⁣𝗙𝗮𝗰𝘁𝗼𝗿𝘆 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻⁡
+    /* 
+        • ⁡⁣⁢⁣A factory function is a function that returns an object. It is a simple way to create objects without using classes or constructor functions.⁡
+
+        • Factory functions can be used to create multiple instances of an object with similar properties and methods, without the need for a class. They are often used in JavaScript to create objects that share common behavior.
         
+    */        
+      
+    function createPerson(name , age , city) {
+        return {
+            name : name,
+            age : age,
+            city : city
+        };
+    }    
+
+    createPersonte("sanket" , 24 , "pune");
 
         
 // ⁡⁢⁣⁣ Callback Function    ⁡
@@ -233,9 +249,9 @@
         // { id: 1, name: 'John Doe' }
 
 
-        // ## What is diff bwt Higher-Order function and Callback Function
-        /*
-            - A higher-order function is a function that takes another function as an argument or returns a function as its result. It can be used to create more abstract and reusable code. For example, the map method is a higher-order function because it takes a callback function as an argument.
+/*
+    ⁡⁢⁣⁣Q) 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗱𝗶𝗳𝗳 𝗯𝘄𝘁 𝗛𝗶𝗴𝗵𝗲𝗿-𝗢𝗿𝗱𝗲𝗿 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗮𝗻𝗱 𝗖𝗮𝗹𝗹𝗯𝗮𝗰𝗸 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻⁡
+        - A higher-order function is a function that takes another function as an argument or returns a function as its result. It can be used to create more abstract and reusable code. For example, the map method is a higher-order function because it takes a callback function as an argument.
 
             - A callback function is a function that is passed as an argument to another function and is executed after some operation has been completed. It is often used for handling asynchronous operations, such as fetching data from an API or responding to user events.   
 

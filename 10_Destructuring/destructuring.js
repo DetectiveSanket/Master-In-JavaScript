@@ -1,24 +1,28 @@
 
 /* 
     Q)⁡⁢⁣⁣ 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗗𝗲𝘀𝘁𝗿𝘂𝗰𝘁𝘂𝗿𝗶𝗻𝗴 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁?⁡
-    --> Destructuring in JavaScript is a ⁡⁣⁣⁢𝗰𝗼𝗻𝘃𝗲𝗻𝗶𝗲𝗻𝘁 𝘄𝗮𝘆 𝘁𝗼 𝗲𝘅𝘁𝗿𝗮𝗰𝘁 𝘃𝗮𝗹𝘂𝗲𝘀 𝗳𝗿𝗼𝗺 𝗮𝗿𝗿𝗮𝘆𝘀 𝗼𝗿 𝗽𝗿𝗼𝗽𝗲𝗿𝘁𝗶𝗲𝘀 𝗳𝗿𝗼𝗺 𝗼𝗯𝗷𝗲𝗰𝘁𝘀 𝗮𝗻𝗱 𝗮𝘀𝘀𝗶𝗴𝗻 𝘁𝗵𝗲𝗺 𝘁𝗼 𝘃𝗮𝗿𝗶𝗮𝗯𝗹𝗲𝘀⁡. 
-    - It allows you to unpack values from arrays or properties from objects into distinct variables in a more concise and readable manner.
+        - Destructuring in JavaScript is a ⁡⁣⁣⁢𝗰𝗼𝗻𝘃𝗲𝗻𝗶𝗲𝗻𝘁 𝘄𝗮𝘆 𝘁𝗼 𝗲𝘅𝘁𝗿𝗮𝗰𝘁 𝘃𝗮𝗹𝘂𝗲𝘀 𝗳𝗿𝗼𝗺 𝗮𝗿𝗿𝗮𝘆𝘀 𝗼𝗿 𝗽𝗿𝗼𝗽𝗲𝗿𝘁𝗶𝗲𝘀 𝗳𝗿𝗼𝗺 𝗼𝗯𝗷𝗲𝗰𝘁𝘀 𝗮𝗻𝗱 𝗮𝘀𝘀𝗶𝗴𝗻 𝘁𝗵𝗲𝗺 𝘁𝗼 𝘃𝗮𝗿𝗶𝗮𝗯𝗹𝗲𝘀⁡. 
+
+        - It allows you to unpack values from arrays or properties from objects into distinct variables in a more concise and readable manner.
+
+        -
 
 */
     // Example of Object Destructuring:
-    const person = {
-        name: "John",
-        age: 30,
-        city: "New York"
-    };
+    const ab = {
+        name: "Sanket",
+        age: 24,
+        city: "Pune"
+    }
 
-    console.log("person: " , person);
-    console.log("\n");
+    const {name , age , city} = ab;
+        console.log(name);
+        console.log(age);
+        console.log(city);
 
-    const {name , age , city} = person; // Object destructuring
-    console.log("name: " , name); // Output: John
-    console.log("age: " , age); // Output: 30
-    console.log("city: " , city); // Output: New York
+    const {name: fullName , age: years} = ab;
+        console.log(fullName);
+        console.log(years);
 
     // Example of Array Destructuring:
     const numbers = [1, 2, 3, 4, 5];
@@ -49,10 +53,6 @@
     // 3. Renaming variables
     // 4. Nested destructuring
 
-    // this called Renaming variables in destructuring
-    const {name: fullName, age: years} = person;
-    console.log("fullName: " , fullName);
-    console.log("years: " , years);
 
     // IMPORTANT:--
     let array = [1, 2, 3, 4, 5];

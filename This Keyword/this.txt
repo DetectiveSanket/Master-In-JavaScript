@@ -64,3 +64,11 @@ A1: The purpose of `this` in JavaScript is to refer to the current object or the
     myInstance.showThis(); // MyClass Instance⁡
 
 ```
+
+⁡⁢⁣⁣𝗤) 𝗛𝗼𝘄 𝗱𝗼𝗲𝘀 𝗶𝘁𝘀 𝘃𝗮𝗹𝘂𝗲 𝗰𝗵𝗮𝗻𝗴𝗲 𝗶𝗻 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝘁 𝗰𝗼𝗻𝘁𝗲𝘅𝘁𝘀 𝗹𝗶𝗸𝗲 𝗿𝗲𝗴𝘂𝗹𝗮𝗿 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀, 𝗮𝗿𝗿𝗼𝘄 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻𝘀, 𝗮𝗻𝗱 𝗼𝗯𝗷𝗲𝗰𝘁 𝗺𝗲𝘁𝗵𝗼𝗱𝘀?⁡
+
+-> In regular functions, `this` refers to the object that called the function. 
+-> In arrow functions, `this` is lexically bound, meaning it takes the value of `this` from the surrounding context where the arrow function is defined. Value is not changed based on how the function is called.
+-> In object methods, `this` refers to the object that owns the method.
+
+
