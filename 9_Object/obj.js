@@ -1,6 +1,6 @@
 
 // ⁡⁢⁣⁣𝗝𝗦𝗢𝗡.𝗦𝘁𝗿𝗶𝗻𝗴𝗶𝗳𝘆()?⁡
-    // Ojbect to JSON string
+    // Ojbect/array to JSON string
     const objectJ = {
         name: "John",
         age: 30,
@@ -23,6 +23,8 @@
     const parseredObject = JSON.parse(jsonString);
     console.log(parseredObject);
     console.log(typeof parseredObject); // "object"
+
+
 //-------------------------------------------------------------
     // Array
     const array = [1, 2, 3, 4, 5];

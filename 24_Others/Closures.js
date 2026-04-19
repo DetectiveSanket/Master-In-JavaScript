@@ -8,7 +8,9 @@
 
         - In Another word - ⁡⁣⁢⁣Function inside another function and the inner function accessing variables from its outer function even after the outer function has finished executing.
         ⁡
-
+⁡⁣⁣⁢         𝗬𝗲 𝘀𝗮𝗰𝗵 𝗵𝗮𝗶 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗸𝗲 𝗸𝗵𝗮𝘁𝗮𝗺 𝗵𝗼𝗻𝗲 𝗽𝗲 𝗮𝗽𝗽𝗸𝗮 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗮𝗻𝗱 𝘂𝘀𝗸𝗲 𝘃𝗮𝗿𝗶𝗮𝗯𝗹𝗲𝘀 𝗯𝗵𝗶 𝗸𝗵𝗮𝘁𝗮𝗺 𝗵𝗼 𝗷𝗮𝘁𝗲 𝗵𝗮𝗶 , 𝗽𝗮𝗿 𝗷𝗮𝗯 𝗯𝗵𝗶 𝗰𝗹𝗼𝘀𝘂𝗿𝗲 𝗯𝗮𝗻𝘁𝗮 𝗵𝗮𝗶 𝘁𝗼 𝘄𝗼 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗸𝗲 𝗮𝗻𝗱𝗮𝗿 𝗸𝗲 𝘃𝗮𝗿𝗶𝗮𝗯𝗹𝗲𝘀 𝗸𝗼 𝘆𝗮𝗮𝗱 𝗿𝗮𝗸𝗵𝘁𝗮 𝗵𝗮𝗶, 𝗮𝘂𝗿 𝘂𝘀𝗸𝗮 𝗻𝗮𝗮𝗺 𝗵𝗼𝘁𝗮 𝗵𝗮𝗶 𝗖𝗹𝗼𝘀𝘂𝗿𝗲
+⁡
+        -
 
     ⁡⁢⁣⁣𝗤) 𝗪𝗵𝗮𝘁 𝗮𝗿𝗲 𝘁𝗵𝗲 𝗯𝗲𝗻𝗲𝗳𝗶𝘁𝘀 𝗼𝗳 𝘂𝘀𝗶𝗻𝗴 𝗰𝗹𝗼𝘀𝘂𝗿𝗲𝘀 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁?⁡
         - Data Privacy: Closures allow you to create private variables that cannot be accessed from outside the function, providing a way to encapsulate data and protect it from unintended modifications.

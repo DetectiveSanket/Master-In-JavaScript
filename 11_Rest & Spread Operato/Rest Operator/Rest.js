@@ -32,6 +32,7 @@
         - It can be used in variable declarations, function parameters, and assignment expressions.
 
     𝗘͟𝘅͟𝗮͟𝗺͟𝗽͟𝗹͟𝗲 𝗼͟𝗳 𝗮͟𝗿͟𝗿͟𝗮͟𝘆 ⁡⁢⁣⁣𝗱͟𝗲͟𝘀͟𝘁͟𝗿͟𝘂͟𝗰͟𝘁͟𝘂͟𝗿͟𝗶͟𝗻͟𝗴⁡ 𝘄͟𝗶͟𝘁͟𝗵 𝗿͟𝗲͟𝘀͟𝘁 𝗼͟𝗽͟𝗲͟𝗿͟𝗮͟𝘁͟𝗼͟𝗿͟:
+    
         ⁡⁢⁢⁢const [first, second, ...rest] = [1, 2, 3, 4, 5];
         console.log(first);⁡  // Output: 1
         ⁡⁢⁢⁢console.log(second);⁡ // Output: 2

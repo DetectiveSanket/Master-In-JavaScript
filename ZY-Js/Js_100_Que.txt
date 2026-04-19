@@ -47,7 +47,7 @@
 
 41. What is the purpose of the “split” method in JavaScript? ✔️
 42. What is the difference between a deep clone and a shallow clone of an object? ✔️
-43. Explain the concept of the event delegation pattern.
+43. Explain the concept of the event delegation pattern✔️
 45. What is the purpose of the “arguments” object in JavaScript?
 46. What are the different ways to define methods in JavaScript objects? ✔️
 47. Explain the concept of memoization and its benefits.
