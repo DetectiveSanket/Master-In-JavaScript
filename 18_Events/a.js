@@ -7,7 +7,7 @@
     | └── 𝗘𝘃𝗲𝗻𝘁 𝗖𝗮𝗽𝘁𝘂𝗿𝗶𝗻𝗴
     | └── 𝗘𝘃𝗲𝗻𝘁 𝗱𝗲𝗹𝗲𝗴𝗮𝘁𝗶𝗼𝗻⁡
 
-    ⟫ ⁡⁢⁣⁣𝗘𝘃𝗲𝗻𝘁⁡:-
+    🔥⟫ ⁡⁢⁣⁣𝗘𝘃𝗲𝗻𝘁⁡:-
         * An event is an action or occurrence that happens in the system you are programming, which the system tells you about so your code can react to it. 
 
     ^ In JavaScript, an **event** is something that happens in the browser.
