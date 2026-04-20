@@ -2,7 +2,7 @@
 /* 
     ⁡⁢⁣⁣𝗤) 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗖𝗹𝗼𝘀𝘂𝗿𝗲 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁?⁡
 
-        - Closure is a fundamental concept in JavaScript that allows a function to access variables from its outer (enclosing) scope, even after the outer function has finished executing. 
+        * Closure is a fundamental concept in JavaScript that allows a function to access variables from its outer (enclosing) scope, even after the outer function has finished executing. 
 
         - In other words, a closure gives you access to an outer function's scope from an inner function.
 
