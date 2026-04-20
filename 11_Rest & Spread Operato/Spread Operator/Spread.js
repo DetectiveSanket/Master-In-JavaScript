@@ -8,7 +8,11 @@
        - Used in function calls/array literals
        - Used to copy arrays/object
 */
-
+    /* 
+      ✔️⁡ ⁢⁣⁣𝗦𝗶𝗺𝗽𝗹𝗲 𝗱𝗶𝗳𝗳 𝗯𝘄𝘁 𝗦𝗽𝗿𝗲𝗮𝗱 𝗮𝗻𝗱 𝗥𝗲𝘀𝘁 𝗼𝗽𝗲𝗿𝗮𝘁𝗼𝗿:⁡
+            - when you use ... (three dots) in ⁡⁣⁣⁢function parameter⁡ it is ⁡⁣⁢⁣rest⁡ operator 
+            - when you use ... (three dots) in ⁡⁣⁣⁢array or object⁡ literal it is ⁡⁣⁢⁣spread⁡ operator.
+    */
 
 // # ⁡⁣⁢⁣𝗟𝗲𝘀𝘁 𝘀𝘁𝗮𝗿𝘁 𝗙𝗿𝗼𝗺 𝗦𝗽𝗿𝗲𝗮𝗱 𝗢𝗽𝗲𝗿𝗮𝘁𝗼𝗿⁡
 

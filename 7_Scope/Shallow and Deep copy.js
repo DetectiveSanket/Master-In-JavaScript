@@ -26,12 +26,14 @@
         let deepCopy = JSON.parse(JSON.stringify(obj)); // deep copy
            ->> deepCopy is used in real life application when we want to copy the object and we don't want to change the original object.      
 
-*/
+*/ 
    //! --------------------------------------------------------------------------------
+
+   // **Deep copy:** 
 
 /*
    ⁡⁢⁣⁣ 𝗮) 𝗦𝗵𝗮𝗹𝗹𝗼𝘄 𝗖𝗼𝗽𝘆: ⁡
-        * A shallow copy creates a new outer object, but nested objects/arrays are still copied by reference.
+        * A 𝘀͟𝗵͟𝗮͟𝗹͟𝗹͟𝗼͟𝘄 𝗰͟𝗼͟𝗽͟𝘆 creates a 𝙣𝙚𝙬 𝙘𝙤𝙥𝙮 object or array, but nested objects or arrays still share the same references as the original. So, changes to nested data in one will also affect the other.
 
         - In Simple word, ⁡⁣⁣⁢Shallow copy means copying the top-level properties of an object or array, but nested objects or arrays are not copied and still reference the same memory location.⁡
 
@@ -44,6 +46,10 @@
         & That means:
             - top-level properties are copied
             - nested objects are __shared__
+
+       ≽≽ Array and Object are reference data types. Mean when you copy array or object then it is not copied by value but it is copied by reference , so if you change in new or old array/object till you seen canges in both.
+       
+       ≽≽ So, when we copy an array or object using spread operator then it creates a shallow copy because it only copies the reference of the array or object and not the actual array or object.    
             
         * So, in shallow copy, only the top-level properties are copied, and nested objects or arrays are shared between the original and the copy. This means that changes to nested objects or arrays in the copy will affect the original object or array.
 */
@@ -82,7 +88,7 @@
 
 /*               
     ⁡⁢⁣⁣𝗯) 𝗗𝗲𝗲𝗽 𝗖𝗼𝗽𝘆:⁡
-        - A deep copy creates a completely independent copy, including all nested objects/arrays.
+        * A 𝗱͟𝗲͟𝗲͟𝗽 𝗰͟𝗼͟𝗽͟𝘆 creates a completely 𝙞𝙣𝙙𝙚𝙥𝙚𝙣𝙙𝙚𝙣𝙩 𝙘𝙤𝙥𝙮 𝙤𝙛 𝙩𝙝𝙚 𝙤𝙧𝙞𝙜𝙞𝙣𝙖𝙡 𝙤𝙗𝙟𝙚𝙘𝙩 𝙤𝙧 𝙖𝙧𝙧𝙖𝙮, including all nested objects and arrays. So, changes in the copied version do not affect the original at any level.
 
         - In Simple word, ⁡⁣⁣⁢Deep copy means copying all levels of an object or array, including nested objects or arrays, so that the new copy is completely independent of the original.⁡
 

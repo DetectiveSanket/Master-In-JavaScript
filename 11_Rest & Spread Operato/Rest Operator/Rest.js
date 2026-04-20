@@ -17,6 +17,7 @@
     --> This is useful when we don't know how many arguments will be passed to the function.
 
     𝗘͟𝘅͟𝗮͟𝗺͟𝗽͟𝗹͟𝗲:
+
         ⁡⁢⁢⁢function sum(...numbers) {
             return numbers.reduce((acc, curr) => acc + curr, 0);
         }
@@ -31,7 +32,7 @@
         - Destructuring is a ⁡⁣⁣⁢convenient way of extracting multiple values from data stored in (possibly nested) objects and Arrays.⁡
         - It can be used in variable declarations, function parameters, and assignment expressions.
 
-    𝗘͟𝘅͟𝗮͟𝗺͟𝗽͟𝗹͟𝗲 𝗼͟𝗳 𝗮͟𝗿͟𝗿͟𝗮͟𝘆 ⁡⁢⁣⁣𝗱͟𝗲͟𝘀͟𝘁͟𝗿͟𝘂͟𝗰͟𝘁͟𝘂͟𝗿͟𝗶͟𝗻͟𝗴⁡ 𝘄͟𝗶͟𝘁͟𝗵 𝗿͟𝗲͟𝘀͟𝘁 𝗼͟𝗽͟𝗲͟𝗿͟𝗮͟𝘁͟𝗼͟𝗿͟:
+    > 𝗘͟𝘅͟𝗮͟𝗺͟𝗽͟𝗹͟𝗲 𝗼͟𝗳 𝗮͟𝗿͟𝗿͟𝗮͟𝘆 ⁡⁢⁣⁣𝗱͟𝗲͟𝘀͟𝘁͟𝗿͟𝘂͟𝗰͟𝘁͟𝘂͟𝗿͟𝗶͟𝗻͟𝗴⁡ 𝘄͟𝗶͟𝘁͟𝗵 𝗿͟𝗲͟𝘀͟𝘁 𝗼͟𝗽͟𝗲͟𝗿͟𝗮͟𝘁͟𝗼͟𝗿͟:
     
         ⁡⁢⁢⁢const [first, second, ...rest] = [1, 2, 3, 4, 5];
         console.log(first);⁡  // Output: 1
@@ -40,7 +41,7 @@
 
     * In this example, the first two elements of the array are assigned to the variables first and second, while the rest operator (...) collects the remaining elements into a new array called rest.
 
-    𝗘͟𝘅͟𝗮͟𝗺͟𝗽͟𝗹͟𝗲 𝗼͟𝗳 𝗼͟𝗯͟𝗷͟𝗲͟𝗰͟𝘁 𝗱͟𝗲͟𝘀͟𝘁͟𝗿͟𝘂͟𝗰͟𝘁͟𝘂͟𝗿͟𝗶͟𝗻͟𝗴 𝘄͟𝗶͟𝘁͟𝗵 𝗿͟𝗲͟𝘀͟𝘁 𝗼͟𝗽͟𝗲͟𝗿͟𝗮͟𝘁͟𝗼͟𝗿͟:
+    > 𝗘͟𝘅͟𝗮͟𝗺͟𝗽͟𝗹͟𝗲 𝗼͟𝗳 𝗼͟𝗯͟𝗷͟𝗲͟𝗰͟𝘁 𝗱͟𝗲͟𝘀͟𝘁͟𝗿͟𝘂͟𝗰͟𝘁͟𝘂͟𝗿͟𝗶͟𝗻͟𝗴 𝘄͟𝗶͟𝘁͟𝗵 𝗿͟𝗲͟𝘀͟𝘁 𝗼͟𝗽͟𝗲͟𝗿͟𝗮͟𝘁͟𝗼͟𝗿͟:
         ⁡⁢⁢⁢const { a, b, ...rest } = { a: 1, b: 2, c: 3, d: 4 };
         console.log(a)⁡;  // Output: 1
         ⁡⁢⁢⁢console.log(b)⁡; // Output: 2
