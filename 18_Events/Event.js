@@ -96,9 +96,11 @@
     🔥 ⁡⁢⁣⁣𝟱. 𝗘𝘃𝗲𝗻𝘁 𝗗𝗲𝗹𝗮𝗴𝗮𝘁𝗶𝗼𝗻.⁡
         * Event delegation is a technique in JavaScript where you attach a single event listener to a parent element instead of attaching multiple event listeners to individual child elements.
 
+        * which is efficient especially when child elements are added or removed dynamically.
+
         - The event listener on the parent element can then handle events that occur on its child elements by using the event object's properties to determine which child element triggered the event.
 
-        - This technique is particularly useful when you have a large number of child elements or when child elements are added dynamically, as it helps to improve performance and reduce memory usage.
+        - This technique is particularly useful when you have a large number of child elements or when child elements are added or remove dynamically, as it helps to improve performance and reduce memory usage.
 
-
+        ^ Just a small note: event delegation typically relies on event bubbling, where events propagate from the child element up to the parent, allowing the parent’s listener to catch events from its children.
 */

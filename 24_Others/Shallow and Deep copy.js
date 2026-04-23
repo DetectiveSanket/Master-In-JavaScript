@@ -33,7 +33,7 @@
 
 /*
    ⁡⁢⁣⁣ 𝗮) 𝗦𝗵𝗮𝗹𝗹𝗼𝘄 𝗖𝗼𝗽𝘆: ⁡
-        * A 𝘀͟𝗵͟𝗮͟𝗹͟𝗹͟𝗼͟𝘄 𝗰͟𝗼͟𝗽͟𝘆 creates a 𝙣𝙚𝙬 𝙘𝙤𝙥𝙮 object or array, but nested objects or arrays still share the same references as the original. So, changes to nested data in one will also affect the other.
+        * A 𝘀͟𝗵͟𝗮͟𝗹͟𝗹͟𝗼͟𝘄 𝗰͟𝗼͟𝗽͟𝘆 creates a 𝙣𝙚𝙬 𝙘𝙤𝙥𝙮 of object or array, but nested objects or arrays still share the same references as the original. So, changes to nested data in one will also affect the other.
 
         - In Simple word, ⁡⁣⁣⁢Shallow copy means copying the top-level properties of an object or array, but nested objects or arrays are not copied and still reference the same memory location.⁡
 
@@ -46,6 +46,9 @@
         & That means:
             - top-level properties are copied
             - nested objects are __shared__
+
+        ⁡⁣⁢⁣𝗛𝗼𝘄 𝗱𝗼 𝘆𝗼𝘂 𝗮𝗰𝗵𝗶𝗲𝘃𝗲 𝗮 𝘀𝗵𝗮𝗹𝗹𝗼𝘄 𝗰𝗼𝗽𝘆 𝗼𝗳 𝗮𝗻 𝗮𝗿𝗿𝗮𝘆 𝗼𝗿 𝗼𝗯𝗷𝗲𝗰𝘁 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁?⁡
+        ^ You can achieve a shallow copy of an array using the spread operator `[...]` or the `Array.prototype.slice()` method. For objects, you can use the spread operator `{...}` or `Object.assign()`.    
 
        ≽≽ Array and Object are reference data types. Mean when you copy array or object then it is not copied by value but it is copied by reference , so if you change in new or old array/object till you seen canges in both.
        
@@ -74,13 +77,13 @@
             const shallowArray = [...originalArray];
 
             console.log(shallowArray); // [1, 2, 3 ,4 ,5]
-            console.log(originalArray); //
+            console.log(originalArray); // [1, 2, 3 ,4 ,5]
 
             shallowArray[0] = 10;
             console.log(shallowArray); // [10, 2, 3 ,4 , 5] -> changed
             console.log(originalArray); // [1, 2, 3 ,4 ,5] -> not changed
 
-            //But IF 
+            //But IF nested array is there then it will change because nested array is shared between original and shallow copy.
                 let NewArray = [1,2,3,[4,5]];
                 let shallowCopy = [...NewArray];
                 shallowCopy[3][0] = 10;
@@ -88,10 +91,15 @@
 
 /*               
     ⁡⁢⁣⁣𝗯) 𝗗𝗲𝗲𝗽 𝗖𝗼𝗽𝘆:⁡
-        * A 𝗱͟𝗲͟𝗲͟𝗽 𝗰͟𝗼͟𝗽͟𝘆 creates a completely 𝙞𝙣𝙙𝙚𝙥𝙚𝙣𝙙𝙚𝙣𝙩 𝙘𝙤𝙥𝙮 𝙤𝙛 𝙩𝙝𝙚 𝙤𝙧𝙞𝙜𝙞𝙣𝙖𝙡 𝙤𝙗𝙟𝙚𝙘𝙩 𝙤𝙧 𝙖𝙧𝙧𝙖𝙮, including all nested objects and arrays. So, changes in the copied version do not affect the original at any level.
+        * A 𝗱͟𝗲͟𝗲͟𝗽 𝗰͟𝗼͟𝗽͟𝘆 creates a new copy of object or array that completely 𝙞𝙣𝙙𝙚𝙥𝙚𝙣𝙙𝙚𝙣𝙩 𝙘𝙤𝙥𝙮 𝙤𝙛 𝙩𝙝𝙚 𝙤𝙧𝙞𝙜𝙞𝙣𝙖𝙡 𝙤𝙗𝙟𝙚𝙘𝙩 𝙤𝙧 𝙖𝙧𝙧𝙖𝙮, including all nested objects and arrays. So, changes in the copied version do not affect the original at any level.
 
         - In Simple word, ⁡⁣⁣⁢Deep copy means copying all levels of an object or array, including nested objects or arrays, so that the new copy is completely independent of the original.⁡
+         
+        ⁡⁣⁢⁣⁡⁣⁢▶ 𝗛𝗼𝘄 𝗱𝗼 𝘆𝗼𝘂 𝗮𝗰𝗵𝗶𝗲𝘃𝗲 𝗮 𝗗𝗲𝗲𝗽 𝗰𝗼𝗽𝘆 𝗼𝗳 𝗮𝗻 𝗮𝗿𝗿𝗮𝘆 𝗼𝗿 𝗼𝗯𝗷𝗲𝗰𝘁 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁? 𝗔𝗻𝗱 𝘄𝗵𝗮𝘁 𝗮𝗿𝗲 𝘁𝗵𝗲 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝘁𝘀 𝘄𝗮𝘆 𝘁𝗼 𝗰𝗿𝗲𝗮𝘁𝗲 𝗱𝗲𝗲𝗽 𝗰𝗼𝗽𝘆?⁡
+        ^ You can achieve a deep copy of an object using `JSON.parse(JSON.stringify(obj))`. This method converts the object to a JSON string and then parses it back to a new object, effectively creating a deep copy. 
 
+        ^ However, this method has limitations, such as not copying functions, undefined, or symbols. For arrays, you can also use this method, but it is not recommended for large arrays due to performance issues. For more complex objects, you may need to implement a custom deep copy function or use libraries like Lodash which provide a `_.cloneDeep()` method for deep copying.
+        
         - It is best to use deep copy when we want to create a completely independent copy of an object or array, especially when it contains nested objects or arrays.
 
         - For example, when we use JSON.parse(JSON.stringify(obj)) to copy an object, it creates a deep copy.

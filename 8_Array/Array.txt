@@ -33,7 +33,7 @@
         console.log(newArr); // [2, 4, 6, 8]⁡
 
 2) ⁡⁣⁢⁣𝗙𝗶𝗹𝘁𝗲𝗿⁡
-    - creates a new array with all elements that pass the test implemented by the provided function
+    - ⁡⁣⁣⁢creates a new array with all elements that pass the test implemented by the provided function⁡
     * use when you want to filter data based on a condition
     - does not modify the original array
     - compuslary return a boolean value for each element
@@ -46,7 +46,7 @@
         console.log(newArr); // [2, 4]⁡
 
 3) ⁡⁣⁢⁣𝗥𝗲𝗱𝘂𝗰𝗲⁡
-    - executes a reducer function on each element of the array, resulting in a single output value
+    - ⁡⁣⁣⁢executes a reducer function on each element of the array, resulting in a single output value⁡
     * use when you want to reduce an array to a single value (e.g., sum, product)
     - does not modify the original array
     - compuslary return a single value
@@ -60,7 +60,7 @@
 
 
 4) ⁡⁣⁢⁣𝗳𝗼𝗿𝗘𝗮𝗰𝗵⁡
-    - executes a provided function once for each array element
+    - ⁡⁣⁣⁢executes a provided function once for each array element⁡
     * Used when you want to perform an action for each element (e.g., logging)
     - does not modify the original array
     - does not return a new array
