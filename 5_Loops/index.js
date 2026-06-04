@@ -51,14 +51,14 @@ console.log(newMap); // [ 2, 4, 6, 8, 10 ]
 //---------------------
 
 /* 
-    ## what use of 'for of' and 'for in' loop and how they are different from each other.
+    ## ⁡⁢⁣⁣𝘄𝗵𝗮𝘁 𝘂𝘀𝗲 𝗼𝗳 '𝗳𝗼𝗿 𝗼𝗳' 𝗮𝗻𝗱 '𝗳𝗼𝗿 𝗶𝗻' 𝗹𝗼𝗼𝗽 𝗮𝗻𝗱 𝗵𝗼𝘄 𝘁𝗵𝗲𝘆 𝗮𝗿𝗲 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝘁 𝗳𝗿𝗼𝗺 𝗲𝗮𝗰𝗵 𝗼𝘁𝗵𝗲𝗿.⁡
 
 
-    > for...of and for...in are both loops in JavaScript, but they are used for different things.
+    * for...of and for...in are both loops in JavaScript, but they are used for different things.
 
-        ## 1. `for...of`
+        ## ⁡⁣⁢⁣𝟭. `𝗳𝗼𝗿...𝗼𝗳`⁡
 
-            - Used to loop through __values__ of an iterable.
+            * Used to loop through __values__ of an iterable.
             
             ### Works with:
                 - Arrays
@@ -105,9 +105,9 @@ console.log(newMap); // [ 2, 4, 6, 8, 10 ]
                 S⁡
             ```
     ---------------------------------------------------
-    ## 2. `for...in`
+    ## ⁡⁣⁢⁣𝟮. `𝗳𝗼𝗿...𝗶𝗻`⁡
 
-        - Used to loop through __keys / property names__.
+        * Used to loop ⁡⁣⁣⁢⁡⁣⁣⁢through __keys⁡⁡ / property names__.
         
         ### Mostly used with:
             - Objects

@@ -20,3 +20,4 @@ let string = "34";
 console.log(typeof string);
 let number = +string;
 console.log(typeof number);
+

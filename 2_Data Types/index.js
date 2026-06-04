@@ -1,7 +1,13 @@
 
-//# ⁡⁢⁣⁣𝗗𝗮𝘁𝗮 𝗧𝘆𝗽𝗲𝘀 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁⁡
+/*
+    # ⁡⁢⁣⁣𝗗𝗮𝘁𝗮 𝗧𝘆𝗽𝗲𝘀 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁⁡ 
+        - Which type of data hold by varible
 
-// JavaScript has several built-in data types. Here are the most commonly used ones:
+    * JavaScript has several built-in data types. Here are the most commonly used ones:
+
+       ⟫⟫ Array and Object are pass by reference value.
+
+*/
 
 //1. ⁡⁣⁢⁣𝗣𝗿𝗶𝗺𝗶𝘁𝗶𝘃𝗲𝘀 𝗱𝗮𝘁𝗮⁡
  
@@ -40,6 +46,18 @@ console.log(typeof regex); // "object"
 
 //⁡⁣⁣⁢# 𝗘𝘅𝗲𝗿𝗰𝗶𝘀𝗲𝘀⁡
     //* 1. Create a variable of each data type and log their types using `typeof`.
+        console.log(typeof x); // "number"
+        console.log(typeof y); // "string"
+        console.log(typeof isActive); // "boolean"
+        console.log(typeof n); // "object" (this is a known quirk in JavaScript)
+        console.log(typeof u); // "undefined"
+        console.log(typeof sym); // "symbol"
+        console.log(typeof bigIntNum); // "bigint"
+        console.log(typeof arr); // "object"
+        console.log(typeof obj); // "object"
+        console.log(typeof func); // "function"
+        console.log(typeof date); // "object"
+        console.log(typeof regex); // "object"
 
     //* 2. Create an array containing different data types and log the type of each element.
 

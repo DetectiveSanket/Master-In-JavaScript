@@ -1,7 +1,7 @@
 // var is function scope
 // and let is block scope
 
-// Example 1: Block scope with let
+//* Example 1: Block scope with let
 function blockScopeExample() {
     let x = 10;
     if(true) {
@@ -12,7 +12,7 @@ function blockScopeExample() {
 }
 
 
-// Example 2: Function scope with var
+//* Example 2: Function scope with var
 function functionScopeExample() {
     var y = 10;
     if(true) {
@@ -22,7 +22,7 @@ function functionScopeExample() {
     console.log("Outside block y:", y); // Will print ⁡⁣⁣⁢20⁡, not 10!
 }
 
-// Example 3: Scope outside functions
+//* Example 3: Scope outside functions
 function scopeOutsideFunction() {
 
     if(true) {
@@ -34,7 +34,7 @@ function scopeOutsideFunction() {
     console.log(blockScoped); // Would cause ReferenceError , we don't have access to blockScoped here
 }
 
-// Run the examples
+//* Run the examples
 console.log("Example 1: Block scope with let");
 blockScopeExample();
 
@@ -44,8 +44,8 @@ functionScopeExample();
 console.log("\nExample 3: Scope outside functions");
 scopeOutsideFunction();
 
-// Hoisting impact per type
-//* hoisting -> ek variable ko jab JavaScript mein banaate hai to wo variable do hisso mein toot jaata hai and uska declare part upar chala jaata hai and uska initialization part neeche rehjata hai
+//* Hoisting impact per type
+//^ hoisting -> ek variable ko jab JavaScript mein banaate hai to wo variable do hisso mein toot jaata hai and uska declare part upar chala jaata hai and uska initialization part neeche rehjata hai
 
  
 console.log(a); // undefined

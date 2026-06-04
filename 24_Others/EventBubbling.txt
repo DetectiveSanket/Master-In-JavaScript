@@ -11,7 +11,7 @@
 - ✅ **Capturing** = outside ➜ inside
 - ✅ Default in JS = **Bubbling**
 
-========================================
+========================================================================================================================
 
 # 📚 Table of Contents
 
@@ -30,82 +30,75 @@
 13. [Common Mistakes](#-13-common-mistakes)
 14. [Mini Recap Quiz](#-14-mini-recap-quiz)
 
-========================================
+========================================================================================================================
 
-# 🔹 1. What is an Event?
+ 🔹 ⁡⁢⁣⁣𝟭. 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗮𝗻 𝗘𝘃𝗲𝗻𝘁?⁡
 
-In JavaScript, an **event** is something that happens in the browser.
+   - ⁡⁣⁣⁢𝗜𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁, 𝗮𝗻 𝗲𝘃𝗲𝗻𝘁 𝗶𝘀 𝘀𝗼𝗺𝗲𝘁𝗵𝗶𝗻𝗴 𝘁𝗵𝗮𝘁 𝗵𝗮𝗽𝗽𝗲𝗻𝘀 𝗶𝗻 𝘁𝗵𝗲 𝗯𝗿𝗼𝘄𝘀𝗲𝗿⁡.
 
-## ✅ Common Examples of Events
-- 🖱️ User clicks a button
-- ⌨️ User types in an input field
-- 🖱️ User moves the mouse
-- 📩 User submits a form
+    ## ✅ Common Examples of Events
+        - 🖱️ User clicks a button
+        - ⌨️ User types in an input field
+        - 🖱️ User moves the mouse
+        - 📩 User submits a form
 
-So when a user clicks on an element, JavaScript can detect that action.
+    - So when a user clicks on an element, JavaScript can detect that action.
 
-## Example:
-```javascript
-button.addEventListener("click", function () {
-  console.log("Button clicked");
-});
-```
+        ## Example:
+        ⁡⁢⁢⁢button.addEventListener("click", function () {
+            console.log("Button clicked");
+        });⁡
 
-### 💡 Simple Meaning:
-When the button is clicked, JavaScript runs the given function.
+
+
+    - When the button is clicked, JavaScript runs the given function.
 
 ----------------------------------------
 
-# 🔹 2. HTML Elements Are Inside Each Other
+ 🔹 ⁡⁢⁣⁣𝟮. 𝗛𝗧𝗠𝗟 𝗘𝗹𝗲𝗺𝗲𝗻𝘁𝘀 𝗔𝗿𝗲 𝗜𝗻𝘀𝗶𝗱𝗲 𝗘𝗮𝗰𝗵 𝗢𝘁𝗵𝗲𝗿⁡
 
-On a webpage, elements are usually **nested**.
+    - On a webpage, elements are usually nested.
 
-## Example:
-```html
-<div id="grandparent">
-  <div id="parent">
-    <button id="child">Click Me</button>
-  </div>
-</div>
-```
+    ## Example:
+        ⁡⁢⁢⁢<div id="grandparent">
+            <div id="parent">
+                <button id="child">Click Me</button>
+            </div>
+        </div>⁡
 
-## Structure:
-- `grandparent` → outer element
-- `parent` → inside grandparent
-- `child` → inside parent
 
-### Visual Flow:
-```text
-grandparent
-   ↓
- parent
-   ↓
- child
-```
+    ## Structure:
+        - `grandparent` → outer element
+        - `parent` → inside grandparent
+        - `child` → inside parent
 
-Or simply:
+    ### Visual Flow:
 
-`grandparent -> parent -> child`
+        grandparent
+          ↓
+        parent
+          ↓
+        child
 
-## Important Point:
-If you click the **button**, the browser knows:
-- you clicked the button
-- the button is inside `parent`
-- the `parent` is inside `grandparent`
+    ## Important Point:
+        If you click the button, the browser knows:
+        - you clicked the button
+        - the button is inside `parent`
+        - the `parent` is inside `grandparent`
 
-This is exactly where **event bubbling** and **event capturing** happen.
+    - This is exactly where **event bubbling** and **event capturing** happen.
 
 ----------------------------------------
 
 # 🔥 ⁡⁢⁣⁣𝟯. 𝗘𝘃𝗲𝗻𝘁 𝗕𝘂𝗯𝗯𝗹𝗶𝗻𝗴⁡
 
 ## ✅ Simple Definition
-When an event happens on a child element, it first runs on that child, then moves upward to the parent, and then upward again.
+    - When an event happens on a child element, it first runs on that child, then moves upward to the parent, and then upward again.
 
-This upward movement is called **event bubbling**.
+    - This upward movement is called **event bubbling**.
 
 ## 🧠 Easy Line to Remember
-> **Bubbling means event goes from inside to outside.**
+    > **Bubbling means event goes from inside to outside.**
 
 ### Direction:
 `child -> parent -> grandparent`
@@ -155,7 +148,7 @@ Grandparent
 ```
 
 ## 🤔 Why?
-Because the click starts on the actual clicked element (`child`) and then travels upward.
+    - Because the click starts on the actual clicked element (`child`) and then travels upward.
 
 ✅ That is **event bubbling**.
 
@@ -163,13 +156,12 @@ Because the click starts on the actual clicked element (`child`) and then travel
 
 # 🎯 ⁡⁢⁣⁣𝟰. 𝗘𝘃𝗲𝗻𝘁 𝗖𝗮𝗽𝘁𝘂𝗿𝗶𝗻𝗴⁡
 
-## ✅ Simple Definition
-Capturing is the opposite of bubbling.
+    - Capturing is the opposite of bubbling.
 
-In capturing, the event starts from the outer element and moves inward to the target element.
+    - In capturing, the event starts from the outer element and moves inward to the target element.
 
 ## 🧠 Easy Line to Remember
-> **Capturing means event goes from outside to inside.**
+    > **Capturing means event goes from outside to inside.**
 
 ### Direction:
 `grandparent -> parent -> child`
@@ -222,7 +214,7 @@ To use capturing, pass `true` as the third argument in `addEventListener()`.
 ```
 
 ## 🤔 Why?
-Because now the event travels from outer to inner.
+    - Because now the event travels from outer to inner.
 
 ✅ That is **event capturing**.
 

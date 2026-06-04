@@ -12,10 +12,10 @@
 A1: The purpose of `this` in JavaScript is to refer to the current object or the context in which the code is running.
 
     * ## Simple meaning
-        - `this` tells you __"whose data or object is being used right now?"__
+        - `⁡⁣⁣⁢𝘁𝗵𝗶𝘀` 𝘁𝗲𝗹𝗹𝘀 𝘆𝗼𝘂 "𝘄𝗵𝗼𝘀𝗲 𝗱𝗮𝘁𝗮 𝗼𝗿 𝗼𝗯𝗷𝗲𝗰𝘁 𝗶𝘀 𝗯𝗲𝗶𝗻𝗴 𝘂𝘀𝗲𝗱 𝗿𝗶𝗴𝗵𝘁 𝗻𝗼𝘄?⁡"
 
 
-𝗤𝟮: 𝗛𝗼𝘄 𝗱𝗼𝗲𝘀 𝘁𝗵𝗲 𝘃𝗮𝗹𝘂𝗲 𝗼𝗳 `𝘁𝗵𝗶𝘀` 𝗰𝗵𝗮𝗻𝗴𝗲 𝗶𝗻 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝘁 𝗰𝗼𝗻𝘁𝗲𝘅𝘁𝘀?⁡
+⁡⁢⁣⁣𝗤𝟮: 𝗛𝗼𝘄 𝗱𝗼𝗲𝘀 𝘁𝗵𝗲 𝘃𝗮𝗹𝘂𝗲 𝗼𝗳 `𝘁𝗵𝗶𝘀` 𝗰𝗵𝗮𝗻𝗴𝗲 𝗶𝗻 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝘁 𝗰𝗼𝗻𝘁𝗲𝘅𝘁𝘀?⁡
      ->: The value of `this` can change based on how a function is called:
         - In the global context, `this` refers to the ⁡⁣⁣⁢global object⁡ (e.g., `window` in browsers).
         - In a function, `this` refers to the object that called the function.

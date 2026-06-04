@@ -46,5 +46,3 @@ const myClosure = outerFunction(); // myClosure is now a reference to the inner 
 myClosure(); // Output: 1
 myClosure(); // Output: 2
 myClosure(); // Output: 3
-
-// 
