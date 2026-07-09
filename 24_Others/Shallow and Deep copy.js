@@ -37,9 +37,9 @@
 
         - In Simple word, ⁡⁣⁣⁢Shallow copy means copying the top-level properties of an object or array, but nested objects or arrays are not copied and still reference the same memory location.⁡
 
-        - It is best to copy the primitive data types like string, number, boolean etc. because they are immutable and they are copied by value. But when we copy the reference data types like object and array then it is called shallow copy because it only copies the reference of the object or array and not the actual object or array.
+        - It is best to copy the primitive data types like string, number, boolean etc. because they are immutable and they are copied by value. But 𝘄͟𝗵͟𝗲͟𝗻 𝘄͟𝗲 𝗰͟𝗼͟𝗽͟𝘆 𝘁͟𝗵͟𝗲 𝗿͟𝗲͟𝗳͟𝗲͟𝗿͟𝗲͟𝗻͟𝗰͟𝗲 𝗱͟𝗮͟𝘁͟𝗮 𝘁͟𝘆͟𝗽͟𝗲͟𝘀 𝗹͟𝗶͟𝗸͟𝗲 𝗼͟𝗯͟𝗷͟𝗲͟𝗰͟𝘁 𝗮͟𝗻͟𝗱 𝗮͟𝗿͟𝗿͟𝗮͟𝘆 𝘁͟𝗵͟𝗲͟𝗻 𝗶͟𝘁 𝗶͟𝘀 𝗰͟𝗮͟𝗹͟𝗹͟𝗲͟𝗱 𝘀͟𝗵͟𝗮͟𝗹͟𝗹͟𝗼͟𝘄 𝗰͟𝗼͟𝗽͟𝘆 because it only copies the reference of the object or array and not the actual object or array.
 
-        - For example, when we use the spread operator to copy an array or object, it creates a shallow copy.
+        - For example, ⁡⁣⁣⁢𝘄𝗵𝗲𝗻 𝘄𝗲 𝘂𝘀𝗲 𝘁𝗵𝗲 𝘀𝗽𝗿𝗲𝗮𝗱 𝗼𝗽𝗲𝗿𝗮𝘁𝗼𝗿 𝘁𝗼 𝗰𝗼𝗽𝘆 𝗮𝗻 𝗮𝗿𝗿𝗮𝘆 𝗼𝗿 𝗼𝗯𝗷𝗲𝗰𝘁, 𝗶𝘁 𝗰𝗿𝗲𝗮𝘁𝗲𝘀 𝗮 𝘀𝗵𝗮𝗹𝗹𝗼𝘄 𝗰𝗼𝗽𝘆.⁡
 
         - We create shllow copy using ⁡⁣⁣⁢spread operator⁡ for arrays and objects.
 

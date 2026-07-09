@@ -21,6 +21,7 @@ A1: The purpose of `this` in JavaScript is to refer to the current object or the
         - In a function, `this` refers to the object that called the function.
         - In an event handler, `this` refers to the element that triggered the event.
         - In a class method, `this` refers to the instance of the class.
+        - In object methods, `this` refers to the object that owns the method.
 
   ex=
 

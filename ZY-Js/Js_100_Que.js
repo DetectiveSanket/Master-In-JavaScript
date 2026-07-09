@@ -1,12 +1,13 @@
 /* 
  ⁡⁢⁣⁣ 1. What is JavaScript ?⁡
-    - JavaScript is a programming language mainly used to make web pages interactive and also used on servers using Node.js.
+    - JavaScript (JS) is a lightweight, high-level programming language primarily used to make web pages interactive and dynamic. 
+    - also used on servers using Node.js.
     - Example: button click, form validation, showing/hiding content, animations.
     - It works with:
         HTML = structure, CSS = design, JavaScript = action.
     - JavaScript can run in the browser and also on the server using Node.js.
 
-    2) What are the data types in JavaScript?⁡
+  ⁡⁢⁣⁣𝟮) 𝗪𝗵𝗮𝘁 𝗮𝗿𝗲 𝘁𝗵𝗲 𝗱𝗮𝘁𝗮 𝘁𝘆𝗽𝗲𝘀 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁?⁡
     - In js , data types means the type of value a variable can store.
         for ex: variable may store number, string, boolean, object, etc.
 

@@ -1,6 +1,6 @@
 
 /* 
-    •  type of function in Js
+    # ⁡⁢⁣⁣𝗧𝘆𝗽𝗲 𝗼𝗳 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗶𝗻 𝗝𝘀⁡
         - Function Declaration
         - Function Expression
         - Arrow Function
@@ -14,7 +14,6 @@
             - Recursive Function
             - Callback Hell
             - Promise Function
-
 */
 
 // ⁡⁢⁣⁣function declaration⁡
@@ -38,11 +37,11 @@
         • Useful for creating functions conditionally⁡
     */
             // console.log(sayHello("sanket")) // ReferenceError: Cannot access 'sayHello' before initialization
-            const sayHello = function(name) { // Anonymous function expression
+            const sayHello = function(name) { //^ Anonymous function expression
                 return `Hello, ${name}!`;
             };
 
-            const namedSayHello = function greet(name) { // Named function expression -> (not anonymous)...
+            const namedSayHello = function greet(name) { //^ Named function expression -> (not anonymous)...
                 return `Hello, ${name}!`;
             };
 
