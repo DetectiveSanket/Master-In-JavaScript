@@ -11,7 +11,7 @@
     <> ⁡⁢⁣⁣𝗜𝗳 𝘁𝗵𝗲 𝗶𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄𝗲𝗿 𝗮𝘀𝗸𝘀 𝘁𝗵𝗲 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲 𝗯𝗲𝘁𝘄𝗲𝗲𝗻 𝗰𝗮𝗹𝗹, 𝗮𝗽𝗽𝗹𝘆, 𝗮𝗻𝗱 𝗯𝗶𝗻𝗱⁡
 
         You can answer:
-            - ⁡⁣⁢⁣𝗰𝗮𝗹𝗹()⁡ → Invokes the function immediately with a specified this.
+            - ⁡⁣⁢⁣𝗰𝗮𝗹𝗹()⁡ → Invokes the function immediately with a specified 'this' .
             - ⁡⁣⁢⁣⁡⁣⁢⁣𝗮𝗽𝗽𝗹𝘆()⁡⁡ → Same as call(), but arguments are passed as an array.
             - ⁡⁣⁢⁣𝗯𝗶𝗻𝗱()⁡ → Does not invoke the function immediately. It returns a new function with this permanently bound.   
 */

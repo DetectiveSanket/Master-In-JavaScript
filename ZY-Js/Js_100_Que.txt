@@ -17,8 +17,8 @@
 11. What are the different ways to create objects in JavaScript? ✔️
 12. Explain the concept of callback functions in JavaScript. ✔️
 13. What is event bubbling and event capturing in JavaScript? ✔️
-14. What is the purpose of the “bind” method in JavaScript? 
-15. Explain the concept of AJAX in JavaScript.
+14. What is the purpose of the “bind” method in JavaScript? ✔️
+15. Explain the concept of AJAX in JavaScript. ✔️
 16. What is the “typeof” operator used for?  ✔️
 17. How does JavaScript handle errors and exceptions? ✔️
 18. Explain the concept of event-driven programming in JavaScript.
