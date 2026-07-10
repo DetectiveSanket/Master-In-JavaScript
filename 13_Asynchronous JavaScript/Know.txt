@@ -9,7 +9,7 @@ In JavaScript, some tasks take time (like fetching data from a database).
 We handle them in three main ways:
 
 
-   ⁡⁣⁢⁣A. CALLBACKS (The Old Way)⁡
+   ⁡⁣⁢⁣𝗔. 𝗖𝗔𝗟𝗟𝗕𝗔𝗖𝗞𝗦 ⁡⁣⁢⁣(𝗧𝗵𝗲 𝗢𝗹𝗱 𝗪𝗮𝘆)⁡
    ---------------------------
    A callback is just a function passed into another function to be called 
    later.
@@ -38,10 +38,10 @@ We handle them in three main ways:
    code look and behave like synchronous (line-by-line) code.
 
    • ⁡⁣⁣⁢async⁡: 
-     Tells JS that this function will handle asynchronous tasks
+      - Tells JS that this function will handle asynchronous tasks
 
    • ⁡⁣⁣⁢await⁡: 
-     Tells JS to "pause and wait" for the promise to finish before moving to 
+      - Tells JS to "pause and wait" for the promise to finish before moving to 
      the next line. Much easier to read!
 
 

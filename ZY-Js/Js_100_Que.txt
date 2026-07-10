@@ -21,7 +21,7 @@
 15. Explain the concept of AJAX in JavaScript. ✔️
 16. What is the “typeof” operator used for?  ✔️
 17. How does JavaScript handle errors and exceptions? ✔️
-18. Explain the concept of event-driven programming in JavaScript.
+18. Explain the concept of event-driven programming in JavaScript. ✔️
 19. What is the purpose of the “async” and “await” keywords in JavaScript? ✔️
 
 20. What is the difference between a deep copy and a shallow copy in JavaScript? ✔️
@@ -35,7 +35,7 @@
 29. What are the different types of loops in JavaScript? ✔️
 30. What is the difference between “let,” “const,” and “var” in JavaScript? ✔️
 
-31. Explain the concept of event propagation in JavaScript. 
+31. Explain the concept of event propagation in JavaScript. ✔️
 32. What are the different ways to manipulate the DOM in JavaScript?
 33. What is the purpose of the “localStorage” and “sessionStorage” objects?
 34. How do you handle asynchronous operations in JavaScript? ✔️
@@ -50,9 +50,9 @@
 43. Explain the concept of the event delegation pattern✔️
 45. What is the purpose of the “arguments” object in JavaScript?
 46. What are the different ways to define methods in JavaScript objects? ✔️
-47. Explain the concept of memoization and its benefits.
+47. Explain the concept of memoization and its benefits. ✔️
 48. What is the difference between “slice” and “splice” in JavaScript arrays? ✔️
-49. What is the purpose of the “apply” and “call” methods in JavaScript?
+49. What is the purpose of the “apply” and “call” methods in JavaScript? ✔️
 50. Explain the concept of the event loop in JavaScript and how it handles asynchronous operations. ✔️
 
 51. What are arrow functions, and how are they different from regular functions?
