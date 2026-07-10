@@ -189,9 +189,9 @@ console.log(deepCopy.address.city); // "Chennai"
     //------------------------------------------------------------------------//
 
     
-// ⁡⁢⁣⁣𝕕͟𝕚͟𝕗͟𝕗 𝕨͟𝕒͟𝕪 𝕥͟𝕠 𝕥͟𝕠 𝕔͟𝕣͟𝕖͟𝕒͟𝕥͟𝕖 𝕠͟𝕓͟𝕛͟𝕖͟𝕔͟𝕥.⁡
+// ⁡⁢⁣⁣D𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝘁 𝘄𝗮𝘆𝘀 𝘁𝗼 𝗰𝗿𝗲𝗮𝘁𝗲 𝗮𝗻 𝗼𝗯𝗷𝗲𝗰𝘁 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁⁡
 
-// 1. Object literal syntax
+// ⁡⁣⁢⁣1. Object literal syntax⁡
 const person = {
     name: "John",
     age: 30,
@@ -201,7 +201,7 @@ console.log("person: " , person);
 console.log("\n");
 
 
-// 2. Using the Object constructor
+//⁡⁣⁢⁣ 2. Using the Object constructor⁡
 
 const person2 = new Object();
 
@@ -213,7 +213,7 @@ console.log("person2: " , person2);
 console.log("persor2", person2)
 console.log("\n");
 
-// 3. Using a constructor function
+//⁡⁣⁢⁣ 3. Using a constructor function⁡
 
 function personn(name , age , city) {
     this.name = name;
@@ -225,7 +225,7 @@ const person3 = new personn("Alice" , 28 , "Chicago");
 console.log("person3: " , person3);
 console.log("\n");
 
-// 4. Using a class
+// ⁡⁣⁢⁣4. Using a class⁡
 
 class personnn {
     constructor(name , age , city) {
@@ -239,7 +239,7 @@ const person4 = new personnn("Bob" , 35 , "San Francisco");
 console.log("person4: " , person4);
 console.log("\n");
 
-// 5. Using Object.create()
+// ⁡⁣⁢⁣5. Using Object.create()⁡
 
 const person5 = Object.create();
 person5.name = "Charlie";
@@ -249,14 +249,14 @@ person5.city = "Miami";
 console.log("person5: " , person5);
 console.log("\n");
 
-// 6. Using JSON.parse()
+// ⁡⁣⁢⁣6. Using JSON.parse()⁡
 
 const personJson = '{"name": "David", "age": 22, "city": "Seattle"}';
 const person6 = JSON.parse(personJson);
 console.log("person6: " , person6);
 console.log("\n");
 
-// 7. Using a factory function -> factory function is a function that returns an object. it is a simple way to create objects without using classes or constructor functions.
+//⁡⁣⁢⁣ 7. Using a factory function -⁡> factory function is a function that returns an object. it is a simple way to create objects without using classes or constructor functions.
 
 function createPerson(name , age , city) {  
     return {

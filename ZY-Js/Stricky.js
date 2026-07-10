@@ -37,7 +37,7 @@ console.log([] === [])
 
     - Since [] and [] are different instances in memory, the result is false.
 
-    > console.log([] == []) :- For this case also the result will be false because both are different instances in memory.
+    > ⁡⁢⁢⁢console.log([] == [])⁡ :- For this case also the result will be ⁡⁣⁣⁢false⁡ because both are different instances in memory.
 */
 
 console.log("10" < "9")
@@ -60,7 +60,13 @@ console.log(NaN === NaN)
 
     - As a result, NaN === NaN returns false.
     - To check if a value is NaN, use Number.isNaN().
+
+
+
+    >  ⁡⁢⁢⁢console.log(NaN == NaN)⁡ :- For this case also the result will be ⁡⁣⁣⁢false⁡ because NaN is not equal to itself in JavaScript.
 */
+
+//! JavaScript uses type coercion with the loose equality operator (==).
 
 console.log(true == 1)
 /*  

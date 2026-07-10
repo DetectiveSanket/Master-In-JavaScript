@@ -11,7 +11,7 @@
 6. What is the difference between “==” and “===” operators in JavaScript?  ✔️
 7. Explain the concept of prototypal inheritance in JavaScript. ✔️
 8. What are the different ways to define a function in JavaScript? ✔️
-9. How does event delegation work in JavaScript?
+9. How does event delegation work in JavaScript?  ✔️
 10. What is the purpose of the “this” keyword in JavaScript? ✔️
 
 11. What are the different ways to create objects in JavaScript? ✔️
