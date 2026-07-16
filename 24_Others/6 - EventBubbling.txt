@@ -93,9 +93,9 @@
 # 🔥 ⁡⁢⁣⁣𝟯. 𝗘𝘃𝗲𝗻𝘁 𝗕𝘂𝗯𝗯𝗹𝗶𝗻𝗴⁡
 
 ## ✅ Simple Definition
-    - When an event happens on a child element, it first runs on that child, then moves upward to the parent, and then upward again.
+    - ⁡⁣⁣⁢When an event happens on a child element, it first runs on that child, then moves upward to the parent, and then upward again.⁡
 
-    - This upward movement is called **event bubbling**.
+    - This upward movement is called event bubbling.
 
 ## 🧠 Easy Line to Remember
     > **Bubbling means event goes from inside to outside.**
@@ -156,9 +156,9 @@ Grandparent
 
 # 🎯 ⁡⁢⁣⁣𝟰. 𝗘𝘃𝗲𝗻𝘁 𝗖𝗮𝗽𝘁𝘂𝗿𝗶𝗻𝗴⁡
 
-    - Capturing is the opposite of bubbling.
+    - ⁡⁣⁣⁢Capturing is the opposite of bubbling.⁡
 
-    - In capturing, the event starts from the outer element and moves inward to the target element.
+    - ⁡⁣⁣⁢In capturing, the event starts from the outer element and moves inward to the target element.⁡
 
 ## 🧠 Easy Line to Remember
     > **Capturing means event goes from outside to inside.**
@@ -254,7 +254,7 @@ The message goes:
 
 # ⚙️ 6. Default Behavior
 
-B⁡⁣⁣⁢y default, JavaScript uses **event bubbling**.⁡
+B⁡⁣⁣⁢y default, JavaScript uses event bubbling.⁡
 
 ## Default Syntax:
 ```javascript
@@ -337,47 +337,47 @@ Button
 
 ----------------------------------------
 
-# ✋ 8. stopPropagation()
+# ✋ ⁡⁢⁣⁣𝟴. 𝘀𝘁𝗼𝗽𝗣𝗿𝗼𝗽𝗮𝗴𝗮𝘁𝗶𝗼𝗻()⁡
 
 Sometimes you do **not** want the event to continue moving.
 
 For that, JavaScript provides:
 
 ```javascript
-event.stopPropagation();
+    event.stopPropagation();
 ```
 
 ## Example:
 ```javascript
-document.getElementById("parent").addEventListener("click", function () {
-  console.log("Parent clicked");
-});
+    document.getElementById("parent").addEventListener("click", function () {
+        console.log("Parent clicked");
+    });
 
-document.getElementById("child").addEventListener("click", function (event) {
-  console.log("Child clicked");
-  event.stopPropagation();
-});
+    document.getElementById("child").addEventListener("click", function (event) {
+        console.log("Child clicked");
+        event.stopPropagation();
+    });
 ```
 
 ## Output:
 ```javascript
-Child clicked
+    Child clicked
 ```
 
 ## Why did parent not run?
-Because `stopPropagation()` stops the event from moving further.
+    - Because `stopPropagation()` stops the event from moving further.
 
 ✅ It can stop bubbling or capturing from continuing.
 
 ----------------------------------------
 
-# 🎤 9. Interview-Style Short Definition
+# 🎤 ⁡⁢⁣⁣𝟵. 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄-𝗦𝘁𝘆𝗹𝗲 𝗦𝗵𝗼𝗿𝘁 𝗗𝗲𝗳𝗶𝗻𝗶𝘁𝗶𝗼𝗻⁡
 
-## Event Bubbling
-Event bubbling is a process where an event starts from the target element and then propagates upward to its parent and ancestors.
+##⁡⁣⁢⁣ Event Bubbling⁡ :- 
+    - Event bubbling is a process where an event starts from the target element and then propagates upward to its parent and ancestors.
 
-## Event Capturing
-Event capturing is a process where an event starts from the top ancestor and propagates downward to the target element.
+##⁡⁣⁢⁣ 𝗘𝘃𝗲𝗻𝘁 𝗖𝗮𝗽𝘁𝘂𝗿𝗶𝗻𝗴⁡ :-
+    - Event capturing is a process where an event starts from the top ancestor and propagates downward to the target element.
 
 ----------------------------------------
 
@@ -395,9 +395,9 @@ Event capturing is a process where an event starts from the top ancestor and pro
 
 # 🧠 11. One-Line Memory Trick
 
-- **Bubbling** = **bottom to top**
-- **Capturing** = **top to bottom**
-
+    - Bubbling = bottom to top
+    - Capturing = top to bottom
+    
 ----------------------------------------
 
 # ✅ 12. Final Simple Summary

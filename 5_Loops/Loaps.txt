@@ -18,7 +18,7 @@
 1) ⁡⁣⁢⁣𝗠𝗮𝗽⁡
     - ⁡⁣⁣⁢creates a n͟e͟w a͟r͟r͟a͟y by applying a function to each element⁡
     * use when you want to transform data
-    - does not modify the original array
+    - ⁡⁢⁢⁢does not modify the original array⁡
     - compuslary return a value for each element
     * map away return values
     - can be used to transform data
@@ -26,21 +26,21 @@
 
 
 4) ⁡⁣⁢⁣𝗳𝗼𝗿𝗘𝗮𝗰𝗵⁡
-    - executes a provided function once for each array element
+    - ⁡⁣⁣⁢executes a provided function once for each array element⁡
     * Used when you want to perform an action for each element (e.g., logging)
-    - does not modify the original array
+    - ⁡⁢⁢⁢does not modify the original array⁡
     - does not return a new array
     - ⁡⁣⁣⁢does not create a ⁡⁣⁣⁢n͟e͟w a͟r͟r͟a͟y⁡⁡ 
-    - is often used for side effects (e.g., logging)
+    - is often used for ⁡⁣⁣⁢𝘀𝗶𝗱𝗲 𝗲𝗳𝗳𝗲𝗰𝘁𝘀⁡ (e.g., logging)
 
     ex-
-        let arr = [1, 2, 3, 4];
+        ⁡⁢⁢⁢let arr = [1, 2, 3, 4];
         arr.forEach(num => {
             console.log(num * 2);
-        });
+        });⁡
 
 
-    • forEach vs map
+    • ⁡⁣⁢⁣𝗳𝗼𝗿𝗘𝗮𝗰𝗵 𝘃𝘀 𝗺𝗮𝗽⁡
         - forEach is used for side effects (e.g., logging), while map is used for transforming data.
 
         - forEach does not return a new array, while map returns a new array with the transformed elements.
@@ -48,3 +48,194 @@
         - forEach can be used with any type of function, while map requires a specific ⁡⁣⁣⁢return value for each element.⁡
 
         - forEach is generally used when you want to perform an action for each element, while map is used when you want to create a new array based on the original array.
+
+-------------------------------------------------------------------
+
+## ⁡⁢⁣⁣𝗔𝗹𝗹 𝗧𝘆𝗽𝗲𝘀 𝗼𝗳 𝗟𝗼𝗼𝗽𝘀 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁⁡
+
+  ⁡⁣⁢⁡⁣⁢⁣1. `for` Loop (Traditional Loop)⁡
+       - Use Case: When you know the exact number of iterations or need index access.
+Ex:-
+⁡⁢⁢⁢    for (let i = 0; i < 5; i++) {
+        console.log(i); // 0, 1, 2, 3, 4
+    }⁡
+
+
+When to use:
+	- Iterating a specific number of times
+	- Need access to the index
+	- Need to control iteration (skip, go backwards)
+
+---
+
+  ⁡⁣⁢⁣2. `while` Loop⁡
+       - Use Case: When the number of iterations is unknown and depends on a condition.
+
+Ex:-
+⁡⁢⁢⁢    let count = 0;
+    while (count < 5) {
+        console.log(count);
+        count++;
+    }⁡
+
+
+When to use:
+	- Loop until a condition is met
+	- Don't know how many iterations needed
+	- Event-driven loops
+
+---
+
+  ⁡⁣⁢⁣3. `do...while` Loop⁡
+       - Use Case: When you need the loop to execute at least once, then check the condition.
+
+Ex:-
+⁡⁢⁢⁢    ⁡⁢⁢⁢let count = 0;
+    do {
+        console.log(count);
+        count++;
+    } while (count < 5);⁡
+
+
+When to use:
+	- Loop must execute at least once
+	- User input validation (repeat until valid input)
+	- Menu-driven programs
+
+---
+
+---
+
+  ⁡⁣⁢⁣4. `for...in` Loop⁡
+       - Use Case: Iterating over object properties or array indices (not recommended for arrays).
+
+Ex:-
+⁡⁢⁢⁢    const obj = { name: "John", age: 30, city: "NYC" };
+    for (let key in obj) {
+        console.log(key, obj[key]);
+    }⁡
+
+
+When to use:
+	- Iterating through object properties
+	- NOT recommended for arrays (use for...of instead)
+	- Enumerating object keys
+
+---
+
+  ⁡⁣⁢⁣5. `for...of` Loop⁡
+       - Use Case: Iterating over iterable values (arrays, strings, Sets, Maps).
+
+Ex:-
+⁡⁢⁢⁢    const arr = [1, 2, 3, 4];
+    for (let value of arr) {
+        console.log(value); // 1, 2, 3, 4
+    }
+
+    const str = "hello";
+    for (let char of str) {
+        console.log(char); // h, e, l, l, o
+    }⁡
+
+
+When to use:
+	- Iterating array values (cleaner than for loop)
+	- Strings, Sets, Maps
+	- When you don't need the index
+	- Recommended for arrays over for...in
+
+---
+
+  ⁡⁣⁢⁣6. `forEach()` Method⁡
+       - Use Case: Performing side effects for each array element.
+
+Ex:-
+⁡⁢⁢⁡⁢⁢⁢    const arr = [1, 2, 3, 4];
+    arr.forEach((num, index) => {
+        console.log(index, num);
+    });⁡
+
+
+When to use:
+	- Side effects (logging, API calls)
+	- Can't break or return from forEach
+	- Clean, functional approach
+	- Does NOT return a value
+
+---
+
+  ⁡⁣⁢⁡⁣⁢⁣7. `map()` Method⁡
+       - Use Case: Transforming array elements into a new array.
+Ex:-
+⁡⁢⁢⁢    const arr = [1, 2, 3, 4];
+    const doubled = arr.map(num => num * 2);
+    console.log(doubled); // [2, 4, 6, 8]⁡
+
+
+When to use:
+	- Transform array data
+	- Need a new array with modified values
+	- Functional programming style
+	- Must return a value
+
+---
+
+  ⁡⁣⁢⁣8. `filter()` Method⁡
+       - Use Case: Creating a new array with elements that pass a test/condition.
+Ex:-
+⁡⁢⁢⁢    const arr = [1, 2, 3, 4, 5];
+    const even = arr.filter(num => num % 2 === 0);
+    console.log(even); // [2, 4]⁡
+
+
+When to use:
+	- Filter array based on condition
+	- Create subset of array
+	- Keep elements that match criteria
+
+---
+
+  ⁡⁣⁢⁣9. `reduce()` Method⁡
+       - Use Case: Accumulating values into a single result.
+
+Ex:-
+⁡⁢⁢⁢    const arr = [1, 2, 3, 4];
+    const sum = arr.reduce((acc, num) => acc + num, 0);
+    console.log(sum); // 10⁡
+
+
+When to use:
+	- Sum, multiply, or combine array values
+	- Build objects/arrays from data
+	- Complex data transformations
+
+---
+
+
+Quick Comparison Table
+
+| Loop Type    | Best For                  | Returns    | Index  | Can Break |
+|--------------|---------------------------|-----------|--------|----------- |
+| for          | Known iterations          | —         | ✅ Yes | ✅ Yes    |
+| while        | Unknown iterations        | —         | ❌ Manual | ✅ Yes |
+| do...while   | At least once             | —         | ❌ Manual | ✅ Yes |
+| for...in     | Object properties         | —         | ✅ Keys | ✅ Yes   |
+| for...of     | Array values              | —         | ❌ No  | ✅ Yes    |
+| forEach      | Side effects              | undefined | ✅ Yes | ❌ No     |
+| map          | Transform data            | New array | ✅ Yes | ❌ No     |
+| filter       | Conditional subset        | New array | ✅ Yes | ❌ No     |
+| reduce       | Accumulation              | Single value | ✅ Yes | ❌ No  |
+
+---
+
+When to Use Which?
+
+	- Need index & control? → `for` loop
+	- Loop until condition? → `while` or `do...while`
+	- Object properties? → `for...in`
+	- Array values? → `for...of`
+	- Side effects (logging, API)? → `forEach`
+	- Transform data? → `map`
+	- Filter data? → `filter`
+	- Accumulate/combine? → `reduce`
+

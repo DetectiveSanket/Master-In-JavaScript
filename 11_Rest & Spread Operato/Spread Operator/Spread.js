@@ -2,6 +2,7 @@
     ⁡⁢⁣⁢> 𝗦𝗽𝗿𝗲𝗮𝗱 𝗮𝗻𝗱 𝗥𝗲𝘀𝘁 𝗢𝗽𝗲𝗿𝗮𝘁𝗼𝗿𝘀⁡
 
    ⁡⁢⁣⁣ 𝟭. 𝗦𝗽𝗿𝗲𝗮𝗱 𝗢𝗽𝗲𝗿𝗮𝘁𝗼𝗿⁡
+        - Spread operator takes values out of an array/object and spreads them.
        - It's spread or expands the values of an iterable (like an array)
        - copy the array , merge array , spread the array ,  (use cases)
        - Used to split up array elements OR object properties

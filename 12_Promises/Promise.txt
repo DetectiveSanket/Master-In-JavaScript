@@ -119,7 +119,7 @@ A promise is always in one of these THREE states:
    • Example: "Regardless of whether I ate, I will leave the restaurant"
 
 
-## 𝗧͟𝘆͟𝗽͟𝗲͟𝘀 𝗼͟𝗳 𝗣͟𝗿͟𝗼͟𝗺͟𝗶͟𝘀͟𝗲....
+## ⁡⁢⁢⁣𝗧͟𝘆͟𝗽͟𝗲͟𝘀 𝗼͟𝗳 𝗣͟𝗿͟𝗼͟𝗺͟𝗶͟𝘀͟𝗲....⁡
    1. Promise.All().
    2. Promise.AllSettled().
    3. Promise.Race().

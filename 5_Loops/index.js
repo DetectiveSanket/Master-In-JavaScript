@@ -79,12 +79,9 @@ console.log(newMap); // [ 2, 4, 6, 8, 10 ]
             ```
             
             ### Output:
-            
-            ```js
    ⁡⁢⁢⁢             10
                 20
                 30⁡
-            ```
             
             > Here, `value` gets the array elements directly.
 
@@ -99,11 +96,9 @@ console.log(newMap); // [ 2, 4, 6, 8, 10 ]
             ```
             
             Output:
-            
-            ```js
 ⁡⁢⁢⁢                J
                 S⁡
-            ```
+
     ---------------------------------------------------
     ## ⁡⁣⁢⁣𝟮. `𝗳𝗼𝗿...𝗶𝗻`⁡
 
@@ -127,38 +122,35 @@ console.log(newMap); // [ 2, 4, 6, 8, 10 ]
         ```
         
         ### Output:
-        
-        ```js
  ⁡⁢⁢⁢           name Sanket
             age 22
             city Pune⁡
-        ```
+
         
         Here:
         - `key` = property name
         - `user[key]` = property value
 ----------------------------------------------------
 
-        # When to use
+        # ⁡⁢⁣⁣𝗪𝗵𝗲𝗻 𝘁𝗼 𝘂𝘀𝗲⁡
 
-            ## Use `for...of` when:
+            ## ⁡⁣⁢⁣𝗨𝘀𝗲 `𝗳𝗼𝗿...𝗼𝗳` 𝘄𝗵𝗲𝗻:⁡
                 - You want array values
                 - You want characters from a string
                 - You want cleaner looping on iterables
             
-            ## Use `for...in` when: 
+            ## ⁡⁣⁢⁣𝗨𝘀𝗲 `𝗳𝗼𝗿...𝗶𝗻` 𝘄𝗵𝗲𝗻:⁡ 
                 - You want object keys
                 - You need property names
         
         ---
         
-        # Important note
-        
-        ⁡⁣⁣⁢𝗔𝘃𝗼𝗶𝗱 𝘂𝘀𝗶𝗻𝗴 `𝗳𝗼𝗿...𝗶𝗻` 𝗳𝗼𝗿 𝗮𝗿𝗿𝗮𝘆𝘀 𝗶𝗻 𝗺𝗼𝘀𝘁 𝗰𝗮𝘀𝗲𝘀, 𝗯𝗲𝗰𝗮𝘂𝘀𝗲 𝗶𝘁 𝗴𝗶𝘃𝗲𝘀 𝗶𝗻𝗱𝗲𝘅𝗲𝘀 𝗮𝗻𝗱 𝗰𝗮𝗻 𝗮𝗹𝘀𝗼 𝗶𝗻𝗰𝗹𝘂𝗱𝗲 𝗶𝗻𝗵𝗲𝗿𝗶𝘁𝗲𝗱 𝗽𝗿𝗼𝗽𝗲𝗿𝘁𝗶𝗲𝘀.⁡
+        # ⁡⁢⁣⁣𝗜𝗺𝗽𝗼𝗿𝘁𝗮𝗻𝘁 𝗻𝗼𝘁𝗲⁡
+        ⁡⁣⁣⁢    - 𝗔𝘃𝗼𝗶𝗱 𝘂𝘀𝗶𝗻𝗴 `𝗳𝗼𝗿...𝗶𝗻` 𝗳𝗼𝗿 𝗮𝗿𝗿𝗮𝘆𝘀 𝗶𝗻 𝗺𝗼𝘀𝘁 𝗰𝗮𝘀𝗲𝘀, 𝗯𝗲𝗰𝗮𝘂𝘀𝗲 𝗶𝘁 𝗴𝗶𝘃𝗲𝘀 𝗶𝗻𝗱𝗲𝘅𝗲𝘀 𝗮𝗻𝗱 𝗰𝗮𝗻 𝗮𝗹𝘀𝗼 𝗶𝗻𝗰𝗹𝘂𝗱𝗲 𝗶𝗻𝗵𝗲𝗿𝗶𝘁𝗲𝗱 𝗽𝗿𝗼𝗽𝗲𝗿𝘁𝗶𝗲𝘀.⁡
 
         # Simple rule to remember
             - `for...of` → __of values__
-            - `for...in` → __in object keys__
-
-             
+            - `for...in` → __in object keys__    
 */ 
+
+

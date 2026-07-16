@@ -4,6 +4,7 @@
 
 /* 
     ⁡⁢⁣⁣2⁡⁢⁣⁣. 𝗥𝗲𝘀𝘁 𝗢𝗽𝗲𝗿𝗮𝘁𝗼𝗿⁡⁡
+        - Rest operator collects multiple values INTO a single array. Used in function parameters.
         - It's rest or collects multiple elements and condenses them into a single element
         - Used in function parameters
         - Used to merge multiple parameters into an array

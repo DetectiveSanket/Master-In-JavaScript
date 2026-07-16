@@ -1,11 +1,11 @@
 
 /* 
     # ⁡⁢⁣⁣𝗧𝘆𝗽𝗲 𝗼𝗳 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗶𝗻 𝗝𝘀⁡
-        - Function Declaration
-        - Function Expression
-        - Arrow Function
-        - IIFE (Immediately Invoked Function Expression) 
-        - Generator Function
+        ⁡⁣⁢⁣- 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗗𝗲𝗰𝗹𝗮𝗿𝗮𝘁𝗶𝗼𝗻
+        - 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗘𝘅𝗽𝗿𝗲𝘀𝘀𝗶𝗼𝗻
+        - 𝗔𝗿𝗿𝗼𝘄 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻
+        - 𝗜𝗜𝗙𝗘 (𝗜𝗺𝗺𝗲𝗱𝗶𝗮𝘁𝗲𝗹𝘆 𝗜𝗻𝘃𝗼𝗸𝗲𝗱 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗘𝘅𝗽𝗿𝗲𝘀𝘀𝗶𝗼𝗻) 
+        - 𝗚𝗲𝗻𝗲𝗿𝗮𝘁𝗼𝗿 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻⁡
 
         # sub types
             - Async Function
@@ -50,11 +50,115 @@
 
 
 
-// ⁡⁢⁣⁣Arrow Function ⁡       
+// ⁡⁢⁣⁣𝗔͟𝗿͟𝗿͟𝗼͟𝘄 𝗙͟𝘂͟𝗻͟𝗰͟𝘁͟𝗶͟𝗼͟𝗻 ͟⁡       
+
    /* 
-        • ⁡⁣⁢⁣A concise syntax for writing function expressions, introduced in ES6. They have lexical this binding, meaning this refers to the this of the surrounding scope. They are often used for shorter, single-line functions or as callbacks.⁡
+        • ⁡⁣⁢⁣Arrow functions are a shorter, cleaner way to write functions in JavaScript (introduced in ES6). Instead of using the function keyword, they use a fat arrow =>..⁡
+
+        • Think of arrow functions as: "Regular functions, but with a shortcut syntax that's great for quick callbacks and one-liners.
+
+        ⁡⁢⁣⁣𝗤𝟭: 𝗪𝗵𝗮𝘁'𝘀 𝘁𝗵𝗲 𝗺𝗮𝗶𝗻 𝗱𝗶𝗳𝗳𝗲𝗿𝗲𝗻𝗰𝗲 𝗶𝗻 𝘀𝘆𝗻𝘁𝗮𝘅 𝗯𝗲𝘁𝘄𝗲𝗲𝗻 𝗻𝗼𝗿𝗺𝗮𝗹 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗮𝗻𝗱 𝗮𝗿𝗿𝗼𝘄 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻 ?⁡⁡
+        A: Regular functions use the ⁡⁣⁣⁢function keyword⁡, arrow functions use ⁡⁣⁣⁢=>.⁡
+
+            ex- 
+            * Regular
+                function add(a, b) { return a + b; }
+                
+                * Arrow
+                const add = (a, b) => a + b;
+        
+        ⁡⁣⁢⁣⁡⁢⁣⁣𝗤𝟮: 𝗪𝗵𝗶𝗰𝗵 𝗼𝗻𝗲 𝗶𝘀 𝗳𝗮𝘀𝘁𝗲𝗿 𝘁𝗼 𝘄𝗿𝗶𝘁𝗲?⁡
+        A: Arrow functions! They're much shorter, especially for simple operations.   
+
+            ex- 
+                * Regular - 3 lines
+                function double(x) {
+                    return x * 2;
+                }
+                
+                * Arrow - 1 line
+                const double = x => x * 2;     
+
+        ⁡⁢⁣⁣𝗤𝟯: 𝗪𝗵𝗲𝗻 𝗰𝗮𝗻 𝗜 𝘀𝗸𝗶𝗽 𝘁𝗵𝗲 𝗰𝘂𝗿𝗹𝘆 𝗯𝗿𝗮𝗰𝗲𝘀 {}?⁡
+        A: Only when you have ⁡⁣⁣⁢one line of code⁡ that you want to return.   
+        
+            ex-
+                * This works (one line, auto-return)
+                const square = x => x * x;
+                
+                * This needs braces (multiple lines)
+                const square = x => {
+                    console.log("Calculating...");
+                    return x * x;
+                };
+
+        ⁡⁢⁣⁣𝗤𝟰: 𝗪𝗵𝗲𝗻 𝗰𝗮𝗻 𝗜 𝘀𝗸𝗶𝗽 𝘁𝗵𝗲 𝗽𝗮𝗿𝗲𝗻𝘁𝗵𝗲𝘀𝗲𝘀 () 𝗮𝗿𝗼𝘂𝗻𝗱 𝗽𝗮𝗿𝗮𝗺𝗲𝘁𝗲𝗿𝘀?
+        A: Only when you have exactly one parameter.
+
+            ex-
+                * Skip parentheses with 1 parameter
+                ⁡⁢⁢⁢const getName = name => `Hello, ${name}`;⁡
+                
+                * Need parentheses with 0 or 2+ parameters
+                ⁡⁢⁢⁢const getName = () => "Hello";
+                const add = (a, b) => a + b;⁡
+
+        ⁡⁣⁢⁣𝗤𝟱: 𝗪𝗵𝗮𝘁 𝗮𝗯𝗼𝘂𝘁 𝗵𝗼𝗶𝘀𝘁𝗶𝗻𝗴? 𝗖𝗮𝗻 𝗜 𝗰𝗮𝗹𝗹 𝘁𝗵𝗲𝗺 𝗯𝗲𝗳𝗼𝗿𝗲 𝘁𝗵𝗲𝘆'𝗿𝗲 𝗱𝗲𝗳𝗶𝗻𝗲𝗱?⁡
+        A: NO. Arrow functions are NOT hoisted.        
+
+            ex-
+                * ❌ This will FAIL
+                console.log(greet("John")); // ReferenceError!
+                const greet = (name) => `Hello, ${name}`;
+                
+                * ✅ This works fine
+                function greet(name) {
+                    return `Hello, ${name}`;
+                }
+                console.log(greet("John")); // Works! (hoisted)
+
+        ⁡⁢⁣⁣𝗤𝟲: 𝗪𝗵𝗮𝘁'𝘀 𝘁𝗵𝗶𝘀 "𝘁𝗵𝗶𝘀" 𝗸𝗲𝘆𝘄𝗼𝗿𝗱 𝗶𝘀𝘀𝘂𝗲 𝗲𝘃𝗲𝗿𝘆𝗼𝗻𝗲 𝘁𝗮𝗹𝗸𝘀 𝗮𝗯𝗼𝘂𝘁?⁡
+        A: Arrow functions don't have their own this - they take it from the surrounding scope.
+
+            ex-
+            * Regular function - has its own 'this'
+            const user = {
+                name: "Alice",
+                greet: function() {
+                    console.log(this.name); // 'this' = user object ✅
+                }
+            };
+            
+            * Arrow function - takes 'this' from outer scope
+            const user = {
+                name: "Alice",
+                greet: () => {
+                    console.log(this.name); // 'this' = window/global ❌
+                }
+            };
+
+        ----------------------------
+
+        ✅ ⁡⁢⁣⁣When to Use Each?⁡
+
+            > Use Regular Functions when:
+                - You need hoisting
+                - You need your own this (like in object methods)
+                - You want to use new with constructor functions
+                - Use Arrow Functions when:
+            
+            > You want cleaner, shorter code
+                - Using callbacks (.map(), .filter(), etc.)
+                - You want inherited this behavior
+                - Writing simple, one-liner operations    
    */
 
+        //* Regular function
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+
+        //* Arrow function (same thing, shorter)
         const arrowFunction = (name) => {
             return `Hello, ${name}!`;
         };
@@ -63,6 +167,7 @@
             return "Hello , i am without parameter"
         }
 
+        //* Arrow function (one-liner - even shorter!)
         const singleLineArrowFunction = name => `Hello, ${name}!`; // Implicit return
 
         const anotherSingleLineArrowFunction = () => `Hello, I am another single line arrow function!`;
@@ -71,6 +176,8 @@
         console.log(withoutParameter()); // works fine
         console.log(singleLineArrowFunction("David")); // works fine
         console.log(anotherSingleLineArrowFunction()); // works fine
+
+
 
 // ⁡⁢⁣⁣Immediately Invoked Function Expressions (IIFEs)  
     /* 
@@ -186,7 +293,7 @@
 
         This pattern is fundamental to JavaScript, especially for handling asynchronous operations.  
         
-       # Why Use Callbacks?
+       # ⁡⁢⁣⁣𝗪𝗵𝘆 𝗨𝘀𝗲 𝗖𝗮𝗹𝗹𝗯𝗮𝗰𝗸𝘀?⁡
         - JavaScript is single-threaded, meaning it can only do one thing at a time. If it has to wait for a long operation (like fetching data from a server, reading a file, or waiting for a timer), the entire program would freeze.
 
         - Callbacks allow you to start an operation and provide a function that will be executed once that operation completes, without blocking the main thread.
@@ -250,25 +357,23 @@
 
 /*
     ⁡⁢⁣⁣Q) 𝗪𝗵𝗮𝘁 𝗶𝘀 𝗱𝗶𝗳𝗳 𝗯𝘄𝘁 𝗛𝗶𝗴𝗵𝗲𝗿-𝗢𝗿𝗱𝗲𝗿 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻 𝗮𝗻𝗱 𝗖𝗮𝗹𝗹𝗯𝗮𝗰𝗸 𝗙𝘂𝗻𝗰𝘁𝗶𝗼𝗻⁡
-        - A higher-order function is a function that takes another function as an argument or returns a function as its result. It can be used to create more abstract and reusable code. For example, the map method is a higher-order function because it takes a callback function as an argument.
+        - A higher-order function is a function ⁡⁣⁣⁢that takes another function as an argument or returns a function as its result.⁡ It can be used to create more abstract and reusable code. For example, the map method is a higher-order function because it takes a callback function as an argument.
 
-            - A callback function is a function that is passed as an argument to another function and is executed after some operation has been completed. It is often used for handling asynchronous operations, such as fetching data from an API or responding to user events.   
-
-            - ex:-
+        - A callback function is a function ⁡⁣⁣⁢that is passed as an argument to another function and is executed after some operation has been completed.⁡ It is often used for handling asynchronous operations, such as fetching data from an API or responding to user events.   
             
 */
-            //• Higher-Order Function
+        //• Higher-Order Function
             function higherOrderFunction(callback) {
                 console.log("This is a higher-order function.");
                 callback(); // Calling the callback function
             }
             higherOrderFunction(callbackFunction);
 
-            //• Callback Function
+        //• Callback Function
             function callbackFunction() {
                 console.log("This is a callback function.");
             }
            
-            //Output:
-            //This is a higher-order function.
-            //This is a callback function.
+        //Output:
+        //This is a higher-order function.
+        //This is a callback function.

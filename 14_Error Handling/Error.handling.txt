@@ -9,7 +9,7 @@ ________________________________________________________________________________
 
 
     • ⁡⁢⁣⁣How is Error Handling Achieved in JavaScript?⁡
-    -> The primary mechanism for synchronous error handling is the `try...catch...finally` statement.
+    -> The primary mechanism for synchronous error handling is the `⁡⁣⁣⁢𝘁𝗿𝘆...𝗰𝗮𝘁𝗰𝗵...𝗳𝗶𝗻𝗮𝗹𝗹𝘆⁡` statement.
     -> For asynchronous code (like API calls), we use ⁡⁣⁣⁢promise .catch() methods or try...catch with async/await⁡.
 
         ⁡⁢⁣⁢1. The try...catch...finally Block⁡
