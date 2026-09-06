@@ -1,6 +1,6 @@
 /* 
  ⁡⁢⁣⁣ 1. What is JavaScript ?⁡
-    - JavaScript (JS) is a lightweight, high-level programming language primarily used to make web pages interactive and dynamic. 
+    * JavaScript (JS) is a lightweight, high-level programming language primarily used to make web pages interactive and dynamic. 
     - also used on servers using Node.js.
     - Example: button click, form validation, showing/hiding content, animations.
     - It works with:
@@ -8,13 +8,18 @@
     - JavaScript can run in the browser and also on the server using Node.js.
 
   ⁡⁢⁣⁣𝟮) 𝗪𝗵𝗮𝘁 𝗮𝗿𝗲 𝘁𝗵𝗲 𝗱𝗮𝘁𝗮 𝘁𝘆𝗽𝗲𝘀 𝗶𝗻 𝗝𝗮𝘃𝗮𝗦𝗰𝗿𝗶𝗽𝘁?⁡
-    - In js , data types means the type of value a variable can store.
+    * In js , data types means the type of value a variable can store.
         for ex: variable may store number, string, boolean, object, etc.
 
         - Data types tell us what kind of daa we are working with.   
 
         • Two main type
-            1) Primitive data types: These are basic data types that are not objects and have no methods. They include:
+            ^1) Primitive data types: These are basic data types that are not objects and have no methods. They include:
+            * Basic data types that store a single value.
+            * Variables store the actual value directly.
+            * Immutable: the original value cannot be changed.
+            * Copies contain independent values.
+
                 - String: Represents text. Example: "Hello, World!"
                 - Number: Represents both integer and floating-point numbers. Example: 42, 3.14
                 - Boolean: Represents true or false values. Example: true, false
@@ -23,7 +28,11 @@
                 - Symbol: Represents a unique identifier. Example: Symbol('id')
                 - BigInt: Represents integers with arbitrary precision. Example: 9007199254740991n
 
-            2) Non-primitive data types: These are complex data types that can store collections of values and more complex entities. They include:
+            ^2) Non-primitive data types: These are complex data types that can store collections of values and more complex entities. They include:
+             * Variables store a reference to the object’s location.
+             * Mutable: properties or elements can be changed.
+             * Copies may point to the same object.
+
                 - Object: Represents a collection of key-value pairs. Example: { name: "Alice", age: 30 }
                 - Array: Represents an ordered list of values. Example: [1, 2, 3, 4, 5]
                 - Function: Represents a reusable block of code that performs a specific task. Example: function greet() { console.log("Hello!"); }
@@ -69,6 +78,35 @@ console.log("Function with no return:", doNothing()); // undefined
 function findUser(name) { return name === "Admin" ? { name: "Admin" } : null; }
 console.log("Function returning null:", findUser("John")); // null
 
+/* 
+```javascript
+console.log("6" == 6); // true
+```
+
+`==` is called **loose equality**. It performs **type conversion** before comparing.
+
+Here:
+
+- `"6"` is a **string**
+- `6` is a **number**
+- JavaScript converts the string `"6"` into the number `6`
+- Then it compares:
+
+```javascript
+Number("6") == 6
+6 == 6 // true
+```
+
+So, in this example, **the string is converted into a number**, not the number into a string.
+
+Use `===` to avoid automatic conversion:
+
+```javascript
+console.log("6" === 6); // false
+```
+
+`===` checks both **value and data type**.
+ */
 
 // !-------------------------------------4 Next Question--------------------------------
 

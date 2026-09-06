@@ -43,9 +43,9 @@ hello();
 */
 
 //! Here's where bind() helps.
-const hello = person.sayHello.bind(person);
+const hello1 = person.sayHello.bind(person);
 
-hello();
+hello1();
 /* 
     Output: Hello, I'm Alice
 
@@ -59,14 +59,14 @@ hello();
 
 // ⁡⁢⁣⁣𝗧𝗵𝗲𝗻 𝗴𝗶𝘃𝗲 𝗮 𝘀𝗶𝗺𝗽𝗹𝗲 𝗲𝘅𝗮𝗺𝗽𝗹𝗲:⁡
 
-const person = {
+const person1 = {
     name: "Alice",
     greet() {
         console.log("Hello " + this.name);
     }
 };
 
-const greet = person.greet.bind(person);
+const greet = person1.greet.bind(person1);
 greet(); // Hello Alice
 
 /* 
