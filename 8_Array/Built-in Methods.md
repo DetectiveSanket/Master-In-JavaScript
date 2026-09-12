@@ -64,7 +64,49 @@ copy.push("purple");
 console.log(colors); // ["red", "green", "blue", "yellow"]
 ```
 
-## 2. `split()`
+## 2. `splice()`
+
+### What it does
+
+`splice()` removes, replaces, or inserts elements in an array. Unlike
+`slice()`, it changes the original array.
+
+### Data type
+
+- **Array:** `splice()` is an array method.
+- It is not a direct string method.
+
+### Usage patterns
+
+```js
+const fruits = ["apple", "banana", "cherry", "date"];
+
+const removed = fruits.splice(1, 2);
+
+console.log(removed); // ["banana", "cherry"]
+console.log(fruits); // ["apple", "date"]
+```
+
+The first argument is the start index. The second argument is the number of
+elements to remove. Any additional arguments are inserted at the start index.
+
+```js
+const numbers = [1, 2, 5];
+
+numbers.splice(2, 0, 3, 4); // remove 0, then insert 3 and 4
+console.log(numbers); // [1, 2, 3, 4, 5]
+
+numbers.splice(1, 2, "two", "three");
+console.log(numbers); // [1, "two", "three", 4, 5]
+```
+
+### Result
+
+`splice()` returns a new array containing the elements that were removed. If
+no elements are removed, it returns an empty array. The original array is
+modified.
+
+## 3. `split()`
 
 ### What it does
 
@@ -98,7 +140,7 @@ is returned as the only array element.
 `split()` always returns an array when called successfully on a string. It does
 not change the original string.
 
-## 3. `reverse()`
+## 4. `reverse()`
 
 ### What it does
 
@@ -139,7 +181,7 @@ console.log(reversedCopy); // [3, 2, 1]
 `reverse()` returns the same array after changing its order. It does not return a
 new array.
 
-## 4. `join()`
+## 5. `join()`
 
 ### What it does
 
@@ -209,6 +251,29 @@ console.log(output); // "dlrow olleh"
 
 `Set.prototype.has`, `Map.prototype.get`, `Map.prototype.set`,
 `Promise.all`, `Promise.allSettled`, and `Promise.race`.
+
+## `slice()` vs `splice()` vs `split()`
+
+| Method | Used on | Purpose | Mutates original? | Returns |
+| --- | --- | --- | --- | --- |
+| `slice()` | String or array | Copies a selected portion | No | String or array |
+| `splice()` | Array only | Removes, replaces, or inserts elements | Yes | Array of removed elements |
+| `split()` | String only | Divides a string into pieces | No | Array |
+
+```js
+const letters = ["a", "b", "c", "d"];
+
+letters.slice(1, 3); // ["b", "c"], letters stays unchanged
+letters.splice(1, 2); // ["b", "c"], letters becomes ["a", "d"]
+
+"a-b-c".split("-"); // ["a", "b", "c"]
+```
+
+Remember:
+
+- `slice()` means **copy a portion** without changing the original.
+- `splice()` means **change an array** by removing or inserting elements.
+- `split()` means **divide a string** into an array.
 
 ## Important distinctions
 

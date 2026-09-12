@@ -13,6 +13,15 @@
         You can answer:
             - ⁡⁣⁢⁣𝗰𝗮𝗹𝗹()⁡ → Invokes the function immediately with a specified 'this' .
             - ⁡⁣⁢⁣⁡⁣⁢⁣𝗮𝗽𝗽𝗹𝘆()⁡⁡ → Same as call(), but arguments are passed as an array.
+            -
+                * call() and apply() invoke a function immediately with a specified this value. 
+                * The main difference is that call() receives arguments individually, while apply() receives them as an array-like collection.
+                * Both are useful for controlling function context.
+                    - Example
+                        ⁡⁢⁢⁢fn.call(obj, 1, 2);⁡
+⁡⁢⁢⁢                        fn.apply(obj, [1, 2]);
+⁡
+            
             - ⁡⁣⁢⁣𝗯𝗶𝗻𝗱()⁡ → Does not invoke the function immediately. It returns a new function with this permanently bound.   
 */
 
