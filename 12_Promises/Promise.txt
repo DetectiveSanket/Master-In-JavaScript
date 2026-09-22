@@ -262,20 +262,20 @@ Posts, and the Notifications all at once.
       You and 3 friends order pizza. You agree that if even one person's 
       pizza is burnt, you will all leave the restaurant and not eat anything.
 
-   📝 Code Example:
-   
-⁡⁢⁢⁢      const p1 = fetch('/profile');
-      const p2 = fetch('/posts');
-      const p3 = fetch('/notifications');
+      📝 Code Example:
+      
+   ⁡⁢⁢⁢      const p1 = fetch('/profile');
+         const p2 = fetch('/posts');
+         const p3 = fetch('/notifications');
 
-        try {
-            // Starts all 3 at the same time!
-            const results = await Promise.all([p1, p2, p3]); 
+         try {
+               // Starts all 3 at the same time!
+               const results = await Promise.all([p1, p2, p3]); 
 
-            console.log("All data loaded:", results);
-        } catch (error) {
-           console.log("One task failed, so the whole batch failed.");
-        }⁡
+               console.log("All data loaded:", results);
+         } catch (error) {
+            console.log("One task failed, so the whole batch failed.");
+         }⁡
 
 
 🔹 ⁡⁣⁢⁣𝟮. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗔𝗟𝗟𝗦𝗘𝗧𝗧𝗟𝗘𝗗() — "𝗧𝗵𝗲 𝗖𝗼𝗺𝗽𝗹𝗲𝘁𝗶𝗼𝗻𝗶𝘀𝘁" 📋⁡
@@ -305,8 +305,7 @@ Posts, and the Notifications all at once.
 
 🔹 ⁡⁣⁢⁣𝟯. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗥𝗔𝗖𝗘() — "𝗧𝗵𝗲 𝗦𝗽𝗲𝗲𝗱𝘀𝘁𝗲𝗿" 🏃⁡
 ------------------------------------------
-    - ⁡⁣⁣⁢This returns the result of the first promise that settles (either success 
-or failure).⁡
+    - ⁡⁣⁣⁢This returns the result of the first promise that settles (either success  or failure).⁡
 
    🚖 Real-world Analogy: 
       You call two different taxi companies. Whichever one arrives first 
@@ -319,13 +318,12 @@ or failure).⁡
 
 🔹 ⁡⁣⁢⁣𝟰. 𝗣𝗥𝗢𝗠𝗜𝗦𝗘.𝗔𝗡𝗬() — "𝗧𝗵𝗲 𝗙𝗶𝗿𝘀𝘁 𝗦𝘂𝗰𝗰𝗲𝘀𝘀" ⭐⁡
 ---------------------------------------------
-    - ⁡⁣⁣⁢This waits for the first successful promise. It ignores failures unless 
-all of them fail.⁡
+    - ⁡⁣⁣⁢This waits for the first successful promise. It ignores failures unless all of them fail.⁡
 
-   🔌 Real-world Analogy: 
-      You ask 3 friends for a spare phone charger. You only need one. 
-      If Friend A says "No," you wait for Friend B. If Friend B says 
-      "Yes," you're done!
+      🔌 Real-world Analogy: 
+         You ask 3 friends for a spare phone charger. You only need one. 
+         If Friend A says "No," you wait for Friend B. If Friend B says 
+         "Yes," you're done!
 
 
 📊 ⁡⁣⁢⁣𝘊𝘖𝘔𝘗𝘈𝘙𝘐𝘚𝘖𝘕 𝘈𝘛 𝘈 𝘎𝘓𝘈𝘕𝘊𝘌⁡
@@ -384,36 +382,36 @@ We create a race between two things:
 
 
     // 1. A function that just waits and then fails
-   ⁡⁢⁢⁢ function timeout(seconds) {
-        return new Promise((_, reject) => {
-            setTimeout(() => {
-                reject(new Error("Request took too long!"));
-            }, seconds * 1000);
-        });
-    }
+      ⁡⁢⁢⁢ function timeout(seconds) {
+         return new Promise((_, reject) => {
+               setTimeout(() => {
+                  reject(new Error("Request took too long!"));
+               }, seconds * 1000);
+         });
+      }
 
 
 
    // 2. The actual data fetch
-   async function getProfile() {
-        try {⁡
+      async function getProfile() {
+         try {⁡
 
-            // RACE! 
-            // Either the fetch finishes first, or the 5s timer finishes first.
-            ⁡⁢⁢⁢const response = await Promise.race([
-                fetch('https://api.example.com/profile'),
-                timeout(5) 
-            ]);
+               // RACE! 
+               // Either the fetch finishes first, or the 5s timer finishes first.
+               ⁡⁢⁢⁢const response = await Promise.race([
+                  fetch('https://api.example.com/profile'),
+                  timeout(5) 
+               ]);
 
-            const data = await response.json();
-            console.log("Success:", data);
-        } catch (err) {
-            // This will catch if the fetch fails OR if the timeout wins!
-            console.error("Race Error:", err.message);
-        }
-    }
+               const data = await response.json();
+               console.log("Success:", data);
+         } catch (err) {
+               // This will catch if the fetch fails OR if the timeout wins!
+               console.error("Race Error:", err.message);
+         }
+      }
 
-   getProfile();⁡
+      getProfile();⁡
 
 
 ⁡⁣⁢⁣🛠️ THE "EXPERT" REFINEMENT: Cleanup
@@ -463,62 +461,6 @@ You have now covered:
       Request Timeouts and Aborting tasks
 
 --------------------------------------------------------------------------------
-Study Guide: JavaScript Promises & Asynchronous Patterns
-
-Subject: Advanced JavaScript (ES6+)
-
-Topics:
-
-Promise Lifecycle and States
-
-The Event Loop (Microtasks vs. Macrotasks)
-
-Promise Combinators (all, allSettled, race, any)
-
-Modern Request Management (AbortController)
-
-Summary
-
-This guide covers the fundamental and advanced aspects of how JavaScript handles time-consuming operations. It moves from the three core states of a Promise to the architectural "Priority Rules" of the JavaScript Engine (Event Loop), and concludes with professional strategies for managing multiple concurrent tasks and network request cancellation.
-
-Key Concepts
-
-The Initial State (Pending): A Promise always starts as Pending. It only becomes "Resolved" or "Rejected" once the task completes. A common mistake is thinking a promise in progress is "Resolved" just because it hasn't failed yet.
-
-The VIP Lane (Microtask Queue): Promises do not go to the same place as setTimeout. They enter the Microtask Queue, which is higher priority. The engine will finish every single Microtask before it even looks at a single Macrotask (like a timer).
-
-Awaiting Non-Promises: If you await a regular number or string, JavaScript doesn't crash. It automatically wraps that value in a Promise.resolve(value) so the code can continue in its asynchronous flow without interruption.
-
-Resilience with allSettled: While Promise.all is "all-or-nothing," Promise.allSettled is used when you need the results of all tasks regardless of individual failures. It returns an array of objects showing the status (fulfilled/rejected) and the value or reason.
-
-Request Cancellation: The AbortController is the modern standard for stopping a fetch request. It is essential for performance, allowing developers to kill "stale" requests that are no longer needed by the UI.
-
-Vocabulary List
-
-Pending: The "in-between" state of a Promise where the result is not yet available.
-
-Microtask: A high-priority task (like Promise callbacks) that executes immediately after the current script and before the next event loop tick.
-
-Macrotask: A standard priority task (like setTimeout or setInterval) scheduled for the next turn of the event loop.
-
-Settled: A term used when a Promise is no longer pending (it is either fulfilled or rejected).
-
-AbortController: A JavaScript object used to communicate with and terminate asynchronous tasks like Web Requests.
-
-Key Questions
-
-Explain the difference between a Promise that is "Pending" and one that is "Fulfilled."
-
-Why does a Promise callback run before a setTimeout(..., 0)?
-
-What is the specific return format of Promise.allSettled()?
-
-How would you implement a 5-second timeout for a network request using Promise.race()?
-
-If a function is marked async, but has no await inside, does it still return a Promise? (Answer: Yes!)
-
-
--------------------------------------------
 
 Important Links:
     • Main quiz: https://gemini.google.com/share/aa89e154448e

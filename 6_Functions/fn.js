@@ -12,8 +12,14 @@
             - Callback Function
             - Higher-Order Function
             - Recursive Function
+            - Generator Function
             - Callback Hell
             - Promise Function
+
+    > Key difference isn't syntax — it's this binding.
+
+        - ⁡⁢⁣⁣𝗥𝗲𝗴𝘂𝗹𝗮𝗿 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻:⁡ this depends on how the function is called
+        - ⁡⁢⁣⁣𝗔𝗿𝗿𝗼𝘄 𝗳𝘂𝗻𝗰𝘁𝗶𝗼𝗻:⁡ this is inherited from the surrounding scope (lexical this)       
 */
 
 // ⁡⁢⁣⁣function declaration⁡

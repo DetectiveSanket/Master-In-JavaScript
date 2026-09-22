@@ -149,7 +149,7 @@ something real: Getting weather data from an API.
                 // 3. If the internet is down, we handle it here
                 console.log("Could not find weather!", error);
             }
-        }
+         }
 
       getMyWeather();
       console.log("I'm not blocked! I can run while the weather is loading.");

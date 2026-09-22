@@ -1,1 +1,6 @@
 
+Key difference isn't syntax — it's this binding.
+
+* Regular function: this depends on how the function is called
+* Arrow function: this is inherited from the surrounding scope (lexical this)
+

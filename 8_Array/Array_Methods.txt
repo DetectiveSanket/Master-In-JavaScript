@@ -61,6 +61,7 @@
 
 4) ⁡⁣⁢⁣𝗳𝗼𝗿𝗘𝗮𝗰𝗵⁡
     - ⁡⁣⁣⁢executes a provided function once for each array element⁡
+    - forEach is used for side effects 
     * Used when you want to perform an action for each element (e.g., logging)
     - does not modify the original array
     - does not return a new array
