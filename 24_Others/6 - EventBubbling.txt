@@ -15,20 +15,20 @@
 
 # 📚 Table of Contents
 
-1. [What is an Event?](#-1-what-is-an-event)
-2. [Nested HTML Elements](#-2-html-elements-are-inside-each-other)
-3. [Event Bubbling](#-3-event-bubbling)
-4. [Event Capturing](#-4-event-capturing)
-5. [Real-Life Analogy](#-5-very-simple-real-life-analogy)
-6. [Default Behavior](#-6-default-behavior)
-7. [Full Practical Example](#-7-full-simple-example)
-8. [stopPropagation()](#-8-stoppropagation)
-9. [Interview Definitions](#-9-interview-style-short-definition)
-10. [Bubbling vs Capturing Table](#-10-difference-between-bubbling-and-capturing)
-11. [Memory Trick](#-11-one-line-memory-trick)
-12. [Final Summary](#-12-final-simple-summary)
-13. [Common Mistakes](#-13-common-mistakes)
-14. [Mini Recap Quiz](#-14-mini-recap-quiz)
+1. What is an Event?
+2. Nested HTML Elements
+3. Event Bubbling
+4. Event Capturing
+5. Real-Life Analogy
+6. Default Behavior
+7. Full Practical Example
+8. stopPropagation()
+9. Interview Definitions
+10.Bubbling vs Capturing Table
+11. Memory Trick
+12. Final Summary
+13. Common Mistakes
+14. Mini Recap Quiz
 
 ========================================================================================================================
 
@@ -97,60 +97,60 @@
 
     - This upward movement is called event bubbling.
 
-## 🧠 Easy Line to Remember
-    > **Bubbling means event goes from inside to outside.**
+    ## 🧠 Easy Line to Remember
+        > **Bubbling means event goes from inside to outside.**
 
-### Direction:
-`child -> parent -> grandparent`
+    ### Direction:
+    `child -> parent -> grandparent`
 
-### Phase Map (Bubbling)
-```text
-Target (child)
-   ↑
-Parent
-   ↑
-Grandparent
-```
+    ### Phase Map (Bubbling)
+    ```text
+        Target (child)
+        ↑
+        Parent
+        ↑
+        Grandparent
+    ```
 
-## Example of Event Bubbling
+    ## Example of Event Bubbling
 
-### HTML:
-```html
-    <div id="grandparent">
-    Grandparent
-        <div id="parent">
-            Parent
-            <button id="child">Click Me</button>
+    ### HTML:
+    ```html
+        <div id="grandparent">
+        Grandparent
+            <div id="parent">
+                Parent
+                <button id="child">Click Me</button>
+            </div>
         </div>
-    </div>
-```
+    ```
 
-### JavaScript:
-```javascript
-    document.getElementById("grandparent").addEventListener("click", function () {
-        console.log("Grandparent clicked");
-    });
+    ### JavaScript:
+    ```javascript
+        document.getElementById("grandparent").addEventListener("click", function () {
+            console.log("Grandparent clicked");
+        });
 
-    document.getElementById("parent").addEventListener("click", function () {
-        console.log("Parent clicked");
-    });
+        document.getElementById("parent").addEventListener("click", function () {
+            console.log("Parent clicked");
+        });
 
-    document.getElementById("child").addEventListener("click", function () {
-        console.log("Child clicked");
-    });
-```
+        document.getElementById("child").addEventListener("click", function () {
+            console.log("Child clicked");
+        });
+    ```
 
-## 📌 Output When Button is Clicked:
-```javascript
-    Child clicked
-    Parent clicked
-    Grandparent clicked
-```
+    ## 📌 Output When Button is Clicked:
+    ```javascript
+        Child clicked
+        Parent clicked
+        Grandparent clicked
+    ```
 
-## 🤔 Why?
-    - Because the click starts on the actual clicked element (`child`) and then travels upward.
+    ## 🤔 Why?
+        - Because the click starts on the actual clicked element (`child`) and then travels upward.
 
-✅ That is **event bubbling**.
+    ✅ That is **event bubbling**.
 
 ----------------------------------------
 
