@@ -27,7 +27,7 @@ Explore `split()` first when you want to turn a string into an array of parts.
 
 ### What it does
 
-`slice()` extracts a section and returns a new value. It does not modify the
+`slice()`:- copies a portion of an array or string returns a new value. It does not modify the
 original string or array.
 
 ### Data types
@@ -68,7 +68,7 @@ console.log(colors); // ["red", "green", "blue", "yellow"]
 
 ### What it does
 
-`splice()` removes, replaces, or inserts elements in an array. Unlike
+`splice()` modifies the original array — can remove, replace, or insert elements. Unlike
 `slice()`, it changes the original array.
 
 ### Data type
@@ -110,8 +110,9 @@ modified.
 
 ### What it does
 
-`split()` divides a string into an array of substrings using a separator. It is
-the common first step when string data must be processed with array methods.
+`split()` :- splits a string into an array based on a separator
+  - divides a string into an array of substrings using a separator.
+  - It is the common first step when string data must be processed with array methods.
 
 ### Data type
 

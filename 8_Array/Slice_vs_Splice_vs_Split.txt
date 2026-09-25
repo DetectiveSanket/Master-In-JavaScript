@@ -1,0 +1,18 @@
+
+
+
+• slice — copies a portion of an array or string without modifying the original
+
+    - Its can work on both arrays and strings.
+    - Its is used to create a new array or string from a portion of the original.
+
+    > Syntax: 
+        - array.slice(start, end) 
+        - string.slice(start, end)
+
+
+const arr = [1, 2, 3, 4, 5];
+arr.slice(1, 3); // [2, 3] — from index 1 to 3 (3 not included)
+// original arr is unchanged
+
+Works on both arrays and strings.
