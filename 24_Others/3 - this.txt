@@ -4,7 +4,7 @@
                 ⁡⁢⁣⁢𝗧𝗵𝗶𝘀 𝗸𝗲𝘆𝘄𝗼𝗿𝗱⁡                              
     _________________________________________
 
-✔️✔️ this in global scope , function scope , method , event handler, class
+- this in global scope , function scope , method , event handler, class
 
 ------------------------------------------
 
@@ -22,6 +22,8 @@ A1: The purpose of `this` in JavaScript is to refer to the current object or the
         - In an event handler, `this` refers to the element that triggered the event.
         - In a class method, `this` refers to the instance of the class.
         - In object methods, `this` refers to the object that owns the method.
+        - In Noraml Function , this depends on how the function is called
+        - In arrow function , this is inherited from the surrounding scope (lexical this)
 
   ex=
 

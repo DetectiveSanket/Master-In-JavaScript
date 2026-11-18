@@ -65,17 +65,17 @@ let b;
           :- ex - function abc() {} , const a = () => {}
        - Variables declared with var are hoisted to the top of their function scope
        - If declared outside a function, they have global scope
-       - Can be re-declared and updated within its scope 
+       - Can be re-declared and updated within its scope (re-assigned)
 
     ⁡⁢⁣⁣# Let⁡
         - It is block scope -> block {} -> the block without function
             :- ex - if(true) {}, for loop, while loop
         - Variables declared with let are also hoisted, but not initialized
         - Accessing them before the declaration results in a ReferenceError
-        - Cannot be re-declared in the same scope, but can be updated
+        - Cannot be re-declared in the same scope, but can be updatedc(not re-assigned)
 
     ⁡⁢⁣⁣# Const⁡
         - Its is also block scope -> block {} -> the block without function
         - But variables declared with const must be initialized at the time of declaration
-        - They cannot be re-declared or updated within their scope 
+        - They cannot be re-declared or updated within their scope (not re-assigned)
 */

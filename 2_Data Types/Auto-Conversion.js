@@ -68,6 +68,8 @@ console.log(+" ");              // 0     → space string to 0
 console.log(+"hello");          // NaN   → non-numeric string to NaN
 
 console.log("\n=== ARRAY COERCION ===");
+// Arrays are coerced(means converted) to strings when used with the + operator
+console.log([1, 2] + 3);        // "1,23"   → array to string then concatenated
 console.log([1, 2] + [3, 4]);   // "1,23,4" → arrays to strings then concatenated
 console.log([] + []);           // ""      → empty arrays to empty strings
 console.log([1] + [2]);         // "12"    → arrays to strings then concatenated
@@ -136,3 +138,11 @@ console.log(String(5));         // "5"
 console.log(Boolean(5));        // true
 console.log(parseInt("5.7"));   // 5
 console.log(parseFloat("5.7")); // 5.7
+
+
+/* 
+    # Truethy and Falsy values
+
+        1. Falsy values: false, 0, -0, 0n, "", null, undefined, NaN
+        2. Truthy values: everything else
+*/
